@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 button {
-  color: $kirmizi;
-  background-color: $blue;
+  color: $success;
+  background-color: $light;
 }
 </style>
