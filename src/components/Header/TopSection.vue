@@ -2,7 +2,7 @@
   <div class="header-top-section">
     <div>
       <span>
-        <img src="/remixicon/contacts-book-2-fill.svg" />
+        <i class="ri-mail-line"></i>
       </span>
       <span>(0432) 223 24 48</span>
     </div>

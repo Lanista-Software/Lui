@@ -30,7 +30,7 @@ module.exports = {
       loaders: ['style-loader', 'css-loader', {
         loader: 'sass-loader',
         options: {
-          prependData: `@import "~/src/assets/variables";`
+          prependData: `@import "~/src/assets/style";`
         }
       }],
       include: path.resolve(__dirname, '../'),
