@@ -1,6 +1,7 @@
-@import "./variables.scss";
-@import "./normalize.css";
-
+@import "~/src/assets/fonts.css";
+@import "~/src/assets/normalize.css";
+@import "~/src/assets/remixicon/remixicon.css";
+@import "~/src/assets/variables.scss";
 button {
     font-family:$otherFont;
 }
