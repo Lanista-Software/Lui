@@ -1,10 +1,10 @@
-import TopSection from "../../components/Header/TopSection.vue";
-import ItemGroup from "../../components/Header/ItemGroup.vue";
+import TopSection from "../../components/Header/TopSection/TopSection.vue";
+import ItemGroup from "../../components/Header/TopSection/ItemGroup.vue";
 import { text } from "@storybook/addon-knobs";
 
 export default {
-  title: "Header/TopSection",
-  component: TopSection,
+  title: "Header/Header",
+  component: { TopSection, ItemGroup },
   argTypes: {
     BackgroundColor: { control: "color" }
   }

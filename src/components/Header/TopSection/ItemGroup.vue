@@ -1,5 +1,5 @@
 <template>
-  <a>
+  <a href="#">
     <span>
       <i :class="icon"></i>
     </span>
