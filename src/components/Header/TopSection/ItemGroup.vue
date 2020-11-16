@@ -23,7 +23,7 @@ a {
   display: flex;
   text-align: center;
   span {
-    font-size: 14px;
+    font-size: 10px;
     font-family: $baseFont;
     align-self: center;
     color: $white;
@@ -31,6 +31,11 @@ a {
   i {
     margin-right: 10px;
     font-size: 16px;
+  }
+}
+@media ($xxl) {
+  a > span {
+    font-size: 14px;
   }
 }
 </style>

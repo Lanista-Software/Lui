@@ -1,6 +1,6 @@
 import Header from "../../components/Header/Header.vue";
 export default {
-  title: "Header/index",
+  title: "Header/HeaderErbay",
   component: { Header },
   argTypes: {
     BackgroundColor: { control: "color" }

@@ -17,11 +17,12 @@
 ul {
   padding: 0;
   list-style: none;
+  width: 100%;
   margin: 0;
 }
 li {
   float: left;
-  font-size: 14px;
+  font-size: 10px;
   font-family: $baseFont;
   margin: 0;
   color: $white;
@@ -34,6 +35,14 @@ li {
   }
 }
 li:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 11px;
+}
+@media ($xxl) {
+  li {
+    font-size: 10px;
+  }
+  li:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 </style>
