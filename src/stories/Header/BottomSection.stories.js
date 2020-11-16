@@ -4,7 +4,7 @@ import companyLogo from "../../components/Header/BottomSection/companyLogo.vue";
 import { text } from "@storybook/addon-knobs";
 
 export default {
-  title: "Header/BottomSection",
+  title: "Erbay/Header/BottomSection",
   component: { Menu },
   argTypes: {
     BackgroundColor: { control: "color" }
