@@ -9,6 +9,7 @@
       <li>Ana Sayfa</li>
       <li>Ana Sayfa</li>
       <li>Ana Sayfa</li>
+      <li>Ana Sayfa</li>
     </ul>
   </div>
 </template>
@@ -22,7 +23,7 @@ li {
   float: left;
   font-size: 14px;
   font-family: $baseFont;
-  margin: 8px;
+  margin: 0;
   color: $white;
   span {
     display: block;
@@ -31,5 +32,8 @@ li {
     background-color: $warning;
     margin-top: 3px;
   }
+}
+li:not(:last-child) {
+  margin-right: 30px;
 }
 </style>
