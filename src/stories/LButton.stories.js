@@ -1,17 +1,25 @@
+import { select } from "@storybook/addon-knobs";
 import LButton from "../components/LButton";
-
+import variant from "./assets/variant";
 export default {
   title: "Lanista/Buttons",
   component: LButton
 };
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
+export const Button = () => ({
+  props: {
+    bgVariant: {
+      default: select("bgVariant", variant.backgroundVariant)
+    },
+    textVariant: {
+      default: select("textVariant", variant.textVariant)
+    },
+    borderVariant: {
+      default: select("borderVariant", variant.borderVariant)
+    },
+    size: {
+      default: select("size", ["sm", "md", "lg"], "md")
+    }
+  },
   components: { LButton },
-  template: '<l-button @clicked="clicked">deneme</l-button>'
+  template: '<l-button v-bind="$props" @clicked="clicked">deneme</l-button>'
 });
-
-export const Red = Template.bind({});
-// Red.args = {
-//     red: true,
-//     label:"Button"
-// })
