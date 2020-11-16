@@ -3,7 +3,7 @@ import ItemGroup from "../../components/Header/TopSection/ItemGroup.vue";
 import { text } from "@storybook/addon-knobs";
 
 export default {
-  title: "Header/Header",
+  title: "Header/TopSection",
   component: { TopSection, ItemGroup },
   argTypes: {
     BackgroundColor: { control: "color" }
