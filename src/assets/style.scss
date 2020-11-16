@@ -3,3 +3,6 @@
 @import "~/src/assets/remixicon/remixicon.css";
 @import "~/src/assets/variables.scss";
 @import "~/src/assets/responsive.scss";
+.shadow {
+    box-shadow: $box-shadow;
+}
