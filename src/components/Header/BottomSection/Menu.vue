@@ -39,10 +39,10 @@ li:not(:last-child) {
 }
 @media ($xxl) {
   li {
-    font-size: 10px;
+    font-size: 13px;
   }
   li:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 22px;
   }
 }
 </style>

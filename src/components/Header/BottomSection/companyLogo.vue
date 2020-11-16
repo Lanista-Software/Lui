@@ -39,8 +39,8 @@ export default {
   display: inline-flex;
   &-image {
     img {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
     }
   }
   &-name {
@@ -54,6 +54,15 @@ export default {
       font-family: $baseFont;
       font-size: 8px;
     }
+  }
+}
+@media ($xxl) {
+  .company-logo-image > img {
+    width: 60px;
+    height: 60px;
+  }
+  .company-logo-name {
+    margin-left: 8px;
   }
 }
 </style>

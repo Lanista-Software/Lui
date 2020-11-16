@@ -35,7 +35,7 @@ a {
 }
 @media ($xxl) {
   a > span {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 </style>
