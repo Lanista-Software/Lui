@@ -1,4 +1,5 @@
 import Menu from "../../components/Header/BottomSection/Menu.vue";
+import BottomSectiongroup from "../../components/Header/BottomSection/BottomSectiongroup.vue";
 import companyLogo from "../../components/Header/BottomSection/companyLogo.vue";
 import { text } from "@storybook/addon-knobs";
 
@@ -34,4 +35,8 @@ export const CompanyLogo = () => ({
   },
   components: { companyLogo },
   template: "<companyLogo v-bind='$props' ></companyLogo>"
+});
+export const BottomSectionGroup = () => ({
+  components: { BottomSectiongroup },
+  template: "<bottom-sectiongroup></bottom-sectiongroup>"
 });

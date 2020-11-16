@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .l-button {
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   width: 100%;
   border: 1px solid transparent;
