@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 .l-select {
   width: 100%;
-  height: 30px;
+  height: 20px;
   border-radius: 5px;
   font-family: $baseFont;
   font-size: 12px;
@@ -42,9 +42,15 @@ select option {
   outline: none;
   box-shadow: inset 20px 20px $light;
 }
+@media ($md) {
+  .l-select {
+    height: 25px;
+  }
+}
 @media ($xxl) {
   .l-select {
     font-size: 14px;
+    height: 30px;
   }
 }
 </style>
