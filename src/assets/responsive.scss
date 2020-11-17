@@ -5,3 +5,38 @@ $lg: "min-width: 992px";
 $xl: "min-width: 1200px";
 $xxl: "min-width: 1400px";
 
+@media ($xs) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media ($sm) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media ($md) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media ($lg) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media ($xl) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media ($xxl) {
+    html {
+        font-size: 20px;
+    }
+}

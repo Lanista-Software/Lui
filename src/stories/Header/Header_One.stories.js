@@ -1,13 +1,13 @@
-import Header from "../../components/Header/Header.vue";
+import Header from "../../components/Header/HeaderOne/HeaderOne.vue";
 export default {
-  title: "Erbay/Header/HeaderErbay",
+  title: "Headers/HeaderOne/HeaderOne",
   component: { Header },
   argTypes: {
     BackgroundColor: { control: "color" }
   }
 };
 
-export const HeaderErbay = () => ({
+export const HeaderOne = () => ({
   components: { Header },
   template: "<Header></Header>"
 });

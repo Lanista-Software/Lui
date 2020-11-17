@@ -1,12 +1,12 @@
 <template>
-  <div class="quesiton-drop-card shadow bg-white radius-08">
-    <div class="quesiton-drop-card-inline">
-      <div class="quesiton-drop-card-inline-left">
+  <div class="faq-drop-card shadow bg-white radius-08">
+    <div class="faq-drop-card-inline">
+      <div class="faq-drop-card-inline-left">
         <p class="text-dark">
-          Paket fiyatları aylık mı, yıllık mı ?
+          {{ question }}
         </p>
       </div>
-      <div class="quesiton-drop-card-inline-right">
+      <div class="faq-drop-card-inline-right">
         <i
           v-if="!show"
           class="ri-arrow-down-s-line text-dark"
@@ -19,21 +19,27 @@
         ></i>
       </div>
     </div>
-    <div class="quesiton-drop-card-slot" v-if="show">
-      <p class="text-dark">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sed?
-        Obcaecati aperiam nemo, neque quam quasi dolores omnis sit voluptas
-        asperiores, accusantium laboriosam maxime mollitia voluptatibus fugit
-        sunt laborum iure reprehenderit soluta atque nihil ab quaerat recusandae
-        sequi est! Iste quidem nostrum voluptatibus ducimus illum laboriosam
-        harum, asperiores praesentium fuga!
-      </p>
+    <div class="faq-drop-card-slot text-dark" v-if="show">
+      <slot />
+      <div class="faq-drop-card-slot-btn">
+        <l-button bgVariant="bg-primary" textVariant="text-white" size="lg"
+          >İletişime geçin</l-button
+        >
+      </div>
     </div>
   </div>
 </template>
 <script>
+import LButton from "../LButton.vue";
 export default {
-  name: "QuestiondropCard",
+  components: { LButton },
+  name: "FaqDrop",
+  props: {
+    question: {
+      type: String,
+      default: null
+    }
+  },
   data() {
     return {
       show: false
@@ -42,7 +48,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.quesiton-drop-card {
+.faq-drop-card {
   height: auto;
   padding: 13px;
   transition: 1s ease-in-out;
@@ -72,10 +78,19 @@ export default {
   &-slot {
     font-size: 10px;
     font-family: $baseFont;
+    line-height: 30px;
+    &-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      button {
+        width: 20%;
+      }
+    }
   }
 }
 @media ($sm) {
-  .quesiton-drop-card {
+  .faq-drop-card {
     &-inline {
       p {
         font-size: 14px;
@@ -87,7 +102,7 @@ export default {
   }
 }
 @media ($md) {
-  .quesiton-drop-card {
+  .faq-drop-card {
     &-inline {
       p {
         font-size: 16px;
@@ -102,7 +117,7 @@ export default {
   }
 }
 @media ($lg) {
-  .quesiton-drop-card {
+  .faq-drop-card {
     &-inline {
       p {
         font-size: 18px;
