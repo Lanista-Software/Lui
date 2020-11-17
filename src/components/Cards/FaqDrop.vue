@@ -3,7 +3,7 @@
     <div class="faq-drop-card-inline">
       <div class="faq-drop-card-inline-left">
         <p class="text-dark">
-          Paket fiyatları aylık mı, yıllık mı ?
+          {{ question }}
         </p>
       </div>
       <div class="faq-drop-card-inline-right">
@@ -19,27 +19,8 @@
         ></i>
       </div>
     </div>
-    <div class="faq-drop-card-slot" v-if="show">
-      <p class="text-dark">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-        est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-      </p>
+    <div class="faq-drop-card-slot text-dark" v-if="show">
+      <slot />
       <div class="faq-drop-card-slot-btn">
         <l-button bgVariant="bg-primary" textVariant="text-white" size="lg"
           >İletişime geçin</l-button
@@ -53,7 +34,12 @@ import LButton from "../LButton.vue";
 export default {
   components: { LButton },
   name: "FaqDrop",
-  // FaqDrop
+  props: {
+    question: {
+      type: String,
+      default: null
+    }
+  },
   data() {
     return {
       show: false
