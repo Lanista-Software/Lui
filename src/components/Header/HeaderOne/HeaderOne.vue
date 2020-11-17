@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import BottomSectiongroup from "./BottomSection/BottomSectiongroup.vue";
-import TopSection from "./TopSection/TopSection.vue";
+import BottomSectiongroup from "../HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup";
+import TopSection from "../HeaderOne/HeaderOneComponents/TopSection/TopSection";
 export default {
   components: { TopSection, BottomSectiongroup }
 };

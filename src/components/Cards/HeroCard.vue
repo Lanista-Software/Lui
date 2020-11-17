@@ -11,10 +11,11 @@
           {{ titleSecond }}
         </h1>
         <i class="ri-shield-check-fill text-success" />
+        <!-- slot eklenecek -->
       </div>
     </div>
     <div class="hero-card-center">
-      <p class="text-white">
+      <p class="text-white_08">
         <slot />
       </p>
     </div>
@@ -76,15 +77,11 @@ h1 {
     text-align: left;
     margin: 30px 0px;
     p {
-      opacity: 0.8;
       font-family: $baseFont;
       font-size: 16px;
       margin: 0;
       line-height: 25px;
     }
-  }
-  &-bottom {
-    width: 200px;
   }
 }
 </style>

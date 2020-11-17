@@ -1,4 +1,4 @@
-import { select } from "@storybook/addon-knobs";
+import { boolean, select } from "@storybook/addon-knobs";
 import LButton from "../components/LButton";
 import variant from "./assets/variant";
 export default {
@@ -15,6 +15,9 @@ export const Button = () => ({
     },
     borderVariant: {
       default: select("borderVariant", variant.borderVariant)
+    },
+    block: {
+      default: boolean("block", false)
     },
     size: {
       default: select("size", ["sm", "md", "lg"], "md")

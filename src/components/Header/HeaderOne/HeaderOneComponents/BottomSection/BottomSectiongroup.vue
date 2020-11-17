@@ -21,7 +21,7 @@
 <script>
 import companyLogo from "./companyLogo";
 import lmenu from "./Menu";
-import lButton from "../../../components/LButton";
+import lButton from "../../../../LButton";
 export default {
   components: {
     companyLogo,
