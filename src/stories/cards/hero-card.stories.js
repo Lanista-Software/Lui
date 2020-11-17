@@ -10,16 +10,20 @@ export default {
 
 export const Herocard = () => ({
   props: {
-    img: {
-      default: text("img", "/erbay/logo.png")
+    titleOne: {
+      default: text("titleOne", "ERBAY LASTİK")
     },
-    name: {
-      default: text("name", "ERBAY LASTİK")
+    titleSecond: {
+      default: text("titleSecond", "Her mevsim yol güvenceniz")
     },
     subname: {
       default: text("subname", "Kereste İmalat İnşaat Ltd. Şti.")
+    },
+    btnText: {
+      default: text("btnText", "İletişime geçin")
     }
   },
   components: { HeroCard },
-  template: "<HeroCard v-bind='$props' ></HeroCard>"
+  template: `<HeroCard v-bind='$props' >Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza 
+  yanıt vermek için bekliyoruz</HeroCard>`
 });
