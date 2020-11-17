@@ -24,7 +24,7 @@ export default {
   height: 30px;
   border-radius: 5px;
   font-family: $baseFont;
-  font-size: 14px;
+  font-size: 12px;
   color: $dark;
   padding: 0px 10px;
   outline: none;
@@ -41,5 +41,10 @@ select option {
   border: none;
   outline: none;
   box-shadow: inset 20px 20px $light;
+}
+@media ($xxl) {
+  .l-select {
+    font-size: 14px;
+  }
 }
 </style>
