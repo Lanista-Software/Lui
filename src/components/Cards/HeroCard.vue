@@ -63,6 +63,7 @@ h1 {
       font-family: $baseFont;
       font-size: 16px;
       margin: 0;
+      line-height: 25px;
     }
   }
   &-bottom {
