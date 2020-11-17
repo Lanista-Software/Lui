@@ -1,5 +1,5 @@
 <template>
-  <div style="width:100%;">
+  <div>
     <select class="l-select shadow">
       <option v-for="item in items" :key="item.key" :value="item.key">{{
         item.label
