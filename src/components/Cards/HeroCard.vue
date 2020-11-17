@@ -3,25 +3,28 @@
     <div class="hero-card-top">
       <div class="">
         <h1 class="text-white">
-          ERBAY LASTİK
+          {{ titleOne }}
         </h1>
       </div>
       <div class="hero-card-inline">
         <h1 class="text-white">
-          Her mevsim yol güvenceniz
+          {{ titleSecond }}
         </h1>
         <i class="ri-shield-check-fill text-success" />
       </div>
     </div>
     <div class="hero-card-center">
       <p class="text-white">
-        Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza yanıt
-        vermek için bekliyoruz
+        <slot />
       </p>
     </div>
     <div class="hero-card-bottom">
-      <l-button size="lg" bgVariant="bg-warning" textVariant="text-dark"
-        >İletişime geçin</l-button
+      <l-button
+        v-on="$listeners"
+        size="lg"
+        bgVariant="bg-warning"
+        textVariant="text-dark"
+        >{{ btnText }}</l-button
       >
     </div>
   </div>
@@ -30,7 +33,21 @@
 <script>
 import LButton from "../LButton.vue";
 export default {
-  components: { LButton }
+  components: { LButton },
+  props: {
+    titleOne: {
+      type: String,
+      default: null
+    },
+    titleSecond: {
+      type: String,
+      default: null
+    },
+    btnText: {
+      type: String,
+      default: null
+    }
+  }
 };
 </script>
 
