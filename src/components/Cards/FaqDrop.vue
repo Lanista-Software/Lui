@@ -136,7 +136,7 @@ export default {
       }
     }
     &-slot {
-      line-height: 30px;
+      line-height: 27px;
       font-size: 14px;
     }
   }
