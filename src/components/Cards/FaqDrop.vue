@@ -78,13 +78,13 @@ export default {
   &-slot {
     font-size: 10px;
     font-family: $baseFont;
-    line-height: 30px;
+    line-height: 15px;
     &-btn {
       display: flex;
       justify-content: center;
       margin-top: 30px;
       button {
-        width: 20%;
+        width: 90%;
       }
     }
   }
@@ -97,7 +97,13 @@ export default {
       }
     }
     &-slot {
+      line-height: 20px;
       font-size: 12px;
+      &-btn {
+        button {
+          width: 60%;
+        }
+      }
     }
   }
 }
@@ -112,7 +118,13 @@ export default {
       }
     }
     &-slot {
+      line-height: 25px;
       font-size: 13px;
+      &-btn {
+        button {
+          width: 40%;
+        }
+      }
     }
   }
 }
@@ -124,7 +136,26 @@ export default {
       }
     }
     &-slot {
+      line-height: 27px;
       font-size: 14px;
+    }
+  }
+}
+@media ($xl) {
+  .faq-drop-card {
+    &-inline {
+      p {
+        font-size: 18px;
+      }
+    }
+    &-slot {
+      line-height: 30px;
+      font-size: 14px;
+      &-btn {
+        button {
+          width: 20%;
+        }
+      }
     }
   }
 }

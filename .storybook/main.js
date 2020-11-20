@@ -13,6 +13,21 @@ module.exports = {
     '@storybook/addon-controls',
     "@storybook/preset-scss",
   ],
+  // webpackFinal: async (config, { configType }) => {
+  //   // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+  //   // You can change the configuration based on that.
+  //   // 'PRODUCTION' is used when building the static version of storybook.
+
+  //   // Make whatever fine-grained changes you need
+  //   config.module.rules.push({
+  //     test: /\.scss$/,
+  //     use: ['style-loader', 'css-loader', 'sass-loader'],
+  //     include: path.resolve(__dirname, '../'),
+  //   });
+
+  //   // Return the altered config
+  //   return config;
+  // },
   webpackFinal: async (config, { configType }) => {
 
     config.resolve.alias = {
@@ -31,7 +46,7 @@ module.exports = {
       loaders: ['style-loader', 'css-loader', {
         loader: 'sass-loader',
         options: {
-          prependData: `@import "~/src/assets/style";`
+          prependData: `@import "~/src/assets/style.scss";`,
         }
       }],
       include: path.resolve(__dirname, '../'),
