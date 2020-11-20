@@ -35,7 +35,7 @@ import LButton from "../LButton.vue";
 import LSelect from "../LSelect.vue";
 export default {
   components: { LSelect, LButton },
-  name: "ProductFilter",
+  name: "SelectFilter",
   data() {
     return {
       items: [
