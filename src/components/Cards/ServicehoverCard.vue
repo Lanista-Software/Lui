@@ -32,7 +32,6 @@ export default {
 .service-hover-card {
   display: flex;
   width: 275px;
-  transition: 0.8s;
   height: 240px;
   background-image: url("/public/erbay/man.png");
   &-abs {
@@ -41,7 +40,7 @@ export default {
     text-align: center;
     display: grid;
     justify-content: center;
-    transition: 0.8s;
+    transition: 1s;
     align-content: center;
     grid-template-rows: auto auto auto;
     border-bottom-left-radius: 10px;
@@ -59,6 +58,7 @@ export default {
     }
     button {
       display: none;
+      margin-top: 50px;
     }
   }
 }
@@ -66,10 +66,9 @@ export default {
   .service-hover-card-abs {
     height: 100%;
     border-radius: 10px;
-    transition: 0.8s;
+    transition: 1s;
     button {
       display: block;
-      margin-top: 50px;
     }
   }
 }
