@@ -40,6 +40,10 @@ export default {
       type: String,
       default: null
     },
+    icon: {
+      type: Boolean,
+      default: false
+    },
     titleSecond: {
       type: String,
       default: null
