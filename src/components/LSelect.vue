@@ -24,7 +24,7 @@ export default {
   border-radius: 5px;
   font-family: $baseFont;
   color: $dark;
-  padding: 8px 12px;
+  padding: 0.5rem 0.625rem;
   outline: none;
   border-color: $white;
 }

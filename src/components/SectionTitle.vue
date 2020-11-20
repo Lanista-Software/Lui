@@ -6,6 +6,9 @@
     <h3 class="text-dark fw-100">
       <slot />
     </h3>
+    <p>
+      asdasdasd
+    </p>
   </div>
 </template>
 

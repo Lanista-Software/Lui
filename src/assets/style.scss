@@ -1,7 +1,7 @@
-@import "~/src/assets/fonts.css";
 @import "~/src/assets/normalize.css";
-@import "~/src/assets/remixicon/remixicon.css";
+@import "~/src/assets/fonts.css";
 @import "~/src/assets/variables.scss";
+@import "~/src/assets/remixicon/remixicon.css";
 @import "~/src/assets/responsive.scss";
 .shadow {
     box-shadow: $box-shadow;
@@ -13,4 +13,7 @@ h4,
 h5,
 h6 {
     margin: 0px;
+}
+body {
+    font-family: $baseFont;
 }
