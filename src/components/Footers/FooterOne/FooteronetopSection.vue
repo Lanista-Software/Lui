@@ -81,6 +81,9 @@ a {
   font-size: 0.7rem;
   font-family: $baseFont;
 }
+h5 {
+  font-weight: 100;
+}
 .footer-one-top-section {
   width: 90%;
   &-container {
