@@ -13,6 +13,7 @@ h4,
 h5,
 h6 {
     margin: 0px;
+    font-family: $baseFont;
 }
 ul {
     margin: 0;
@@ -38,4 +39,9 @@ h5 {
 }
 h6 {
     font-size: 0.8rem;
+}
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
