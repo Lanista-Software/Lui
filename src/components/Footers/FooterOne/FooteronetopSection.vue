@@ -91,12 +91,6 @@ h5 {
     justify-content: center;
     width: 100%;
     padding: 20px 0px;
-    background: rgb(44, 77, 131);
-    background: linear-gradient(
-      135deg,
-      rgba(44, 77, 131, 1) 0%,
-      rgba(9, 30, 63, 1) 100%
-    );
   }
   &-center {
     display: none;

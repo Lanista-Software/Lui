@@ -41,22 +41,30 @@ h5 {
   font-family: $baseFont;
 }
 span {
-  font-size: 0.4rem;
+  font-size: 0.6rem;
 }
 .footer-one-bottom-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
+  width: 90%;
   padding: 13px 0px;
   div {
-    justify-self: center;
     align-self: center;
+    justify-self: center;
+  }
+  div:nth-child(1) {
+    justify-self: start;
+  }
+  div:nth-child(2) {
+    justify-self: center;
+  }
+  div:nth-child(3) {
+    justify-self: end;
   }
   &-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #2c4d83;
   }
   img {
     width: 35px;
