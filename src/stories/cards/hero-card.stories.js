@@ -31,7 +31,7 @@ export const Herocard1 = () => ({
     }
   },
   components: { HeroCard },
-  template: `<HeroCard :icon="true" :buttonVariants="buttonVariants" v-bind='$props' >
+  template: `<HeroCard :icon="true" hSize="h2" :buttonVariants="buttonVariants" v-bind='$props' >
   Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza 
   yanıt vermek için bekliyoruz
   <template v-slot:icon>
