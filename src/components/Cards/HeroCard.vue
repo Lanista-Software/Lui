@@ -1,6 +1,6 @@
 <template>
-  <div class="hero-card">
-    <div class="hero-card-top">
+  <div :class="center ? 'hero-card-container-center' : 'hero-card'">
+    <div :class="center ? 'hero-card-top-center' : 'hero-card-top'">
       <div class="">
         <component :is="hSize" :class="textVariant">
           {{ titleOne }}
@@ -47,6 +47,10 @@ export default {
       type: String,
       default: "h1"
     },
+    center: {
+      type: Boolean,
+      default: false
+    },
     titleSecond: {
       type: String,
       default: null
@@ -72,8 +76,19 @@ h6 {
   display: grid;
   grid-template-rows: auto auto auto;
   width: 500px;
+  &-container-center {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
   &-top {
     justify-self: start;
+    &-center {
+      text-align: center;
+      justify-content: center;
+    }
   }
   &-inline {
     display: inline-flex;
