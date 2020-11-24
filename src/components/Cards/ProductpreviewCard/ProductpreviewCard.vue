@@ -128,7 +128,7 @@ export default {
     }
   }
 }
-@media ($lg) {
+@media ($sm) {
   .product-preview-card {
     grid-template-columns: 1fr;
     grid-template-rows: 60px 170px 170px;
