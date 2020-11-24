@@ -44,7 +44,11 @@
       <div class="product-preview-card-desktop-bottom-rating">
         <rating :fill="3" :line="2"></rating>
         <div class="product-preview-card-desktop-bottom-rating-button">
-          <l-button size="sm" bgVariant="bg-primary" textVariant="text-white"
+          <l-button
+            @click="goMarket"
+            size="sm"
+            bgVariant="bg-primary"
+            textVariant="text-white"
             >Mağazaya git</l-button
           >
         </div>
@@ -69,6 +73,11 @@ export default {
     href: {
       type: String,
       default: null
+    }
+  },
+  methods: {
+    goMarket() {
+      window.open(this.href, "_blank");
     }
   }
 };
