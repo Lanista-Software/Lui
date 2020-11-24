@@ -38,6 +38,7 @@ export default {};
     width: 100%;
     img {
       width: 45px;
+      margin-right: 15px;
     }
   }
 }

@@ -13,7 +13,7 @@ $primary: #27509B;
 $blue: #449BFD;
 $dark: #041F45;
 $light: #F3F4F6;
-
+$light-100: #FCFCFC;
 $baseFont:'Inter', sans-serif;
 $titleFont:'Merriweather', serif;
 $otherFont:'Goldman', cursive;
@@ -25,6 +25,7 @@ $all-colors: (
     "dark":#041F45,
     "light":#F3F4F6,
     "blue": #449BFD,
+    "light-100":#FCFCFC,
 
   );
 
