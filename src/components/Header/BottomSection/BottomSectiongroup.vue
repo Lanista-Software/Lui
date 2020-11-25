@@ -1,11 +1,11 @@
 <template>
   <div class="bottom-section-group">
     <div>
-      <companyLogo
+      <CompanyLogo
         img="/erbay/logo.png"
         name="ERBAY LASTİK"
         subname="Kereste İmalat İnşaat Ltd. Şti."
-      ></companyLogo>
+      ></CompanyLogo>
     </div>
     <div>
       <lmenu />
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import companyLogo from "./companyLogo";
+import CompanyLogo from "./CompanyLogo";
 import lmenu from "./Menu";
 import lButton from "../../../components/LButton";
 export default {
   components: {
-    companyLogo,
+    CompanyLogo,
     lmenu,
     lButton
   }
