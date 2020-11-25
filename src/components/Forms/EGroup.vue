@@ -33,7 +33,6 @@ input {
   width: 100%;
 
   height: 35px;
-  padding-left: 10px;
 }
 div {
   width: 100%;

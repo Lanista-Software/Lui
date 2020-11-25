@@ -1,21 +1,23 @@
 <template>
-  <div class="e-form">
-    <div class="e-form-left">
-      <div class="e-form-inline">
-        <EGroup label="Ad" />
-        <EGroup label="Soyad" />
+  <div class="e-form-container bg-white shadow radius-08">
+    <div class="e-form">
+      <div class="e-form-left">
+        <div class="e-form-inline">
+          <EGroup label="Ad" />
+          <EGroup label="Soyad" />
+        </div>
+        <EGroup class="e-form-group" label="Telefon" />
+        <EGroup class="e-form-group" label="E-mail" />
       </div>
-      <EGroup class="e-form-group" label="Telefon" />
-      <EGroup class="e-form-group" label="E-mail" />
-    </div>
-    <div class="e-form-right">
-      <div class="e-form-right-area">
-        <label for="adress">Adres</label>
-        <textarea id="adress" class="bg-dark_01 radius-05" />
-        <div class="e-form-right-area-btn">
-          <l-button textVariant="text-white" bgVariant="bg-dark" size="sm"
-            >Gönder</l-button
-          >
+      <div class="e-form-right">
+        <div class="e-form-right-area">
+          <label for="adress">Adres</label>
+          <textarea id="adress" class="bg-dark_01 radius-05" />
+          <div class="e-form-right-area-btn">
+            <l-button textVariant="text-white" bgVariant="bg-dark" size="sm"
+              >Gönder</l-button
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -30,11 +32,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.e-form-container {
+  padding: 20px;
+  height: 100%;
+}
 .e-form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 30px;
+  gap: 24px;
   &-inline {
     width: 100%;
     div:not(:first-child) {
@@ -56,7 +62,6 @@ export default {
       border: none;
       outline: none;
       width: 100%;
-      padding-left: 10px;
     }
     &-area {
       display: grid;
@@ -77,9 +82,14 @@ export default {
   }
 }
 @media ($lg) {
+  .e-form-container {
+    padding: 50px;
+    max-height: 390px;
+  }
   .e-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
     gap: 30px;
     &-inline {
       display: inline-flex;
