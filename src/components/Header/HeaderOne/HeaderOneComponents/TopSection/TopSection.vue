@@ -41,10 +41,17 @@ export default {
 .header-top-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
   div {
-    justify-self: center;
     align-self: center;
+  }
+  div:nth-child(1) {
+    justify-self: start;
+  }
+  div:nth-child(2) {
+    justify-self: center;
+  }
+  div:nth-child(3) {
+    justify-self: end;
   }
 }
 </style>
