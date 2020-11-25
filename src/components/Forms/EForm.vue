@@ -5,47 +5,97 @@
         <EGroup label="Ad" />
         <EGroup label="Soyad" />
       </div>
-      <EGroup label="Telefon" />
-      <EGroup label="E-mail" />
+      <EGroup class="e-form-group" label="Telefon" />
+      <EGroup class="e-form-group" label="E-mail" />
     </div>
     <div class="e-form-right">
-      <EGroup label="Adres" />
+      <div class="e-form-right-area">
+        <label for="adress">Adres</label>
+        <textarea id="adress" class="bg-dark_01 radius-05" />
+        <div class="e-form-right-area-btn">
+          <l-button textVariant="text-white" bgVariant="bg-dark" size="sm"
+            >Gönder</l-button
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import LButton from "../LButton.vue";
 import EGroup from "./EGroup.vue";
 export default {
-  components: { EGroup }
+  components: { EGroup, LButton }
 };
 </script>
 <style lang="scss" scoped>
 .e-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 30px;
   &-inline {
-    display: inline-flex;
     width: 100%;
-    div:not(:last-child) {
-      margin-right: 20px;
+    div:not(:first-child) {
+      margin-top: 20px;
     }
   }
-  &-left {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    div {
-      margin-top: 22px;
-    }
+  &-group {
+    margin-top: 22px;
   }
   &-right {
     display: grid;
-    grid-template-columns: 1fr;
-    height: 100%;
-    margin-top: 22px;
-    div {
-      margin-top: 22px;
+    label {
+      display: block;
+      font-family: $baseFont;
+      margin-bottom: 10px;
+    }
+    textarea {
+      resize: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding-left: 10px;
+    }
+    &-area {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 1fr;
+      height: 100%;
+      &-btn {
+        width: 20%;
+        float: right;
+        justify-self: end;
+        margin-top: -40px;
+        margin-right: 5px;
+        button {
+          float: right;
+        }
+      }
+    }
+  }
+}
+@media ($lg) {
+  .e-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    &-inline {
+      display: inline-flex;
+      width: 100%;
+      div:not(:last-child) {
+        margin-right: 20px;
+      }
+      div:last-child {
+        margin-top: 0px;
+      }
+    }
+    &-right-area {
+      &-btn {
+        margin-top: -40px;
+        margin-right: 20px;
+      }
     }
   }
 }
