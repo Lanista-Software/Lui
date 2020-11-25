@@ -12,7 +12,7 @@
       </p>
     </div>
     <div class="section-text-more">
-      <span class="text-white fw-400">Devamını okuyun </span>
+      <span class="text-white fw-400"> Devamını okuyun </span>
       <i
         @click="more = !more"
         role="button"
@@ -58,7 +58,7 @@ export default {
     margin-top: 25px;
     p {
       font-family: $baseFont;
-      font-size: 14px;
+      font-size: 12px;
       opacity: 0.8;
     }
     &-desktop {
@@ -87,6 +87,9 @@ export default {
       }
       &-desktop {
         display: block;
+      }
+      p {
+        font-size: 14px;
       }
     }
     &-more {
