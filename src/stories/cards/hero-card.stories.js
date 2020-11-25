@@ -1,4 +1,4 @@
-import { select, text } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import HeroCard from "../../components/Cards/HeroCard";
 import Variant from "../assets/variant";
 export default {
@@ -26,12 +26,15 @@ export const Herocard1 = () => ({
     titleSecond: {
       default: text("titleSecond", "Her mevsim yol güvenceniz")
     },
+    center: {
+      default: boolean("center", false)
+    },
     btnText: {
       default: text("btnText", "İletişime geçin")
     }
   },
   components: { HeroCard },
-  template: `<HeroCard :icon="true" :buttonVariants="buttonVariants" v-bind='$props' >
+  template: `<HeroCard :icon="true" hSize="h2" :buttonVariants="buttonVariants" v-bind='$props' >
   Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza 
   yanıt vermek için bekliyoruz
   <template v-slot:icon>
@@ -58,6 +61,9 @@ export const Herocard2 = () => ({
     },
     btnText: {
       default: text("btnText", "Hemen arayın")
+    },
+    center: {
+      default: boolean("center", false)
     },
     textVariant: {
       default: select("textVariant", Variant.textVariant, "text-dark")

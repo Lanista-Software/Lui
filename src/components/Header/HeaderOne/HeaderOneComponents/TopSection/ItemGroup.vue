@@ -23,19 +23,25 @@ a {
   display: flex;
   text-align: center;
   span {
-    font-size: 10px;
+    font-size: 1rem;
     font-family: $baseFont;
     align-self: center;
     color: $white;
+    text-align: left;
   }
   i {
     margin-right: 10px;
     font-size: 16px;
   }
 }
+@media ($lg) {
+  a > span {
+    font-size: 0.6rem;
+  }
+}
 @media ($xxl) {
   a > span {
-    font-size: 13px;
+    font-size: 0.7rem;
   }
 }
 </style>

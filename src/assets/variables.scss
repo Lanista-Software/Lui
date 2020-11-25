@@ -1,5 +1,5 @@
-
-$xs: "min-width:0px";
+$xss: "min-width:0px";
+$xs: "min-width:320px";
 $sm: "min-width: 576px";
 $md: "min-width: 768px";
 $lg: "min-width: 992px";
@@ -10,9 +10,10 @@ $success: #00FF80;
 $warning: #FCE500;
 $white: #FFFFFF;
 $primary: #27509B;
+$blue: #449BFD;
 $dark: #041F45;
 $light: #F3F4F6;
-
+$light-100: #FCFCFC;
 $baseFont:'Inter', sans-serif;
 $titleFont:'Merriweather', serif;
 $otherFont:'Goldman', cursive;
@@ -22,7 +23,10 @@ $all-colors: (
     "white": #FFFFFF,
     "primary": #27509B,
     "dark":#041F45,
-    "light":#F3F4F6
+    "light":#F3F4F6,
+    "blue": #449BFD,
+    "light-100":#FCFCFC,
+
   );
 
 $all-opacity: ("01": .1,

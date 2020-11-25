@@ -5,7 +5,7 @@
       ['l-button-' + size, bgVariant, textVariant, borderVariant],
       [block ? 'l-button-block' : null]
     ]"
-    @click="clicked"
+    v-on="$listeners"
   >
     <slot />
   </button>
