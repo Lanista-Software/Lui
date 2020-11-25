@@ -22,7 +22,7 @@
     <div class="faq-drop-card-slot text-dark" v-if="show">
       <slot />
       <div class="faq-drop-card-slot-btn">
-        <l-button bgVariant="bg-primary" textVariant="text-white" size="lg"
+        <l-button bgVariant="bg-primary" textVariant="text-white" size="md"
           >İletişime geçin</l-button
         >
       </div>
@@ -79,13 +79,11 @@ export default {
     font-size: 10px;
     font-family: $baseFont;
     line-height: 15px;
+    margin-top: 1rem;
     &-btn {
-      display: flex;
-      justify-content: center;
+      text-align: center;
+      width: 100%;
       margin-top: 30px;
-      button {
-        width: 90%;
-      }
     }
   }
 }
@@ -99,11 +97,6 @@ export default {
     &-slot {
       line-height: 20px;
       font-size: 12px;
-      &-btn {
-        button {
-          width: 60%;
-        }
-      }
     }
   }
 }
@@ -120,11 +113,6 @@ export default {
     &-slot {
       line-height: 25px;
       font-size: 13px;
-      &-btn {
-        button {
-          width: 40%;
-        }
-      }
     }
   }
 }
@@ -151,11 +139,6 @@ export default {
     &-slot {
       line-height: 30px;
       font-size: 14px;
-      &-btn {
-        button {
-          width: 20%;
-        }
-      }
     }
   }
 }

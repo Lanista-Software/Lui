@@ -114,6 +114,9 @@ export default {
       display: flex;
       height: 50%;
       align-items: flex-start;
+      h5 {
+        line-height: 15px;
+      }
     }
     &-bottom {
       display: flex;
@@ -125,7 +128,7 @@ export default {
         width: 100%;
       }
       a {
-        width: 100%;
+        width: 20px;
         display: flex;
         justify-content: flex-end;
       }
