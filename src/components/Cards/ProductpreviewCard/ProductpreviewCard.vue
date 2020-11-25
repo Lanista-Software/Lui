@@ -7,7 +7,7 @@
       <productpreview-cardtop></productpreview-cardtop>
     </div>
     <div class="product-preview-card-img">
-      <img src="/erbay/lastik.png" />
+      <img :src="img" />
     </div>
     <div class="product-preview-card-desc">
       <div class="product-preview-card-desc-top">
@@ -73,6 +73,10 @@ export default {
     href: {
       type: String,
       default: null
+    },
+    img: {
+      type: String,
+      default: "/erbay/lastik.png"
     }
   },
   methods: {
