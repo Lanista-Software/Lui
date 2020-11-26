@@ -36,6 +36,11 @@ a {
 }
 @media ($lg) {
   a > span {
+    font-size: 0.5rem;
+  }
+}
+@media ($xl) {
+  a > span {
     font-size: 0.6rem;
   }
 }
