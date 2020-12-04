@@ -1,10 +1,12 @@
 <template>
   <div class="footer-one">
-    <div>
-      <footeronetop-section></footeronetop-section>
+    <div class="container">
+      <footeronetop-section />
     </div>
     <div class="bg-white_01">
-      <footeonebottom-section></footeonebottom-section>
+      <div class="container">
+        <footeonebottom-section />
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +20,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer-one {
+  overflow: hidden;
   background: rgb(44, 77, 131);
   background: linear-gradient(
     135deg,

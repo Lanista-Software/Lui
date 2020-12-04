@@ -1,7 +1,11 @@
 <template>
   <div>
     <label class="fw-400 text-dark">{{ label }}</label>
-    <input class="bg-dark_01 radius-05" :type="type" v-on="$listeners" />
+    <input
+      class="bg-dark_01 radius-05"
+      :type="type"
+      @input="$emit('input', $event.target.value)"
+    />
   </div>
 </template>
 

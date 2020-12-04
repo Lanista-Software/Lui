@@ -15,6 +15,9 @@ export default {};
   align-items: center;
   justify-content: center;
   max-width: 100%;
+  img {
+    width: 70%;
+  }
 }
 @media ($md) {
   .representative-card {

@@ -5,13 +5,17 @@
         img="/erbay/logo.png"
         name="ERBAY LASTİK"
         subname="Kereste İmalat İnşaat Ltd. Şti."
-      ></companyLogo>
+      />
     </div>
     <div>
       <lmenu />
     </div>
     <div>
-      <l-button bg-variant="bg-primary" size="md" text-variant="text-white"
+      <l-button
+        bg-variant="bg-primary"
+        size="md"
+        text-variant="text-white"
+        @click="scrollDown('form')"
         >İletişim</l-button
       >
     </div>
@@ -19,14 +23,21 @@
 </template>
 
 <script>
+import lButton from "../../../../LButton";
 import companyLogo from "./companyLogo";
 import lmenu from "./Menu";
-import lButton from "../../../../LButton";
 export default {
   components: {
     companyLogo,
     lmenu,
     lButton
+  },
+  methods: {
+    scrollDown(id) {
+      // window.scrollTo(0, 400)
+      const elmnt = document.getElementById(id);
+      elmnt.scrollIntoView();
+    }
   }
 };
 </script>
@@ -34,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 .bottom-section-group {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   div {
     align-self: center;
   }

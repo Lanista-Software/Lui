@@ -1,8 +1,8 @@
 <template>
   <div class="section-text">
-    <h1 class="text-white fw-200">
+    <h3 class="text-white fw-200">
       {{ title }}
-    </h1>
+    </h3>
     <div class="section-text-slot">
       <p class="text-white section-text-slot-mobile">
         {{ !more ? slot.responsiveText : slot.desktopText }}
@@ -14,11 +14,11 @@
     <div class="section-text-more">
       <span class="text-white fw-400"> Devamını okuyun </span>
       <i
-        @click="more = !more"
         role="button"
         class="text-white"
         :class="!more ? 'ri-arrow-down-s-line' : 'ri-arrow-up-s-line'"
-      ></i>
+        @click="more = !more"
+      />
     </div>
   </div>
 </template>
@@ -26,16 +26,16 @@
 <script>
 export default {
   name: "SectionText",
-  data() {
-    return {
-      more: false
-    };
-  },
   props: {
     title: {
       type: String,
       default: null
     }
+  },
+  data() {
+    return {
+      more: false
+    };
   },
   computed: {
     slot() {
@@ -49,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 .section-text {
   text-align: center;
-  h1 {
+  h3 {
     font-family: $baseFont;
   }
   &-slot {
@@ -58,7 +58,6 @@ export default {
     margin-top: 25px;
     p {
       font-family: $baseFont;
-      font-size: 12px;
       opacity: 0.8;
     }
     &-desktop {
@@ -70,7 +69,6 @@ export default {
     display: inline-flex;
     align-items: center;
     span {
-      font-size: 14px;
       display: block;
       font-family: $baseFont;
     }
@@ -87,9 +85,6 @@ export default {
       }
       &-desktop {
         display: block;
-      }
-      p {
-        font-size: 14px;
       }
     }
     &-more {

@@ -2,13 +2,44 @@
   <div class="product-filter">
     <div class="product-filter-top bg-light">
       <div class="product-filter-top-grid-top">
-        <l-select :items="items" class="dr1" />
-        <l-select :items="items" class="dr2" />
+        <l-select
+          v-model="form.brand"
+          :fit="fit"
+          :items="filterData.brands"
+          class="dr1"
+        />
+        <l-select
+          v-model="form.season"
+          :fit="fit"
+          :items="filterData.attributes.seasons"
+          class="dr2"
+        />
+        <l-select
+          v-model="form.year"
+          :fit="fit"
+          :items="filterData.attributes.years"
+          class="dr6"
+        />
       </div>
       <div class="product-filter-top-grid-bottom">
-        <l-select :items="items" class="dr3" />
-        <l-select :items="items" class="dr4" />
-        <l-select :items="items" class="dr5" />
+        <l-select
+          v-model="form.baseWidth"
+          :fit="fit"
+          :items="filterData.attributes.baseWidth"
+          class="dr3"
+        />
+        <l-select
+          v-model="form.sectionRatio"
+          :fit="fit"
+          :items="filterData.attributes.sectionRatio"
+          class="dr4"
+        />
+        <l-select
+          v-model="form.wheelDiameter"
+          :fit="fit"
+          :items="filterData.attributes.wheelDiameter"
+          class="dr5"
+        />
       </div>
     </div>
     <div class="product-filter-center bg-white">
@@ -20,6 +51,7 @@
         size="lg"
         bg-variant="bg-primary"
         text-variant="text-white"
+        @click="filter"
         >Lastik araması yap</l-button
       >
       <l-button
@@ -27,6 +59,7 @@
         size="md"
         bg-variant="bg-primary"
         text-variant="text-white"
+        @click="filter"
         >Lastik araması yap</l-button
       >
     </div>
@@ -35,31 +68,11 @@
 <script>
 import LButton from "../LButton.vue";
 import LSelect from "../LSelect.vue";
+import mixin from "../filter";
 export default {
-  components: { LSelect, LButton },
   name: "ProductFilter",
-  data() {
-    return {
-      items: [
-        {
-          label: "Marka",
-          key: null
-        },
-        {
-          label: "Audi",
-          key: "audi"
-        },
-        {
-          label: "Bmw",
-          key: "bmw"
-        },
-        {
-          label: "Toyota",
-          key: "toyota"
-        }
-      ]
-    };
-  }
+  components: { LSelect, LButton },
+  mixins: [mixin]
 };
 </script>
 <style lang="scss" scoped>
@@ -81,7 +94,7 @@ export default {
     &-grid {
       &-top {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
       }
       &-bottom {
