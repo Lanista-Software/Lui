@@ -10,7 +10,9 @@ export default {
 
 export const HeaderOne = () => ({
   components: { Header },
-  template: "<Header></Header>"
+  template: `<div class="bg-dark">
+  <Header class="container"></Header>
+  </div>`
 });
 
 export const mobile_menu = () => ({

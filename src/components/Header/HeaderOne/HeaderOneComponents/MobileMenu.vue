@@ -1,11 +1,7 @@
 <template>
   <div class="mobile-menu bg-dark">
     <div class="mobile-menu-icon">
-      <i
-        class="ri-contacts-book-2-fill text-white"
-        role="button"
-        @click="emitMenu(false)"
-      />
+      <img src="/erbay/close-line.svg" @click="emitMenu(false)" />
     </div>
     <div class="mobile-menu-items">
       <ul>
@@ -24,7 +20,7 @@ export default {
       menus: [
         {
           href: "/",
-          text: "Ana Sayfa"
+          text: "Anasayfa"
         },
         {
           href: "#products",
@@ -84,8 +80,8 @@ export default {
     justify-self: flex-end;
     margin-right: 20px;
     margin-top: 20px;
-    i {
-      font-size: 30px;
+    img {
+      width: 25px;
     }
   }
   &-items {

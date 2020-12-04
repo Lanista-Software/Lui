@@ -1,15 +1,17 @@
 <template>
   <div class="header-top-section" :style="style">
     <div>
-      <ItemGroup icon="ri-contacts-book-2-fill">(0432) 223 24 48</ItemGroup>
+      <ItemGroup href="tel:0432 223 24 48" icon="ri-contacts-book-2-fill"
+        >(0432) 223 24 48</ItemGroup
+      >
     </div>
     <div>
-      <ItemGroup icon="ri-map-pin-2-fill">
+      <ItemGroup href="#map" icon="ri-map-pin-2-fill">
         Abdurrahman Gazi, Erciş Yolu 2. Km D:No:119/A, 65040 Tuşba/Van
       </ItemGroup>
     </div>
     <div>
-      <ItemGroup icon="ri-mail-line">
+      <ItemGroup href="mailto:info@erbaylastik.com.tr" icon="ri-mail-line">
         info@erbaylastik.com.tr
       </ItemGroup>
     </div>
@@ -40,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 .header-top-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   div {
     align-self: center;
   }

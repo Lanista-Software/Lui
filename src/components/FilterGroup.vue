@@ -3,10 +3,10 @@
     <l-button
       v-for="(btn, i) in buttons"
       :key="i"
-      :bgVariant="active === i ? btn.active : btn.deactive"
-      :textVariant="btn.textVariant"
+      :bg-variant="active === btn.category ? btn.active : btn.deactive"
+      :text-variant="btn.textVariant"
       size="sm"
-      @click="activeEmit(i)"
+      @click="activeEmit(btn.category)"
       >{{ btn.text }}</l-button
     >
   </div>
@@ -25,13 +25,13 @@ export default {
   },
   data() {
     return {
-      active: 0
+      active: null
     };
   },
   methods: {
     activeEmit(i) {
       this.active = i;
-      this.$emit("activefaq", i);
+      this.$emit("active", i);
     }
   }
 };

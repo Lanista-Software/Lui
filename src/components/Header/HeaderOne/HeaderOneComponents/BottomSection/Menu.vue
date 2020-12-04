@@ -2,14 +2,35 @@
   <div>
     <ul>
       <li>
-        Anasayfa
-        <span />
+        <nuxt-link class="text-white" tag="a" to="/" exact=""
+          >Anasayfa <span />
+        </nuxt-link>
       </li>
-      <li>Ana Sayfa</li>
-      <li>Ana Sayfa</li>
-      <li>Ana Sayfa</li>
-      <li>Ana Sayfa</li>
-      <li>Ana Sayfa</li>
+      <li>
+        <nuxt-link class="text-white" tag="a" to="#hit"
+          >Öne çıkanlar <span
+        /></nuxt-link>
+      </li>
+      <li>
+        <nuxt-link class="text-white" tag="a" to="#products"
+          >Ürünler <span />
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link class="text-white" tag="a" to="#brands"
+          >Markalar <span />
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link class="text-white" tag="a" to="#about"
+          >Hakkımızda <span />
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link class="text-white" tag="a" to="#faq"
+          >Sık sorulanlar <span />
+        </nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -22,25 +43,26 @@ ul {
 }
 li {
   float: left;
-  font-size: 10px;
   font-family: $baseFont;
   margin: 0;
   color: $white;
   span {
-    display: block;
+    display: none;
     width: 30px;
     height: 2px;
     background-color: $warning;
     margin-top: 3px;
   }
 }
+.nuxt-link-active {
+  span {
+    display: block;
+  }
+}
 li:not(:last-child) {
   margin-right: 11px;
 }
 @media ($xxl) {
-  li {
-    font-size: 13px;
-  }
   li:not(:last-child) {
     margin-right: 22px;
   }

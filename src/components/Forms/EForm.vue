@@ -1,34 +1,98 @@
 <template>
   <div class="e-form-container bg-white shadow radius-08">
-    <div class="e-form">
-      <div class="e-form-left">
-        <div class="e-form-inline">
-          <EGroup label="Ad" />
-          <EGroup label="Soyad" />
+    <form @submit="submit">
+      <div class="e-form">
+        <div class="e-form-left">
+          <div class="e-form-inline">
+            <EGroup v-model="$v.form.name.$model" label="Ad" />
+            <EGroup v-model="$v.form.surname.$model" label="Soyad" />
+          </div>
+          <EGroup
+            v-model="$v.form.phone.$model"
+            class="e-form-group"
+            label="Telefon"
+          />
+          <EGroup
+            v-model="$v.form.email.$model"
+            class="e-form-group"
+            label="E-mail"
+          />
         </div>
-        <EGroup class="e-form-group" label="Telefon" />
-        <EGroup class="e-form-group" label="E-mail" />
-      </div>
-      <div class="e-form-right">
-        <div class="e-form-right-area">
-          <label for="adress">Adres</label>
-          <textarea id="adress" class="bg-dark_01 radius-05" />
-          <div class="e-form-right-area-btn">
-            <l-button textVariant="text-white" bgVariant="bg-dark" size="sm"
-              >Gönder</l-button
-            >
+        <div class="e-form-right">
+          <div class="e-form-right-area">
+            <label for="adress">Adres</label>
+            <textarea
+              id="adress"
+              v-model="form.adress"
+              class="bg-dark_01 radius-05"
+            />
+            <div class="e-form-right-area-btn">
+              <l-button
+                text-variant="text-white"
+                bg-variant="bg-dark"
+                size="sm"
+                type="submit"
+                >Gönder</l-button
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </template>
 
 <script>
+import { required } from "vuelidate/lib/validators";
 import LButton from "../LButton.vue";
 import EGroup from "./EGroup.vue";
 export default {
-  components: { EGroup, LButton }
+  components: { EGroup, LButton },
+  validations: {
+    form: {
+      name: {
+        required
+      },
+      surname: {
+        required
+      },
+      phone: {
+        required
+      },
+      email: {
+        required
+      }
+    }
+  },
+  data() {
+    return {
+      form: {
+        name: null,
+        surname: null,
+        phone: null,
+        email: null,
+        adress: null
+      }
+    };
+  },
+  methods: {
+    submit() {
+      this.$v.$touch();
+      if (!this.$v.$anyError) {
+        // this.$fire.firestore.collection("requests").add(this.form);
+        this.$v.form.$reset();
+        this.form = {
+          name: "",
+          surname: "",
+          phone: "",
+          email: "",
+          adress: ""
+        };
+      } else {
+        alert("Form has strong");
+      }
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -103,8 +167,9 @@ export default {
     }
     &-right-area {
       &-btn {
-        margin-top: -40px;
-        margin-right: 20px;
+        position: relative;
+        top: -10px;
+        right: 10px;
       }
     }
   }

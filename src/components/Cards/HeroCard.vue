@@ -14,16 +14,16 @@
       </div>
     </div>
     <div class="hero-card-center">
-      <p :class="textVariant + '_08'">
+      <p :class="[[textVariant + '_08'], [center ? 'text-center' : null]]">
         <slot />
       </p>
     </div>
     <div class="hero-card-bottom">
       <l-button
-        v-on="$listeners"
         size="lg"
-        :bgVariant="buttonVariants.bgVariant"
-        :textVariant="buttonVariants.textVariant"
+        :bg-variant="buttonVariants.bgVariant"
+        :text-variant="buttonVariants.textVariant"
+        v-on="$listeners"
         >{{ buttonVariants.btnText }}</l-button
       >
     </div>
@@ -75,7 +75,6 @@ h6 {
 .hero-card {
   display: grid;
   grid-template-rows: auto auto auto;
-  width: 500px;
   &-container-center {
     display: grid;
     grid-template-rows: auto auto auto;
@@ -104,7 +103,6 @@ h6 {
     margin: 30px 0px;
     p {
       font-family: $baseFont;
-      font-size: 1rem;
       margin: 0;
       line-height: 25px;
     }
