@@ -15,7 +15,7 @@
 // import BottomSection from "./FooteroneBottomsection.vue";
 // import TopSection from "./FooteroneTopsection.vue";
 import BottomSection from "./FooteroneBottomsection";
-import TopSection from "./FooteroneTopsection";
+import TopSection from "./FooteronetopSection";
 export default {
   components: {
     BottomSection,

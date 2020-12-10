@@ -1,15 +1,15 @@
 import { boolean, select, text } from "@storybook/addon-knobs";
-import HeroCard from "../../components/Cards/HeroCard";
+import HeroOne from "../../components/Heroes/HeroOne/HeroOne.vue";
 import Variant from "../assets/variant";
 export default {
-  title: "Cards/HeroCard",
-  component: { HeroCard },
+  title: "Heroes/HeroOne",
+  component: { HeroOne },
   argTypes: {
     BackgroundColor: { control: "color" }
   }
 };
 
-export const Herocard1 = () => ({
+export const HeroOne1 = () => ({
   data: () => {
     return {
       buttonVariants: {
@@ -33,16 +33,16 @@ export const Herocard1 = () => ({
       default: text("btnText", "İletişime geçin")
     }
   },
-  components: { HeroCard },
-  template: `<HeroCard :icon="true" hSize="h2" :buttonVariants="buttonVariants" v-bind='$props' >
+  components: { HeroOne },
+  template: `<HeroOne :icon="true" hSize="h2" :buttonVariants="buttonVariants" v-bind='$props' >
   Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza 
   yanıt vermek için bekliyoruz
   <template v-slot:icon>
   <i class="ri-shield-check-fill text-success" />
   </template>
-  </HeroCard>`
+  </HeroOne>`
 });
-export const Herocard2 = () => ({
+export const HeroOne2 = () => ({
   data: () => {
     return {
       buttonVariants: {
@@ -69,7 +69,7 @@ export const Herocard2 = () => ({
       default: select("textVariant", Variant.textVariant, "text-dark")
     }
   },
-  components: { HeroCard },
+  components: { HeroOne },
   template: `<HeroCard :buttonVariants="buttonVariants" hSize="h2" v-bind='$props' >
   Daha fazla bilgi almak ve diğer hizmetleri öğrenmek için
   </HeroCard>`

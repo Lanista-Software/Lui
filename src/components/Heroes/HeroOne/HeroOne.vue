@@ -31,8 +31,9 @@
 </template>
 
 <script>
-import LButton from "../LButton.vue";
+import LButton from "../../LButton";
 export default {
+  name: "HeroOne",
   components: { LButton },
   props: {
     titleOne: {
