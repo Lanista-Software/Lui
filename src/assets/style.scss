@@ -88,7 +88,7 @@ a {
 p,
 span {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .shadow {
@@ -100,14 +100,4 @@ span {
 }
 .text-center {
     text-align: center;
-}
-@media ($lg) {
-    .container {
-        width: 90%;
-    }
-}
-@media ($xl) {
-    .container {
-        width: 80%;
-    }
 }
