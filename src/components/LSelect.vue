@@ -1,9 +1,19 @@
 <template>
   <div>
-    <select class="l-select shadow">
-      <option v-for="item in items" :key="item.key" :value="item.key">{{
-        item.label
-      }}</option>
+    <select
+      class="l-select shadow"
+      @change="$emit('input', $event.target.value)"
+    >
+      <option
+        v-for="(item, index) in items"
+        :key="index"
+        :value="item.key"
+        v-bind="$attrs"
+        :selected="!fit ? $attrs.selected === item.value : null"
+        v-on="$listeners"
+      >
+        {{ item.value }}
+      </option>
     </select>
   </div>
 </template>
@@ -14,6 +24,10 @@ export default {
     items: {
       type: Array,
       required: true
+    },
+    fit: {
+      type: Boolean,
+      required: false
     }
   }
 };

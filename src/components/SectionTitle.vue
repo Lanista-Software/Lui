@@ -1,11 +1,11 @@
 <template>
   <div class="section-title">
-    <h1 class="text-dark fw-100">
+    <h4 class="text-dark fw-100">
       {{ title }}
-    </h1>
-    <h3 class="text-dark fw-100">
+    </h4>
+    <h5 class="text-dark fw-100">
       <slot />
-    </h3>
+    </h5>
   </div>
 </template>
 
@@ -24,16 +24,16 @@ export default {
 .section-title {
   text-align: center;
   width: 100%;
-  h1,
-  h3 {
+  h4,
+  h5 {
     width: 100%;
     font-family: $baseFont;
   }
-  h3 {
+  h5 {
     display: flex;
     justify-content: center;
     opacity: 0.8;
-    margin-top: 25px;
+    margin-top: 1rem;
   }
 }
 </style>

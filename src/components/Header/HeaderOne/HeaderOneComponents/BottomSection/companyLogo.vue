@@ -4,9 +4,9 @@
       <img :src="img" alt="erbay" />
     </div>
     <div class="company-logo-name text-white">
-      <h4>
+      <h5>
         {{ name }}
-      </h4>
+      </h5>
       <span class="fw-400">
         {{ subname }}
       </span>
@@ -46,8 +46,7 @@ export default {
   &-name {
     align-self: center;
     margin-left: 10px;
-    h4 {
-      margin: 0;
+    h5 {
       font-family: $titleFont;
     }
     span {

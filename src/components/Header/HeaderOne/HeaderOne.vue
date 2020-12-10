@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="header">
-      <div class="header-top">
+    <div class="" :class="scrollP <= 600 ? 'header' : 'header-sticky'">
+      <div v-if="scrollP < 600" class="header-top">
         <div class="header-c">
           <top-section />
         </div>
@@ -20,7 +20,11 @@
         <i class="ri-shield-check-fill text-success" />
       </div>
       <div class="responsive-header-right">
-        <i class="ri-menu-5-line text-white" />
+        <i
+          class="ri-menu-5-line text-white"
+          role="button"
+          @click="showMenu()"
+        />
       </div>
     </div>
   </div>
@@ -30,33 +34,51 @@
 import BottomSectiongroup from "../HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup";
 import TopSection from "../HeaderOne/HeaderOneComponents/TopSection/TopSection";
 export default {
-  components: { TopSection, BottomSectiongroup }
+  components: { TopSection, BottomSectiongroup },
+  data() {
+    return {
+      scrollP: 0
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    showMenu() {
+      this.$emit("show", true);
+    },
+    handleScroll() {
+      this.scrollP = window.scrollY;
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .header-c {
-  width: 90%;
+  width: 100%;
+}
+.header-sticky {
+  grid-template-rows: 1fr;
+  transition: 0.5s;
+  display: none;
 }
 .header {
   display: none;
   grid-template-rows: 30px 1fr;
-  background: rgb(44, 77, 131);
-  background: linear-gradient(
-    135deg,
-    rgba(44, 77, 131, 1) 0%,
-    rgba(9, 30, 63, 1) 100%
-  );
   &-top {
     border-bottom: 1px solid $primary;
-    padding: 7px 0px;
+    padding: 0.5rem 0px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   &-bottom {
     align-self: center;
-    margin: 7px 0px;
+    margin: 0.5rem 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,19 +86,13 @@ export default {
 }
 .responsive-header {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-  background: rgb(44, 77, 131);
+  grid-template-columns: 1fr auto 1fr;
   width: 100%;
   height: 40px;
   align-content: center;
-  background: linear-gradient(
-    135deg,
-    rgba(44, 77, 131, 1) 0%,
-    rgba(9, 30, 63, 1) 100%
-  );
   div {
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    align-items: center;
     img {
       width: 20px;
       height: 20px;
@@ -84,6 +100,15 @@ export default {
     i {
       font-size: 20px;
     }
+  }
+  &-right {
+    justify-self: flex-end;
+  }
+  &-center {
+    justify-self: center;
+  }
+  &-left {
+    justify-self: flex-start;
   }
 }
 @media ($sm) {
@@ -104,6 +129,9 @@ export default {
     display: none;
   }
   .header {
+    display: grid;
+  }
+  .header-sticky {
     display: grid;
   }
 }

@@ -1,102 +1,83 @@
 <template>
-  <div class="product-preview-card-left bg-light radius-10">
-    <div>
+  <div class="product-preview-card-left shadow radius-10">
+    <div class="product-preview-card-left-icon">
       <i class="ri-snowy-fill text-blue" />
     </div>
-    <div>
-      <img src="/erbay/lastik.png" alt="" />
+    <div class="product-preview-card-left-container">
+      <img :src="img" alt="Erbay" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    img: {
+      type: String,
+      required: true
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .product-preview-card-left {
-  width: 55px;
-  height: 55px;
-  div:nth-child(1) {
-    padding-right: 5px;
-    padding-top: 5px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  &-icon {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
     display: flex;
     justify-content: flex-end;
-    i {
-      font-size: 8px;
-    }
   }
   img {
-    width: 35px;
+    width: 100%;
+    height: auto;
   }
-  div:nth-child(2) {
+  &-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    max-height: 100px;
   }
 }
-@media ($xs) {
-  .product-preview-card-left {
-    width: 80px;
-    height: 80px;
-    div:nth-child(1) {
-      padding-right: 8px;
-      padding-top: 8px;
-      i {
-        font-size: 12px;
-      }
-    }
-    img {
-      width: 50px;
-    }
-  }
-}
-@media ($md) {
-  .product-preview-card-left {
-    width: 100px;
-    height: 100px;
-    div:nth-child(1) {
-      padding-right: 10px;
-      padding-top: 10px;
-      i {
-        font-size: 14px;
-      }
-    }
-    img {
-      width: 70px;
-    }
-  }
-}
-@media ($lg) {
-  .product-preview-card-left {
-    width: 120px;
-    height: 120px;
-    div:nth-child(1) {
-      padding-right: 12px;
-      padding-top: 12px;
-      i {
-        font-size: 16px;
-      }
-    }
-    img {
-      width: 90px;
-    }
-  }
-}
-@media ($xl) {
-  .product-preview-card-left {
-    width: 140px;
-    height: 140px;
-    div:nth-child(1) {
-      padding-right: 14px;
-      padding-top: 14px;
-      i {
-        font-size: 18px;
-      }
-    }
-    img {
-      width: 110px;
-    }
-  }
-}
+// @media ($xs) {
+//   .product-preview-card-left {
+//     width: 80px;
+//     height: 80px;
+//     &-img {
+//       width: 50px;
+//     }
+//   }
+// }
+// @media ($md) {
+//   .product-preview-card-left {
+//     width: 100px;
+//     height: 100px;
+//     &-img {
+//       width: 70px;
+//     }
+//   }
+// }
+// @media ($lg) {
+//   .product-preview-card-left {
+//     width: 120px;
+//     height: 120px;
+//     &-img {
+//       width: 90px;
+//     }
+//   }
+// }
+// @media ($xl) {
+//   .product-preview-card-left {
+//     width: 140px;
+//     height: 140px;
+//     &-img {
+//       width: 110px;
+//     }
+//   }
+// }
 </style>

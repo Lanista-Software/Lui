@@ -1,9 +1,7 @@
 <template>
   <div class="product-preview-card-top">
     <div class="bg-warning">
-      <span>
-        Popüler
-      </span>
+      <span> Popüler </span>
     </div>
     <div>
       <img src="/erbay/trendyol.png" />

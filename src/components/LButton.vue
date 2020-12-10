@@ -14,17 +14,12 @@
 <script>
 export default {
   name: "LButton",
-  methods: {
-    clicked() {
-      this.$emit("clicked");
-    }
-  },
   props: {
     size: {
       type: String,
       default: null,
-      validator: function(value) {
-        return ["sm", "md", "lg"].indexOf(value) !== -1;
+      validator(value) {
+        return ["sm", "md", "lg"].includes(value);
       }
     },
     bgVariant: {
@@ -43,6 +38,11 @@ export default {
       type: String,
       default: null
     }
+  },
+  methods: {
+    clicked() {
+      this.$emit("clicked");
+    }
   }
 };
 </script>
@@ -55,15 +55,12 @@ export default {
   font-family: $baseFont;
   text-align: center;
   &-sm {
-    font-size: 10px;
     padding: 8px 16px;
   }
   &-md {
     padding: 12px 36px;
-    font-size: 12px;
   }
   &-lg {
-    font-size: 18px;
     padding: 16px 48px;
   }
   &-block {

@@ -1,7 +1,7 @@
 <template>
-  <a href="#">
+  <a v-bind="$attrs">
     <span>
-      <i :class="icon"></i>
+      <i :class="icon" />
     </span>
     <span><slot /></span>
   </a>
@@ -11,7 +11,8 @@
 export default {
   props: {
     icon: {
-      type: String
+      type: String,
+      default: null
     }
   }
 };
@@ -34,14 +35,19 @@ a {
     font-size: 16px;
   }
 }
-@media ($lg) {
-  a > span {
-    font-size: 0.6rem;
-  }
-}
-@media ($xxl) {
-  a > span {
-    font-size: 0.7rem;
-  }
-}
+// @media ($lg) {
+//   a > span {
+//     font-size: 0.5rem;
+//   }
+// }
+// @media ($xl) {
+//   a > span {
+//     font-size: 0.6rem;
+//   }
+// }
+// @media ($xxl) {
+//   a > span {
+//     font-size: 0.7rem;
+//   }
+// }
 </style>

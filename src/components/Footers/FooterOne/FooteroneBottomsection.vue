@@ -1,29 +1,29 @@
 <template>
   <div class="footer-one-bottom-section-container">
     <div class="footer-one-bottom-section">
-      <div>
+      <div class="company">
         <company-logo
           class="footer-one-bottom-section-desktop"
           name="ERBAY LASTİK"
           img="/erbay/logo.png"
           subname="Kereste İmalat İnşaat Ltd. Şti."
-        ></company-logo>
-        <div class="footer-one-bottom-section-responsive">
-          <h5 class="text-white">
-            ERBAY LASTİK
-          </h5>
-          <span class="text-white">
+        />
+        <div
+          class="footer-one-bottom-section-responsive footer-one-bottom-item"
+        >
+          <h6 class="text-white">ERBAY LASTİK</h6>
+          <small class="text-white company-title">
             Kereste İmalat İnşaat Ltd. Şti.
-          </span>
+          </small>
         </div>
       </div>
-      <div>
-        <h5 class="text-white fw-100">
-          Copyright 2020
-        </h5>
+      <div class="copyright">
+        <small class="text-white fw-100">Copyright 2020</small>
       </div>
-      <div>
-        <img src="/lanista/lanista.svg" />
+      <div class="footer-one-bottom-section-item l-logo">
+        <a href="https://www.lanista.com.tr" target="_blank">
+          <img src="/lanista/lanista.svg"
+        /></a>
       </div>
     </div>
   </div>
@@ -37,37 +37,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h5 {
-  font-family: $baseFont;
+a {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+h6 {
+  font-family: $titleFont;
 }
 span {
   font-size: 0.6rem;
 }
+.company-title {
+  display: none;
+}
 .footer-one-bottom-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 90%;
-  padding: 13px 0px;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  align-items: center;
+  &-item {
+    padding: 1rem;
+  }
   div {
-    align-self: center;
     justify-self: center;
   }
-  div:nth-child(1) {
+  .company {
     justify-self: start;
+    width: 100%;
   }
-  div:nth-child(2) {
+  .copyright {
     justify-self: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    small {
+      align-self: center;
+    }
   }
-  div:nth-child(3) {
-    justify-self: end;
+  .l-logo {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
   }
   &-container {
-    width: 100%;
     display: flex;
     justify-content: center;
   }
   img {
-    width: 35px;
+    width: 60%;
+    height: auto;
   }
   &-desktop {
     display: none;
@@ -80,17 +102,21 @@ span {
     }
     img {
       width: 80px;
+      height: auto;
     }
+  }
+  .company-title {
+    display: block;
   }
 }
 @media ($lg) {
   .footer-one-bottom-section {
-    width: 90%;
     span {
       font-size: 0.8rem;
     }
     img {
       width: 100px;
+      height: auto;
     }
     &-desktop {
       display: inline-flex;
@@ -107,6 +133,7 @@ span {
     }
     img {
       width: 130px;
+      height: auto;
     }
   }
 }
