@@ -1,20 +1,20 @@
 <template>
-  <div class="hero-card">
-    <div class="hero-card-top">
+  <div :class="center ? 'hero-card-container-center' : 'hero-card'">
+    <div :class="center ? 'hero-card-top-center' : 'hero-card-top'">
       <div class="">
-        <h1 class="text-white">
+        <component :is="hSize" :class="textVariant">
           {{ titleOne }}
-        </h1>
+        </component>
       </div>
       <div class="hero-card-inline">
-        <h1 class="text-white">
+        <component :is="hSize" :class="textVariant">
           {{ titleSecond }}
-        </h1>
-        <i class="ri-shield-check-fill text-success" />
+        </component>
+        <slot name="icon" />
       </div>
     </div>
     <div class="hero-card-center">
-      <p class="text-white">
+      <p :class="textVariant + '_08'">
         <slot />
       </p>
     </div>
@@ -22,9 +22,9 @@
       <l-button
         v-on="$listeners"
         size="lg"
-        bgVariant="bg-warning"
-        textVariant="text-dark"
-        >{{ btnText }}</l-button
+        :bgVariant="buttonVariants.bgVariant"
+        :textVariant="buttonVariants.textVariant"
+        >{{ buttonVariants.btnText }}</l-button
       >
     </div>
   </div>
@@ -39,29 +39,56 @@ export default {
       type: String,
       default: null
     },
+    textVariant: {
+      type: String,
+      default: "text-white"
+    },
+    hSize: {
+      type: String,
+      default: "h1"
+    },
+    center: {
+      type: Boolean,
+      default: false
+    },
     titleSecond: {
       type: String,
       default: null
     },
-    btnText: {
-      type: String,
-      default: null
+    buttonVariants: {
+      type: Object,
+      required: true
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $baseFont;
 }
 .hero-card {
   display: grid;
   grid-template-rows: auto auto auto;
   width: 500px;
+  &-container-center {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
   &-top {
     justify-self: start;
+    &-center {
+      text-align: center;
+      justify-content: center;
+    }
   }
   &-inline {
     display: inline-flex;
@@ -76,15 +103,11 @@ h1 {
     text-align: left;
     margin: 30px 0px;
     p {
-      opacity: 0.8;
       font-family: $baseFont;
-      font-size: 16px;
+      font-size: 1rem;
       margin: 0;
       line-height: 25px;
     }
-  }
-  &-bottom {
-    width: 200px;
   }
 }
 </style>

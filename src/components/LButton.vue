@@ -1,8 +1,11 @@
 <template>
   <button
     class="l-button"
-    :class="['l-button-' + size, bgVariant, textVariant, borderVariant]"
-    @click="clicked"
+    :class="[
+      ['l-button-' + size, bgVariant, textVariant, borderVariant],
+      [block ? 'l-button-block' : null]
+    ]"
+    v-on="$listeners"
   >
     <slot />
   </button>
@@ -28,6 +31,10 @@ export default {
       type: String,
       default: null
     },
+    block: {
+      type: Boolean,
+      default: false
+    },
     borderVariant: {
       type: String,
       default: null
@@ -44,20 +51,23 @@ export default {
 .l-button {
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
   border: 1px solid transparent;
   font-family: $baseFont;
+  text-align: center;
   &-sm {
-    height: 15px;
     font-size: 10px;
+    padding: 8px 16px;
   }
   &-md {
-    height: 35px;
+    padding: 12px 36px;
     font-size: 12px;
   }
   &-lg {
-    height: 55px;
     font-size: 18px;
+    padding: 16px 48px;
+  }
+  &-block {
+    width: 100%;
   }
 }
 </style>

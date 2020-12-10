@@ -1,21 +1,32 @@
 <template>
-  <div class="search-card">
-    <div class="search-card-top bg-light">
-      <div class="search-card-top-grid-top">
+  <div class="product-filter">
+    <div class="product-filter-top bg-light">
+      <div class="product-filter-top-grid-top">
         <l-select :items="items" class="dr1" />
         <l-select :items="items" class="dr2" />
       </div>
-      <div class="search-card-top-grid-bottom">
+      <div class="product-filter-top-grid-bottom">
         <l-select :items="items" class="dr3" />
         <l-select :items="items" class="dr4" />
         <l-select :items="items" class="dr5" />
       </div>
     </div>
-    <div class="search-card-center bg-white">
+    <div class="product-filter-center bg-white">
       <img src="/erbay/lastik.png" alt="" srcset="" />
     </div>
-    <div class="search-card-bottom bg-light">
-      <l-button size="lg" bg-variant="bg-primary" text-variant="text-white"
+    <div class="product-filter-bottom bg-light">
+      <l-button
+        class="filter-desktop-btn"
+        size="lg"
+        bg-variant="bg-primary"
+        text-variant="text-white"
+        >Lastik araması yap</l-button
+      >
+      <l-button
+        class="filter-responsive-btn"
+        size="md"
+        bg-variant="bg-primary"
+        text-variant="text-white"
         >Lastik araması yap</l-button
       >
     </div>
@@ -26,6 +37,7 @@ import LButton from "../LButton.vue";
 import LSelect from "../LSelect.vue";
 export default {
   components: { LSelect, LButton },
+  name: "ProductFilter",
   data() {
     return {
       items: [
@@ -51,7 +63,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.search-card {
+.filter-desktop-btn {
+  display: none;
+}
+.product-filter {
   display: grid;
   grid-template-rows: 1fr 1.5fr 1fr;
   width: 278px;
@@ -95,13 +110,12 @@ export default {
     border-bottom-right-radius: 8px;
     button {
       width: 75%;
-      height: 35px;
       font-size: 10px;
     }
   }
 }
 @media ($sm) {
-  .search-card {
+  .product-filter {
     width: 320px;
     height: 320px;
     &-center {
@@ -112,14 +126,13 @@ export default {
     }
     &-bottom {
       button {
-        height: 40px;
         font-size: 14px;
       }
     }
   }
 }
 @media ($lg) {
-  .search-card {
+  .product-filter {
     width: 340px;
     height: 340px;
     &-center {
@@ -130,14 +143,13 @@ export default {
     }
     &-bottom {
       button {
-        height: 40px;
         font-size: 14px;
       }
     }
   }
 }
 @media ($xl) {
-  .search-card {
+  .product-filter {
     width: 372px;
     height: 372px;
     &-center {
@@ -148,7 +160,6 @@ export default {
     }
     &-bottom {
       button {
-        height: 53px;
         font-size: 16px;
       }
     }

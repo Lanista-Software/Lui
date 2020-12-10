@@ -21,7 +21,7 @@
 <script>
 import CompanyLogo from "./CompanyLogo";
 import lmenu from "./Menu";
-import lButton from "../../../components/LButton";
+import lButton from "../../../../LButton";
 export default {
   components: {
     CompanyLogo,
@@ -36,8 +36,16 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   div {
-    justify-self: center;
     align-self: center;
+  }
+  div:nth-child(1) {
+    justify-self: start;
+  }
+  div:nth-child(2) {
+    justify-self: center;
+  }
+  div:nth-child(3) {
+    justify-self: end;
   }
   button {
     padding: 7px 24px;

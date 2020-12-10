@@ -1,9 +1,9 @@
-import TopSection from "../../components/Header/TopSection/TopSection.vue";
-import ItemGroup from "../../components/Header/TopSection/ItemGroup.vue";
+import TopSection from "../../components/Header/HeaderOne/HeaderOneComponents/TopSection/TopSection.vue";
+import ItemGroup from "../../components/Header/HeaderOne/HeaderOneComponents/TopSection/ItemGroup.vue";
 import { text } from "@storybook/addon-knobs";
 
 export default {
-  title: "Erbay/Header/TopSection",
+  title: "Headers/HeaderOne/TopSection",
   component: { TopSection, ItemGroup },
   argTypes: {
     BackgroundColor: { control: "color" }

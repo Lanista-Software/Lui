@@ -2,10 +2,14 @@
   <div>
     <div class="header">
       <div class="header-top">
-        <top-section />
+        <div class="header-c">
+          <top-section />
+        </div>
       </div>
       <div class="header-bottom">
-        <bottom-sectiongroup />
+        <div class="header-c">
+          <bottom-sectiongroup />
+        </div>
       </div>
     </div>
     <div class="responsive-header">
@@ -23,14 +27,17 @@
 </template>
 
 <script>
-import BottomSectiongroup from "./BottomSection/BottomSectiongroup.vue";
-import TopSection from "./TopSection/TopSection.vue";
+import BottomSectiongroup from "../HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup";
+import TopSection from "../HeaderOne/HeaderOneComponents/TopSection/TopSection";
 export default {
   components: { TopSection, BottomSectiongroup }
 };
 </script>
 
 <style lang="scss" scoped>
+.header-c {
+  width: 90%;
+}
 .header {
   display: none;
   grid-template-rows: 30px 1fr;
@@ -43,10 +50,16 @@ export default {
   &-top {
     border-bottom: 1px solid $primary;
     padding: 7px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &-bottom {
     align-self: center;
     margin: 7px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .responsive-header {

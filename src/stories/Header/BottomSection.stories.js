@@ -1,10 +1,10 @@
-import Menu from "../../components/Header/BottomSection/Menu.vue";
-import BottomSectiongroup from "../../components/Header/BottomSection/BottomSectiongroup.vue";
-import CompanyLogo from "../../components/Header/BottomSection/CompanyLogo.vue";
+import Menu from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/Menu.vue";
+import BottomSectiongroup from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup.vue";
+import CompanyLogo from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/CompanyLogo.vue";
 import { text } from "@storybook/addon-knobs";
 
 export default {
-  title: "Erbay/Header/BottomSection",
+  title: "Headers/HeaderOne/BottomSection",
   component: { Menu },
   argTypes: {
     BackgroundColor: { control: "color" }
