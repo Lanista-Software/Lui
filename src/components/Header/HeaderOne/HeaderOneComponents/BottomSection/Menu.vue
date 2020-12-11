@@ -8,7 +8,11 @@
           :to="item.href"
           :exact="item.exact"
         >
-          {{ item.text }} <span />
+          {{ item.text }}
+          <div><span class="span-right" /></div>
+          <div v-if="multiBorder">
+            <span class="span-left" />
+          </div>
         </nuxt-link>
       </li>
     </ul>
@@ -21,6 +25,10 @@ export default {
     items: {
       type: Array,
       required: true
+    },
+    multiBorder: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -32,14 +40,26 @@ ul {
   width: 100%;
   margin: 0;
 }
+
 li {
   float: left;
   font-family: $baseFont;
   margin: 0;
   color: $white;
-  span {
-    display: none;
-    width: 30px;
+  div {
+    width: 50%;
+    float: left;
+  }
+  .span-right {
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: $warning;
+    margin-top: 3px;
+  }
+  .span-left {
+    display: block;
+    width: 20%;
     height: 2px;
     background-color: $warning;
     margin-top: 3px;
