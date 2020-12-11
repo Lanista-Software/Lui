@@ -1,8 +1,8 @@
 import { boolean, select, text } from "@storybook/addon-knobs";
-import HeroCard from "../../components/Cards/HeroCard";
+import HeroCard from "../../components/Heros/HeroOne";
 import Variant from "../assets/variant";
 export default {
-  title: "Cards/HeroCard",
+  title: "Heros/HeroOne",
   component: { HeroCard },
   argTypes: {
     BackgroundColor: { control: "color" }
