@@ -1,39 +1,30 @@
 <template>
   <div>
     <ul>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="/" exact=""
-          >Anasayfa <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#hit"
-          >Öne çıkanlar <span
-        /></nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#products"
-          >Ürünler <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#brands"
-          >Markalar <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#about"
-          >Hakkımızda <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#faq"
-          >Sık sorulanlar <span />
+      <li v-for="item in items" :key="item.href">
+        <nuxt-link
+          class="text-white"
+          tag="a"
+          :to="item.href"
+          :exact="item.exact"
+        >
+          {{ item.text }} <span />
         </nuxt-link>
       </li>
     </ul>
   </div>
 </template>
+<script>
+export default {
+  name: "Menu",
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
+  }
+};
+</script>
 <style lang="scss" scoped>
 ul {
   padding: 0;

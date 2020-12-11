@@ -8,7 +8,7 @@
       />
     </div>
     <div>
-      <lmenu />
+      <lmenu :items="items" />
     </div>
     <div>
       <l-button
@@ -31,6 +31,32 @@ export default {
     companyLogo,
     lmenu,
     lButton
+  },
+  data() {
+    return {
+      items: [
+        {
+          href: "/",
+          exact: true,
+          text: "Anasayfa"
+        },
+        {
+          href: "#",
+          exact: true,
+          text: "Hakkımızda"
+        },
+        {
+          href: "#",
+          exact: true,
+          text: "Sık Sorulan sorular"
+        },
+        {
+          href: "#",
+          exact: true,
+          text: "Ürünler"
+        }
+      ]
+    };
   },
   methods: {
     scrollDown(id) {
