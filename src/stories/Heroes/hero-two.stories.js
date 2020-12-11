@@ -34,7 +34,7 @@ export const HeroTwo_v1 = () => ({
             </template>
 
             <img
-            src="https://picsum.photos/200/300/?blur"
+            src="/erbay/man.png"
             alt="Test"
           />
 
