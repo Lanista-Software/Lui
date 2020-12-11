@@ -34,6 +34,7 @@
 import LButton from "../LButton.vue";
 export default {
   components: { LButton },
+  name: "HeroOne",
   props: {
     titleOne: {
       type: String,

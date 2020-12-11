@@ -1,39 +1,38 @@
 <template>
   <div>
     <ul>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="/" exact=""
-          >Anasayfa <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#hit"
-          >Öne çıkanlar <span
-        /></nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#products"
-          >Ürünler <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#brands"
-          >Markalar <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#about"
-          >Hakkımızda <span />
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="text-white" tag="a" to="#faq"
-          >Sık sorulanlar <span />
+      <li v-for="item in items" :key="item.href">
+        <nuxt-link
+          :class="item.class"
+          tag="a"
+          :to="item.href"
+          :exact="item.exact"
+        >
+          {{ item.text }}
+          <div><span class="span-right" /></div>
+          <div v-if="multiBorder">
+            <span class="span-left" />
+          </div>
         </nuxt-link>
       </li>
     </ul>
   </div>
 </template>
+<script>
+export default {
+  name: "Menu",
+  props: {
+    items: {
+      type: Array,
+      required: true
+    },
+    multiBorder: {
+      type: Boolean,
+      default: false
+    }
+  }
+};
+</script>
 <style lang="scss" scoped>
 ul {
   padding: 0;
@@ -41,14 +40,26 @@ ul {
   width: 100%;
   margin: 0;
 }
+
 li {
   float: left;
   font-family: $baseFont;
   margin: 0;
   color: $white;
-  span {
-    display: none;
-    width: 30px;
+  div {
+    width: 50%;
+    float: left;
+  }
+  .span-right {
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: $warning;
+    margin-top: 3px;
+  }
+  .span-left {
+    display: block;
+    width: 20%;
     height: 2px;
     background-color: $warning;
     margin-top: 3px;
