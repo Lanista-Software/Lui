@@ -38,21 +38,25 @@ export default {
         {
           href: "/",
           exact: true,
+          class: "text-white",
           text: "Anasayfa"
         },
         {
           href: "#",
           exact: true,
+          class: "text-white",
           text: "Hakkımızda"
         },
         {
           href: "#",
           exact: true,
+          class: "text-white",
           text: "Sık Sorulan sorular"
         },
         {
           href: "#",
           exact: true,
+          class: "text-white",
           text: "Ürünler"
         }
       ]

@@ -3,7 +3,7 @@
     <ul>
       <li v-for="item in items" :key="item.href">
         <nuxt-link
-          class="text-white"
+          :class="item.class"
           tag="a"
           :to="item.href"
           :exact="item.exact"
