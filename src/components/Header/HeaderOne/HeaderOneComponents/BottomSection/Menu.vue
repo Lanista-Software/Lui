@@ -51,14 +51,14 @@ li {
     float: left;
   }
   .span-right {
-    display: block;
+    display: none;
     width: 80%;
     height: 2px;
     background-color: $warning;
     margin-top: 3px;
   }
   .span-left {
-    display: block;
+    display: none;
     width: 20%;
     height: 2px;
     background-color: $warning;

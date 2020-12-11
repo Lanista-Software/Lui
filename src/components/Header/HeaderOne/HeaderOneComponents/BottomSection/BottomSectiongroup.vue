@@ -8,7 +8,7 @@
       />
     </div>
     <div>
-      <lmenu :items="items" />
+      <lmenu :items="items" multi-border />
     </div>
     <div>
       <l-button
@@ -37,25 +37,25 @@ export default {
       items: [
         {
           href: "/",
-          exact: true,
+          exact: false,
           class: "text-white",
           text: "Anasayfa"
         },
         {
           href: "#",
-          exact: true,
+          exact: false,
           class: "text-white",
           text: "Hakkımızda"
         },
         {
           href: "#",
-          exact: true,
+          exact: false,
           class: "text-white",
           text: "Sık Sorulan sorular"
         },
         {
           href: "#",
-          exact: true,
+          exact: false,
           class: "text-white",
           text: "Ürünler"
         }
