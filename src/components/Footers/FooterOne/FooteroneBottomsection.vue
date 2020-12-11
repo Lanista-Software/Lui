@@ -30,9 +30,9 @@
 </template>
 
 <script>
-import companyLogo from "../../Header/HeaderOne/HeaderOneComponents/BottomSection/companyLogo.vue";
+import CompanyLogo from "../../Header/HeaderOne/HeaderOneComponents/BottomSection/CompanyLogo";
 export default {
-  components: { companyLogo }
+  components: { CompanyLogo }
 };
 </script>
 

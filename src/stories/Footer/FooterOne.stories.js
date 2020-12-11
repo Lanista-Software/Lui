@@ -1,6 +1,6 @@
 // import { boolean, select, text } from "@storybook/addon-knobs";
 import FooteronetopSection from "../../components/Footers/FooterOne/FooteronetopSection.vue";
-import FooteonebottomSection from "../../components/Footers/FooterOne/FooteonebottomSection.vue";
+import FooteonebottomSection from "../../components/Footers/FooterOne/FooteroneBottomsection.vue";
 import FooterOne from "../../components/Footers/FooterOne/FooterOne.vue";
 export default {
   title: "Footers/FooterOne",

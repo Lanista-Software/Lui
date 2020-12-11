@@ -1,21 +1,26 @@
 <template>
   <div class="footer-one">
     <div class="container">
-      <footeronetop-section />
+      <TopSection />
     </div>
     <div class="bg-white_01">
       <div class="container">
-        <footeonebottom-section />
+        <BottomSection />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import FooteonebottomSection from "./FooteonebottomSection.vue";
-import FooteronetopSection from "./FooteronetopSection.vue";
+// import BottomSection from "./FooteroneBottomsection.vue";
+// import TopSection from "./FooteroneTopsection.vue";
+import BottomSection from "./FooteroneBottomsection";
+import TopSection from "./FooteronetopSection";
 export default {
-  components: { FooteronetopSection, FooteonebottomSection }
+  components: {
+    BottomSection,
+    TopSection
+  }
 };
 </script>
 <style lang="scss" scoped>

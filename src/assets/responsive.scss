@@ -23,18 +23,29 @@
 
 @media ($lg) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 @media ($xl) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
 @media ($xxl) {
   html {
-    font-size: 16px;
+    font-size: 15px;
+  }
+}
+
+@media ($lg) {
+  .container {
+      width: 90%;
+  }
+}
+@media ($xl) {
+  .container {
+      width: 80%;
   }
 }

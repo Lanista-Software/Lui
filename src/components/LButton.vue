@@ -67,4 +67,8 @@ export default {
     width: 100%;
   }
 }
+.link {
+  background-color: inherit;
+  display: inline-block;
+}
 </style>

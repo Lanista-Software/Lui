@@ -1,6 +1,6 @@
 import Menu from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/Menu.vue";
 import BottomSectiongroup from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup.vue";
-import companyLogo from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/companyLogo.vue";
+import CompanyLogo from "../../components/Header/HeaderOne/HeaderOneComponents/BottomSection/CompanyLogo.vue";
 import { text } from "@storybook/addon-knobs";
 
 export default {
@@ -21,7 +21,7 @@ MenA.args = {
   label: "BackgroundColor",
   BackgroundColor: "#091E3F"
 };
-export const CompanyLogo = () => ({
+export const CompanyLogoComponents = () => ({
   props: {
     img: {
       default: text("img", "/erbay/logo.png")
@@ -33,8 +33,8 @@ export const CompanyLogo = () => ({
       default: text("subname", "Kereste İmalat İnşaat Ltd. Şti.")
     }
   },
-  components: { companyLogo },
-  template: "<companyLogo v-bind='$props' ></companyLogo>"
+  components: { CompanyLogo },
+  template: "<CompanyLogo v-bind='$props' ></CompanyLogo>"
 });
 export const BottomSectionGroup = () => ({
   components: { BottomSectiongroup },
