@@ -1,8 +1,11 @@
 @import "~/src/assets/normalize.css";
 @import "~/src/assets/fonts.css";
 @import "~/src/assets/variables.scss";
+@import "~/src/assets/functions.scss";
+@import "~/src/assets/mixins.scss";
 @import "~/src/assets/remixicon/remixicon.css";
 @import "~/src/assets/responsive.scss";
+
 html {
     scroll-behavior: smooth;
 }

@@ -27,16 +27,12 @@ export const HeroTwo_v1 = () => ({
             İnsan sağlığına zararsız ve geri dönüşümlü ürünlerle hizmetinizdeyiz.
             </template>         
             <template v-slot:buttons>
-            <div class="button-container">
             <LButton bg-variant="bg-blue" text-variant="text-light" size="md"> Tüm ürünleri görün </LButton>
-            <LButton bg-variant="link">Kataloğu indirin</LButton>
-            </div>
+            <LButton bg-variant="link" size="md">Kataloğu indirin</LButton>
             </template>
-
             <img
             src="/erbay/man.png"
             alt="Test"
           />
-
             </HeroTwo>`
 });

@@ -1,0 +1,56 @@
+@each $weightvalue,
+$weight in $all-weights {
+  .fw-#{$weightvalue} {
+    font-weight: $weight;
+  }
+}
+
+@each $radiusvalue,
+$radius in $all-radius {
+  .radius-#{$radiusvalue} {
+    border-radius: $radius;
+  }
+}
+
+@each $colorname,
+$color in $all-colors {
+  .bg-#{$colorname} {
+    background-color: $color;
+  }
+}
+
+@each $colorname,
+$color in $all-colors {
+  .text-#{$colorname} {
+    color: $color;
+  }
+}
+
+@each $colorname,
+$color in $all-colors {
+  .border-#{$colorname} {
+    border-color: $color !important;
+  }
+}
+
+@each $colorname,
+$color in $all-colors {
+
+  @each $opacity-value,
+  $opacity in $all-opacity {
+    .bg-#{$colorname}_#{$opacity-value} {
+      background-color: rgba($color, $opacity) !important;
+    }
+  }
+}
+
+@each $colorname,
+$color in $all-colors {
+
+  @each $opacity-value,
+  $opacity in $all-opacity {
+    .text-#{$colorname}_#{$opacity-value} {
+      color: rgba($color, $opacity);
+    }
+  }
+}

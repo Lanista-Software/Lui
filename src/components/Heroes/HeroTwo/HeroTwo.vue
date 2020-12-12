@@ -35,6 +35,13 @@ export default {
     }
     &-buttons {
       padding-bottom: 30px;
+      // display: flex;
+      // justify-self: center;
+      // justify-content: center;
+      text-align: center;
+      button {
+        margin-bottom: 12px;
+      }
     }
   }
 }
