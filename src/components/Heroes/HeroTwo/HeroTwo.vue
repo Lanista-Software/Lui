@@ -44,5 +44,10 @@ export default {
       }
     }
   }
+  &-media {
+    background-color: red;
+    padding: 36px;
+    overflow: hidden;
+  }
 }
 </style>
