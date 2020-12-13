@@ -1,5 +1,6 @@
 import HeroTwo from "../../components/Heroes/HeroTwo/HeroTwo.vue";
 import LButton from "../../components/LButton.vue";
+import CarouselOne from "../../components/Carousel/CarouselOne.vue";
 
 export default {
   title: "Heroes/HeroTwo",
@@ -15,7 +16,8 @@ export const HeroTwo_v1 = () => ({
   props: {},
   components: {
     HeroTwo,
-    LButton
+    LButton,
+    CarouselOne
   },
   template: `<HeroTwo>
             <template v-slot:title>
@@ -23,16 +25,22 @@ export const HeroTwo_v1 = () => ({
             </template>         
             <template v-slot:textcontent>
             Ambalaj sektörüne dair bütün ürünler
-            Medcup Ambalaj ile sizlerle buluşuyor. 
+            <strong class="text-blue">Medcup Ambalaj</strong> ile sizlerle buluşuyor. 
             İnsan sağlığına zararsız ve geri dönüşümlü ürünlerle hizmetinizdeyiz.
             </template>         
             <template v-slot:buttons>
-            <LButton bg-variant="bg-blue" text-variant="text-light" size="md"> Tüm ürünleri görün </LButton>
+            <div><LButton bg-variant="bg-blue" text-variant="text-light" size="md"> Tüm ürünleri görün </LButton></div>
             <LButton bg-variant="link" size="md">Kataloğu indirin</LButton>
             </template>
-            <img
-            src="/erbay/man.png"
-            alt="Test"
-          />
+            <slot>
+            <CarouselOne>
+              <slot>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+              </slot>
+            </CarouselOne>
+              </slot>
             </HeroTwo>`
 });
