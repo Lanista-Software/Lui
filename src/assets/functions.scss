@@ -11,6 +11,20 @@ $radius in $all-radius {
     border-radius: $radius;
   }
 }
+@each $radiusvalue,
+$radius in $all-radius {
+  .radius-l-#{$radiusvalue} {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}
+@each $radiusvalue,
+$radius in $all-radius {
+  .radius-r-#{$radiusvalue} {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
 
 @each $colorname,
 $color in $all-colors {

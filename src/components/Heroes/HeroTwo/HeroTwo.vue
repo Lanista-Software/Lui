@@ -27,59 +27,37 @@ export default {
 
 <style scoped lang="scss">
 .hero-two {
+  width: 100%;
   text-align: center;
+
   &-content {
     &-title {
       padding-bottom: 12px;
     }
+
     &-textcontent {
       padding-bottom: 24px;
     }
+
     &-buttons {
       padding-bottom: 30px;
       text-align: center;
+
       button {
         margin-bottom: 12px;
       }
     }
   }
+
   &-media {
-    width: 100%;
-    text-align: center;
+    display: grid;
+    padding: 12px;
+    justify-content: center;
+    grid-template-columns: auto;
     &-container {
-      display: inline-block;
-      width: 260px;
-      height: 260px;
-    }
-  }
-}
-@media ($xss) {
-  .hero-two-media-container {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media ($xs) {
-  .hero-two-media-container {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media ($sm) {
-  .hero-two-media-container {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@media ($md) {
-  .hero-two {
-    &-media {
-      &-container {
-        width: 400px;
-        height: 400px;
-      }
+      width: 100%;
+      max-width: 566px;
+      min-width: 200px;
     }
   }
 }
@@ -88,18 +66,14 @@ export default {
   .hero-two {
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    column-gap: 24px;
+
     &-content {
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: auto auto auto;
       justify-content: center;
-      &-title {
-        padding-bottom: 12px;
-      }
-      &-textcontent {
-        justify-items: center;
-        padding-bottom: 24px;
-      }
+      align-content: center;
       &-buttons {
         display: flex;
         padding-bottom: 30px;
@@ -109,19 +83,17 @@ export default {
         }
       }
     }
+
     &-media {
-      width: 100%;
-      text-align: right;
+      display: grid;
+      justify-content: end;
+      grid-template-columns: auto;
       &-container {
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        max-width: 566px;
+        min-width: 200px;
       }
     }
   }
 }
-// @media ($xl) {
-// }
-
-// @media ($xxl) {
-// }
 </style>
