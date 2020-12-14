@@ -12,7 +12,9 @@
       </div>
     </div>
     <div v-if="$slots.default" class="hero-two-media">
-      <slot></slot>
+      <div class="hero-two-media-container">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -35,9 +37,6 @@ export default {
     }
     &-buttons {
       padding-bottom: 30px;
-      // display: flex;
-      // justify-self: center;
-      // justify-content: center;
       text-align: center;
       button {
         margin-bottom: 12px;
@@ -45,9 +44,13 @@ export default {
     }
   }
   &-media {
-    background-color: red;
-    padding: 36px;
-    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    &-container {
+      display: inline-block;
+      width: 260px;
+      height: 260px;
+    }
   }
 }
 </style>

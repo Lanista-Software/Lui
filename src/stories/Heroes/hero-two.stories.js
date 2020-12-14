@@ -10,10 +10,53 @@ export default {
   }
 };
 export const HeroTwo_v1 = () => ({
-  data: () => {
-    return {};
-  },
   props: {},
+  data() {
+    return {
+      settings: {
+        dots: false,
+        dotsClass: "slick-dots custom-dot-class",
+        edgeFriction: 0.35,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 4000,
+        autoplaySpeed: 2000,
+        arrows: false,
+        // cssEase: "linear",
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        focusOnSelect: true
+        // responsive: [
+        //   {
+        //     breakpoint: 1024,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 3,
+        //       infinite: true,
+        //       dots: true
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 600,
+        //     settings: {
+        //       slidesToShow: 2,
+        //       slidesToScroll: 2,
+        //       initialSlide: 2
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 480,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1
+        //     }
+        //   }
+        // ]
+      }
+    };
+  },
   components: {
     HeroTwo,
     LButton,
@@ -30,15 +73,48 @@ export const HeroTwo_v1 = () => ({
             </template>         
             <template v-slot:buttons>
             <div><LButton bg-variant="bg-blue" text-variant="text-light" size="md"> Tüm ürünleri görün </LButton></div>
-            <LButton bg-variant="link" size="md">Kataloğu indirin</LButton>
+             <LButton bg-variant="link" size="md">
+                <span style="display:flex; align-items:center;">
+                Kataloğu indirin  
+                <i style="margin-left:12px" class="ri-mail-line text-dark" />
+                </span>
+             </LButton>
             </template>
             <slot>
-            <CarouselOne>
+            <CarouselOne v-bind="settings">
               <slot>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+              <div>
+                  <div class="carousel-page-container">
+                    <img
+                      src="https://picsum.photos/id/237/600/600"
+                      alt="Slider Image"
+                    />
+                  </div>
+               </div>
+              <div>
+                 <div class="carousel-page-container">
+                  <img
+                    src="https://picsum.photos/id/200/600/600"
+                    alt="Slider Image"
+                  />
+                  </div>
+              </div>
+              <div>
+                <div class="carousel-page-container">
+              <img
+                src="https://picsum.photos/id/157/600/600"
+                alt="Slider Image"
+                  />
+                </div>
+              </div>
+              <div>
+                <div class="carousel-page-container">
+              <img
+                src="https://picsum.photos/id/119/600/600"
+                alt="Slider Image"
+                  />
+                </div>
+              </div>
               </slot>
             </CarouselOne>
               </slot>

@@ -14,4 +14,14 @@ export default {
   name: "CarouselOne",
   components: { VueSlickCarousel }
 };
+/**  All MEthodst And Props **/
+/** https://github.com/gs-shop/vue-slick-carousel/blob/master/docs/API.md#props **/
 </script>
+<style lang="scss">
+.carousel-page-container {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
