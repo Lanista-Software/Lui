@@ -73,7 +73,8 @@ export const HeroTwo_v1 = () => ({
     TagImage,
     TagOne
   },
-  template: `  <HeroTwo style="padding:5%">
+  template: `<div class="container">
+              <HeroTwo>
                 <template v-slot:title>
                   <h1 class="fw-600" style="line-height:1.40;">Sağlığınız</br> herşeyden önemli.</h1>
                 </template>
@@ -135,5 +136,6 @@ export const HeroTwo_v1 = () => ({
                     </slot>
                   </CarouselOne>
                 </slot>
-              </HeroTwo>`
+              </HeroTwo>
+              </div>`
 });

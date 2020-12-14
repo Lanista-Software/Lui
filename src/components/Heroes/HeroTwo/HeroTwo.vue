@@ -27,6 +27,7 @@ export default {
 
 <style scoped lang="scss">
 .hero-two {
+  width: 100%;
   text-align: center;
 
   &-content {
@@ -50,6 +51,7 @@ export default {
 
   &-media {
     display: grid;
+    padding: 12px;
     justify-content: center;
     grid-template-columns: auto;
     &-container {
