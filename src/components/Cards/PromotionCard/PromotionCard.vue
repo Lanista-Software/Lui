@@ -4,7 +4,7 @@
       <PromotionIcon v-bind="$props.icon" />
     </div>
     <div class="promotion-card-text">
-      <h4 class="fw-100 text-dark">
+      <h4 class="text-dark">
         {{ title }}
       </h4>
       <p class="text-dark_08">
