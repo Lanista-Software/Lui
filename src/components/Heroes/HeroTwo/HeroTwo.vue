@@ -12,7 +12,9 @@
       </div>
     </div>
     <div v-if="$slots.default" class="hero-two-media">
-      <slot></slot>
+      <div class="hero-two-media-container">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -35,7 +37,91 @@ export default {
     }
     &-buttons {
       padding-bottom: 30px;
+      text-align: center;
+      button {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  &-media {
+    width: 100%;
+    text-align: center;
+    &-container {
+      display: inline-block;
+      width: 260px;
+      height: 260px;
     }
   }
 }
+@media ($xss) {
+  .hero-two-media-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media ($xs) {
+  .hero-two-media-container {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media ($sm) {
+  .hero-two-media-container {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media ($md) {
+  .hero-two {
+    &-media {
+      &-container {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media ($lg) {
+  .hero-two {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &-content {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      justify-content: center;
+      &-title {
+        padding-bottom: 12px;
+      }
+      &-textcontent {
+        justify-items: center;
+        padding-bottom: 24px;
+      }
+      &-buttons {
+        display: flex;
+        padding-bottom: 30px;
+        text-align: left;
+        button {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &-media {
+      width: 100%;
+      text-align: right;
+      &-container {
+        width: 500px;
+        height: 500px;
+      }
+    }
+  }
+}
+// @media ($xl) {
+// }
+
+// @media ($xxl) {
+// }
 </style>
