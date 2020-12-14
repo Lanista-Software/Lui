@@ -70,7 +70,7 @@ export const HeroOne2 = () => ({
     }
   },
   components: { HeroOne },
-  template: `<HeroCard :buttonVariants="buttonVariants" hSize="h2" v-bind='$props' >
+  template: `<HeroOne :buttonVariants="buttonVariants" hSize="h2" v-bind='$props' >
   Daha fazla bilgi almak ve diğer hizmetleri öğrenmek için
-  </HeroCard>`
+  </HeroOne>`
 });
