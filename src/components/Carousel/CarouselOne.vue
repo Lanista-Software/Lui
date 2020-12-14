@@ -1,5 +1,5 @@
 <template>
-  <VueSlickCarousel v-bind="$attrs" v-on="$listeners">
+  <VueSlickCarousel class="carousel-one" v-bind="$attrs" v-on="$listeners">
     <slot />
   </VueSlickCarousel>
 </template>
@@ -18,10 +18,7 @@ export default {
 /** https://github.com/gs-shop/vue-slick-carousel/blob/master/docs/API.md#props **/
 </script>
 <style lang="scss">
-.carousel-page-container {
-  img {
-    width: 100%;
-    height: auto;
-  }
+.carousel-one {
+  overflow: hidden;
 }
 </style>
