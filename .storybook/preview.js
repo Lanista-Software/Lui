@@ -8,4 +8,8 @@ Vue.use(Vuelidate);
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: { expanded: true },
+  background: [
+    { name: "light", value: "#eeeeee" },
+    { name: "dark", value: "#222222" }
+  ]
 }
