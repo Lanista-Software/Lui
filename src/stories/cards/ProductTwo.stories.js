@@ -15,5 +15,5 @@ export const VariantOne = () => ({
   components: {
     ProductTwo
   },
-  template: `<ProductTwo />`
+  template: `<ProductTwo class="bg-white"/>`
 });

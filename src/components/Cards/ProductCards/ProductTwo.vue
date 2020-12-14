@@ -1,5 +1,5 @@
 <template>
-  <div class="product-three radius-05">
+  <div v-bind="$attrs" class="product-three radius-05">
     <div class="product-three-image">
       <img
         class="radius-05"
@@ -31,7 +31,28 @@ export default {
 .product-three {
   display: grid;
   padding: 12px;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   column-gap: 12px;
+  &-content {
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    &-title {
+      align-self: start;
+    }
+    &-name {
+      align-self: center;
+    }
+    &-properties {
+      align-self: end;
+    }
+  }
+  &-image {
+    width: 80px;
+    height: 80px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 </style>
