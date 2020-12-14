@@ -1,7 +1,7 @@
 import RepresentativeCard from "../../components/Cards/RepresentativeCard";
 
 export default {
-  title: "/Cards/RepresentativeCard",
+  title: "Cards/RepresentativeCard",
   component: { RepresentativeCard },
   argTypes: {
     BackgroundColor: { control: "color" }
