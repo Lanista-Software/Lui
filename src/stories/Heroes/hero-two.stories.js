@@ -3,7 +3,6 @@ import LButton from "../../components/LButton.vue";
 import TagImage from "../../components/ImageViews/TagImage.vue";
 import TagOne from "../../components/Tags/TagOne.vue";
 import CarouselOne from "../../components/Carousel/CarouselOne.vue";
-import { Math } from "core-js";
 
 export default {
   title: "Heroes/HeroTwo",

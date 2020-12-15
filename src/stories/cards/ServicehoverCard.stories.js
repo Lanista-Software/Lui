@@ -1,7 +1,7 @@
 import ServicehoverCard from "../../components/Cards/ServicehoverCard";
 
 export default {
-  title: "/Cards/ServicehoverCard",
+  title: "Cards/ServicehoverCard",
   component: { ServicehoverCard }
 };
 

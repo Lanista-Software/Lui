@@ -1,7 +1,7 @@
 import ProductFilter from "../../components/Cards/ProductFilter";
 
 export default {
-  title: "/Cards/ProductFilter",
+  title: "Cards/ProductFilter",
   component: { ProductFilter },
   argTypes: {
     BackgroundColor: { control: "color" }
