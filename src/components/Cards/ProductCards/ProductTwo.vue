@@ -1,21 +1,24 @@
 <template>
-  <div v-bind="$attrs" class="product-three radius-05">
-    <div class="product-three-image">
+  <div v-bind="$attrs" class="product-two radius-05">
+    <div class="product-two-tag">
+      <slot name="tag"></slot>
+    </div>
+    <div class="product-two-image">
       <img
         class="radius-05"
         src="https://picsum.photos/id/100/100/100"
         alt="Product Image"
       />
     </div>
-    <div class="product-three-content">
-      <div class="product-three-content-title">
-        <small>Karton ve Kağıt</small>
+    <div class="product-two-content">
+      <div class="product-two-content-title">
+        <slot name="title"></slot>
       </div>
-      <div class="product-three-content-name">
-        <h6>Karton Kahve bardağı 12'li paket - Koli içi 120 adet</h6>
+      <div class="product-two-content-name">
+        <slot name="name"></slot>
       </div>
-      <div class="product-three-content-properties">
-        <small>Ebatlar : 12 x 5 cm</small>
+      <div class="product-two-content-properties">
+        <slot name="properties"></slot>
       </div>
     </div>
   </div>
@@ -23,32 +26,50 @@
 
 <script>
 export default {
-  name: "ProductThree"
+  name: "Producttwo"
 };
 </script>
 
 <style scoped lang="scss">
-.product-three {
+.product-two {
   display: grid;
   padding: 12px;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 2fr 4fr;
   column-gap: 12px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 400px;
+  position: relative;
+  &-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .tag-one {
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 0.3rem 1rem;
+    }
+  }
   &-content {
     display: grid;
     grid-template-rows: 1fr auto 1fr;
     &-title {
+      display: flex;
       align-self: start;
     }
     &-name {
+      display: flex;
       align-self: center;
     }
     &-properties {
+      display: flex;
       align-self: end;
     }
   }
   &-image {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    display: flex;
+    align-self: center;
     img {
       width: 100%;
       height: auto;
