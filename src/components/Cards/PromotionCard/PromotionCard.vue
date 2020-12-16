@@ -1,12 +1,15 @@
 <template>
   <div class="promotion-card">
     <div class="promotion-card-icon">
-      <PromotionIcon v-bind="$props.icon" />
+      <PromotionIcon v-if="!borderMode" v-bind="$props.icon" />
     </div>
     <div class="promotion-card-text">
-      <h4 class="text-dark">
-        {{ title }}
-      </h4>
+      <div class="line-gr">
+        <span v-if="borderMode" class="line-span bg-success"></span>
+        <h4 class="text-dark">
+          {{ title }}
+        </h4>
+      </div>
       <p class="text-dark_08">
         <slot />
       </p>
@@ -21,15 +24,30 @@ export default {
       type: String,
       default: null
     },
+    borderMode: {
+      type: Boolean,
+      default: false
+    },
     icon: {
       type: Object,
-      required: true
+      required: false
     }
   },
   components: { PromotionIcon }
 };
 </script>
 <style lang="scss" scoped>
+.line-span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin-right: 15px;
+  border-radius: 3px;
+}
+.line-gr {
+  display: inline-flex;
+  align-items: center;
+}
 .promotion-card {
   display: grid;
   grid-template-rows: auto 1fr;

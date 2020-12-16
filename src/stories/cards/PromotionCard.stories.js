@@ -1,6 +1,6 @@
 import PromotionIcon from "../../components/Cards/PromotionCard/PromotionIcon";
 import PromotionCard from "../../components/Cards/PromotionCard/PromotionCard";
-import { object, text } from "@storybook/addon-knobs";
+import { boolean, object, text } from "@storybook/addon-knobs";
 
 export default {
   title: "Cards/PromotionCard",
@@ -13,6 +13,9 @@ export const Promotion_Card = () => ({
     title: {
       default: text("title", "Geri Dönüşümlü Ürünler")
     },
+    borderMode: {
+      default: boolean("borderMode", false)
+    },
     icon: {
       default: object("icon", {
         iconColor: " text-primary",
@@ -20,7 +23,7 @@ export const Promotion_Card = () => ({
       })
     }
   },
-  template: `<PromotionCard :icon="icon" :title="title">Medcup Ambalaj'ın evnanterinde olan ürünler doğa dostu ve geri dönüşümlü
+  template: `<PromotionCard v-bind="$props">Medcup Ambalaj'ın evnanterinde olan ürünler doğa dostu ve geri dönüşümlü
   materyellerdendir. Doğa bizim için ve geleceğimiz için çok önemli.</PromotionCard>`
 });
 export const Promotion_Icon = () => ({
