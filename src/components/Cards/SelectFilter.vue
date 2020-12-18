@@ -1,44 +1,11 @@
 <template>
   <div class="select-filter bg-light radius-08 shadow">
-    <div class="select-filter-top">
-      <l-select
-        v-model="form.brand"
-        :items="filterData.brands"
-        :selected="selectform.brand"
-        class="dr1"
-      />
-      <l-select
-        v-model="form.season"
-        :items="filterData.attributes.seasons"
-        :selected="selectform.season"
-        class="dr2"
-      />
-      <l-select
-        v-model="form.year"
-        :selected="selectform.year"
-        :items="filterData.attributes.years"
-        class="dr6"
-      />
-    </div>
-    <div class="select-filter-bottom">
-      <l-select
-        v-model="form.baseWidth"
-        :selected="selectform.baseWidth"
-        :items="filterData.attributes.baseWidth"
-        class="dr3"
-      />
-      <l-select
-        v-model="form.sectionRatio"
-        :selected="selectform.sectionRatio"
-        :items="filterData.attributes.sectionRatio"
-        class="dr4"
-      />
-      <l-select
-        v-model="form.wheelDiameter"
-        :selected="selectform.wheelDiameter"
-        :items="filterData.attributes.wheelDiameter"
-        class="dr5"
-      />
+    <div
+      class="select-filter-top"
+      :style="size > 992 ? frStyle.dst : frStyle.st"
+    >
+      <slot />
+      <!-- slot gelebilir -->
     </div>
     <div class="select-filter-btn">
       <l-button
@@ -46,7 +13,7 @@
         size="lg"
         bg-variant="bg-primary"
         text-variant="text-white"
-        @click="filter"
+        v-on="$listeners"
         >Filtreleme yapın</l-button
       >
       <l-button
@@ -54,7 +21,7 @@
         size="md"
         bg-variant="bg-primary"
         text-variant="text-white"
-        @click="filter"
+        v-on="$listeners"
         >Lastik ara</l-button
       >
     </div>
@@ -63,55 +30,49 @@
 
 <script>
 import LButton from "../LButton.vue";
-import LSelect from "../LSelect.vue";
-import mixin from "../filter";
 export default {
   name: "SelectFilter",
-  components: { LSelect, LButton },
-  mixins: [mixin],
+  components: { LButton },
   props: {
     items: {
       type: Object,
-      required: true
+      required: false
+    },
+    mobileFr: {
+      type: Number,
+      default: 2
+    },
+    desktopFr: {
+      type: Number,
+      default: 6
     }
   },
   data() {
     return {
-      selectform: {
-        brand: null,
-        season: null,
-        baseWidth: null,
-        sectionRatio: null,
-        wheelDiameter: null,
-        year: null
-      }
+      size: null
     };
   },
-  watch: {
-    items: {
-      deep: true,
-      handler(val) {
-        this.form.brand = val.brand;
-        this.form.baseWidth = val.baseWidth;
-        this.form.season = val.season;
-        this.form.sectionRatio = val.sectionRatio;
-        this.form.wheelDiameter = val.wheelDiameter;
-        this.form.year = val.year;
-        // component içi
-        this.selectform.brand = val.brand;
-        this.selectform.season = val.season ? val.season.split(",")[2] : null;
-        this.selectform.baseWidth = val.baseWidth
-          ? val.baseWidth.split(",")[2]
-          : null;
-        this.selectform.sectionRatio = val.sectionRatio
-          ? val.sectionRatio.split(",")[2]
-          : null;
-        this.selectform.wheelDiameter = val.wheelDiameter
-          ? val.wheelDiameter.split(",")[2]
-          : null;
-        this.selectform.year = val.year ? val.year.split(",")[2] : null;
-      }
+  computed: {
+    frStyle() {
+      const st = `
+        grid-template-columns: repeat(${this.mobileFr},1fr);
+      `;
+      const dst = `grid-template-columns: repeat(${this.desktopFr},1fr)`;
+      const arr = { dst, st };
+      return arr;
     }
+  },
+  created() {
+    this.size = window.innerWidth;
+    window.addEventListener("resize", () => {
+      this.size = window.innerWidth;
+    });
+  },
+
+  destroyed() {
+    window.addEventListener("resize", () => {
+      this.size = window.innerWidth;
+    });
   }
 };
 </script>
@@ -119,17 +80,17 @@ export default {
 <style lang="scss" scoped>
 .select-filter {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   gap: 20px;
   padding: 10px;
   &-top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 1rem;
+    grid-template-rows: 1fr;
   }
   &-bottom {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
   &-btn {
@@ -144,10 +105,10 @@ export default {
 }
 @media ($lg) {
   .select-filter {
-    height: 70px;
-    padding: 2px 20px;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    height: auto;
+    padding: 10px;
     grid-template-rows: 1fr;
+    grid-template-columns: auto minmax(100px, 200px);
     gap: 30px;
     &-top {
       align-self: center;
