@@ -6,6 +6,7 @@
       [block ? 'l-button-block' : null]
     ]"
     v-on="$listeners"
+    v-bind="$attrs"
   >
     <slot />
   </button>
