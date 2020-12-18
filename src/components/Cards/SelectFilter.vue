@@ -11,18 +11,19 @@
       <l-button
         class="select-filter-btn-responsive"
         size="lg"
-        bg-variant="bg-primary"
-        text-variant="text-white"
+        :bg-variant="buttonVariants.bg"
+        :text-variant="buttonVariants.text"
         v-on="$listeners"
-        >Filtreleme yapın</l-button
+        block
+        >{{ buttonVariants.slot }}</l-button
       >
       <l-button
         class="select-filter-btn-desktop"
         size="md"
-        bg-variant="bg-primary"
-        text-variant="text-white"
+        :bg-variant="buttonVariants.bg"
+        :text-variant="buttonVariants.text"
         v-on="$listeners"
-        >Lastik ara</l-button
+        >{{ buttonVariants.slot }}</l-button
       >
     </div>
   </div>
@@ -45,6 +46,16 @@ export default {
     desktopFr: {
       type: Number,
       default: 6
+    },
+    buttonVariants: {
+      type: Object,
+      default: () => {
+        return {
+          slot: "Lastik ara",
+          bg: "bg-primary",
+          text: "text-white"
+        };
+      }
     }
   },
   data() {
