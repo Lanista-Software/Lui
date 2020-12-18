@@ -23,5 +23,6 @@ export default {
     "border-warning",
     "border-dark",
     "border-light"
-  ]
+  ],
+  size: [300, 300]
 };
