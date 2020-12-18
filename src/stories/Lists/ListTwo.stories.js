@@ -13,5 +13,5 @@ export const List_Two = () => ({
     }
   },
   template: `<ListTwo :variant="variant">
-  DOĞA DOSTU ÜRETİM</ListTwo>`
+  <p :class="'text-' + variant">DOĞA DOSTU ÜRETİM</p></ListTwo>`
 });

@@ -1,9 +1,7 @@
 <template>
   <div class="list-two">
     <span :class="variants('bg')" class="list-two-span"></span>
-    <p :class="variants('text')" class=" fw-600">
-      <slot />
-    </p>
+    <slot />
   </div>
 </template>
 <script>
