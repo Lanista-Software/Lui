@@ -2,10 +2,7 @@ import FaqDrop from "../../components/Cards/FaqDrop";
 
 export default {
   title: "Cards/FaqDrop",
-  component: { FaqDrop },
-  argTypes: {
-    BackgroundColor: { control: "color" }
-  }
+  component: { FaqDrop }
 };
 
 export const FaqDrop_Card = () => ({
