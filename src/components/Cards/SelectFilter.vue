@@ -1,5 +1,5 @@
 <template>
-  <div class="select-filter bg-light radius-08 shadow">
+  <div class="select-filter bg-light radius-08">
     <div
       class="select-filter-top"
       :style="size > 992 ? frStyle.dst : frStyle.st"
@@ -10,7 +10,7 @@
     <div class="select-filter-btn">
       <l-button
         class="select-filter-btn-responsive"
-        size="lg"
+        size="md"
         :bg-variant="buttonVariants.bg"
         :text-variant="buttonVariants.text"
         v-on="$listeners"
@@ -35,10 +35,6 @@ export default {
   name: "SelectFilter",
   components: { LButton },
   props: {
-    items: {
-      type: Object,
-      required: false
-    },
     mobileFr: {
       type: Number,
       default: 2
@@ -96,7 +92,7 @@ export default {
   padding: 10px;
   &-top {
     display: grid;
-    column-gap: 30px;
+    column-gap: 12px;
     row-gap: 1rem;
     grid-template-rows: 1fr;
   }
@@ -119,8 +115,8 @@ export default {
     height: auto;
     padding: 10px;
     grid-template-rows: 1fr;
-    grid-template-columns: auto minmax(100px, 200px);
-    gap: 30px;
+    grid-template-columns: auto minmax(100px, 150px);
+    gap: 1rem;
     &-top {
       align-self: center;
       div {

@@ -27,7 +27,8 @@ export default {
   &-span {
     margin-right: 10px;
     width: 20px;
-    height: 3px;
+    height: 4px;
+    border-radius: 2px;
   }
 }
 </style>
