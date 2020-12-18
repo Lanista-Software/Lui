@@ -231,6 +231,32 @@ export default {
       return { brands, attributes };
     }
   },
+  watch: {
+    items: {
+      deep: true,
+      handler(val) {
+        this.form.brand = val.brand;
+        this.form.baseWidth = val.baseWidth;
+        this.form.season = val.season;
+        this.form.sectionRatio = val.sectionRatio;
+        this.form.wheelDiameter = val.wheelDiameter;
+        this.form.year = val.year;
+        // component içi
+        this.selectform.brand = val.brand;
+        this.selectform.season = val.season ? val.season.split(",")[2] : null;
+        this.selectform.baseWidth = val.baseWidth
+          ? val.baseWidth.split(",")[2]
+          : null;
+        this.selectform.sectionRatio = val.sectionRatio
+          ? val.sectionRatio.split(",")[2]
+          : null;
+        this.selectform.wheelDiameter = val.wheelDiameter
+          ? val.wheelDiameter.split(",")[2]
+          : null;
+        this.selectform.year = val.year ? val.year.split(",")[2] : null;
+      }
+    }
+  },
   methods: {
     filter() {
       this.$emit("form", this.form);
