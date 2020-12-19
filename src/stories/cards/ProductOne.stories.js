@@ -1,19 +1,16 @@
 // import { boolean, select, text } from "@storybook/addon-knobs";
-import ProductpreviewCardtop from "../../components/Cards/ProductpreviewCard/ProductpreviewCardtop.vue";
-import ProductpreviewCardleft from "../../components/Cards/ProductpreviewCard/ProductpreviewCardleft.vue";
-import ProductpreviewCard from "../../components/Cards/ProductpreviewCard/ProductpreviewCard.vue";
-import Rating from "../../components/Cards/ProductpreviewCard/rating.vue";
+
+import Rating from "../../components/Cards/Rating.vue";
+import ProductOne from "../../components/Cards/ProductCards/ProductOne.vue";
 export default {
-  title: "Cards/ProductpreviewCard",
+  title: "Cards/ProductCards/ProductOne",
   component: {
-    ProductpreviewCardtop,
-    ProductpreviewCardleft,
-    ProductpreviewCard,
+    ProductOne,
     Rating
   }
 };
-
-export const Productpreview_Card = () => ({
+export const Product_One = () => ({
+  components: { ProductOne },
   data() {
     return {
       product: {
@@ -77,20 +74,10 @@ export const Productpreview_Card = () => ({
       }
     };
   },
-  components: { ProductpreviewCard },
-  template: `<ProductpreviewCard :product="product">
-  NOKIAN WR Snowproof 205/55 R16 91H(D5) 2019 Üretimi
-  </ProductpreviewCard>`
-});
-export const ProductpreviewCard_top = () => ({
-  components: { ProductpreviewCardtop },
-  template: `<ProductpreviewCardtop>
-  </ProductpreviewCardtop>`
-});
-export const ProductpreviewCard_left = () => ({
-  components: { ProductpreviewCardleft },
-  template: `<ProductpreviewCardleft img="https://marketplace-single-product-images.oss-eu-central-1.aliyuncs.com/prod/239750/d4ff7eb8-8bc5-4080-9fe8-b4c83adcbf58/626111501_0.jpg">
-  </ProductpreviewCardleft>`
+  template: `
+  <product-one :product="product" img="https://marketplace-single-product-images.oss-eu-central-1.aliyuncs.com/prod/239750/d4ff7eb8-8bc5-4080-9fe8-b4c83adcbf58/626111501_0.jpg">
+  NOKIAN WR Snowproof 205/55 R16 91H(D5) 2019 Üretimi</product-one>
+  `
 });
 export const Rating_Preview = () => ({
   components: { Rating },
