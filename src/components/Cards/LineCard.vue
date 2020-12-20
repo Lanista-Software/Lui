@@ -1,11 +1,19 @@
 <template>
   <div class="line-card">
     <div class="line-card-top">
-      <div class="line-card-top-icon"><slot name="icon"></slot></div>
-      <div class="line-card-top-Title"><slot name="title"></slot></div>
+      <div v-if="$slots.icon" class="line-card-top-icon">
+        <slot name="icon"></slot>
+      </div>
+      <div v-if="$slots.title" class="line-card-top-Title">
+        <slot name="title"></slot>
+      </div>
     </div>
-    <div class="line-card-content"><slot name="content"></slot></div>
-    <div class="line-card-footer"><slot name="footer"></slot></div>
+    <div v-if="$slots.content" class="line-card-content">
+      <slot name="content"></slot>
+    </div>
+    <div v-if="$slots.footer" class="line-card-footer">
+      <slot name="footer"></slot>
+    </div>
   </div>
 </template>
 
