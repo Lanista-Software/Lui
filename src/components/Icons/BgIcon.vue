@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "BgIcon",
+  name: 'BgIcon',
   props: {
     circle: {
       type: Boolean,
@@ -24,10 +24,10 @@ export default {
   },
   computed: {
     typeSelector() {
-      return this.circle === true ? "rounded-circle" : "rounded";
+      return this.circle === true ? 'rounded-circle' : 'rounded'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

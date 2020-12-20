@@ -21,8 +21,8 @@
 
 <script>
 export default {
-  name: "HeroTwo"
-};
+  name: 'HeroTwo'
+}
 </script>
 
 <style scoped lang="scss">
