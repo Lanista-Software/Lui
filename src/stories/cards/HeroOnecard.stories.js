@@ -32,7 +32,7 @@ export const HeroOne1 = () => ({
   <template v-slot:top>
   <i class="ri-shield-check-fill text-success ri-8x" />
   </template>
-  <template v-slot:top-desc>
+  <template v-slot:topDesc>
   <h2 class="text-dark">
   ONLİNE SİPARİŞ KOLAYLIĞI ÇOK YAKINDA HİZMETİNİZDE
   </h2>

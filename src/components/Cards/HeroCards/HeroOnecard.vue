@@ -1,14 +1,14 @@
 <template>
   <div :class="center ? 'hero-card-container-center' : 'hero-card'">
     <div :class="center ? 'hero-card-top-center' : 'hero-card-top'">
-      <div class="">
+      <div v-if="$slots.top">
         <slot name="top" />
       </div>
-      <div class="hero-card-inline">
-        <slot name="top-desc" />
+      <div class="hero-card-inline" v-if="$slots.topDesc">
+        <slot name="topDesc" />
       </div>
     </div>
-    <div class="hero-card-center">
+    <div class="hero-card-center" v-if="$slots.default">
       <slot />
     </div>
     <div class="hero-card-bottom">
