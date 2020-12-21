@@ -1,23 +1,18 @@
 <template>
   <div class="promotion-card">
     <div class="promotion-card-icon">
-      <PromotionIcon v-if="!borderMode" v-bind="$props.icon" />
+      <slot name="icon" />
     </div>
     <div class="promotion-card-text">
-      <div class="line-gr">
-        <span v-if="borderMode" class="line-span bg-success"></span>
-        <h4 class="text-dark">
-          {{ title }}
-        </h4>
-      </div>
-      <p class="text-dark_08">
-        <slot />
-      </p>
+      <slot name="title" />
+      <slot />
+    </div>
+    <div class="promotion-card-button">
+      <slot name="buttons" />
     </div>
   </div>
 </template>
 <script>
-import PromotionIcon from "./PromotionIcon";
 export default {
   props: {
     title: {
@@ -27,14 +22,9 @@ export default {
     borderMode: {
       type: Boolean,
       default: false
-    },
-    icon: {
-      type: Object,
-      required: false
     }
-  },
-  components: { PromotionIcon }
-};
+  }
+}
 </script>
 <style lang="scss" scoped>
 .line-span {
@@ -44,14 +34,10 @@ export default {
   margin-right: 15px;
   border-radius: 3px;
 }
-.line-gr {
-  display: inline-flex;
-  align-items: center;
-}
 .promotion-card {
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 1rem;
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
   &-text {
     text-align: center;
     p {
@@ -59,6 +45,9 @@ export default {
     }
   }
   &-icon {
+    justify-self: center;
+  }
+  &-button {
     justify-self: center;
   }
 }
@@ -69,6 +58,9 @@ export default {
     }
     &-text {
       text-align: left;
+    }
+    &-button {
+      justify-self: left;
     }
   }
 }

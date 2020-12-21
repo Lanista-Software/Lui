@@ -1,5 +1,9 @@
 <template>
-  <div class="brands-card" v-bind="$attrs">
+  <div
+    class="brands-card"
+    :style="`grid-template-columns: repeat(${images.length}, 1fr);`"
+    v-bind="$attrs"
+  >
     <img :src="img" v-for="img in images" :key="img" />
   </div>
 </template>
@@ -16,29 +20,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .brands-card {
-  display: inline-flex;
+  display: grid;
   align-items: center;
-  column-gap: 4rem;
-  justify-content: center;
   width: 100%;
   img {
-    max-width: 100px;
-  }
-}
-@media ($xl) {
-  .brands-card {
-    column-gap: 5rem;
-    img {
-      max-width: 120px;
-    }
-  }
-}
-@media ($xxl) {
-  .brands-card {
-    column-gap: 7rem;
-    img {
-      max-width: 150px;
-    }
+    max-width: 150px;
+    width: 100%;
+    justify-self: center;
+    height: auto;
   }
 }
 </style>
