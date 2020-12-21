@@ -1,13 +1,13 @@
 <template>
   <div class="promotion-card">
-    <div class="promotion-card-icon">
+    <div class="promotion-card-icon" v-if="$slots.icon">
       <slot name="icon" />
     </div>
-    <div class="promotion-card-text">
+    <div class="promotion-card-text" v-if="$slots.title || $slots.default">
       <slot name="title" />
       <slot />
     </div>
-    <div class="promotion-card-button">
+    <div class="promotion-card-button" v-if="$slots.buttons">
       <slot name="buttons" />
     </div>
   </div>
@@ -36,7 +36,7 @@ export default {
 }
 .promotion-card {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto;
   gap: 1.5rem;
   &-text {
     text-align: center;
