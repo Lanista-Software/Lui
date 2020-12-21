@@ -11,8 +11,8 @@
 
 <script>
 export default {
-  name: "HeroThree"
-};
+  name: 'HeroThree'
+}
 </script>
 
 <style lang="scss" scoped>
@@ -27,8 +27,9 @@ export default {
     align-items: center;
   }
   &-right {
-    justify-self: flex-end;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 </style>
