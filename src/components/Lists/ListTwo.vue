@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: "ListTwo",
+  name: 'ListTwo',
   props: {
     variant: {
       type: String,
@@ -15,10 +15,10 @@ export default {
   },
   computed: {
     variants() {
-      return mode => mode + "-" + this.variant;
+      return (mode) => mode + '-' + this.variant
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .list-two {

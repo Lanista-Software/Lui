@@ -14,13 +14,13 @@
 
 <script>
 export default {
-  name: "LButton",
+  name: 'LButton',
   props: {
     size: {
       type: String,
       default: null,
       validator(value) {
-        return ["sm", "md", "lg"].includes(value);
+        return ['sm', 'md', 'lg'].includes(value)
       }
     },
     bgVariant: {
@@ -42,10 +42,10 @@ export default {
   },
   methods: {
     clicked() {
-      this.$emit("clicked");
+      this.$emit('clicked')
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
