@@ -10,14 +10,14 @@ export default {
   props: {
     variant: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     variants() {
       return (mode) => mode + '-' + this.variant
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

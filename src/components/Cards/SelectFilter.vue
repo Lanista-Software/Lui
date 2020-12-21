@@ -30,58 +30,58 @@
 </template>
 
 <script>
-import LButton from "../LButton.vue";
+import LButton from '../LButton.vue'
 export default {
-  name: "SelectFilter",
+  name: 'SelectFilter',
   components: { LButton },
   props: {
     mobileFr: {
       type: Number,
-      default: 2
+      default: 2,
     },
     desktopFr: {
       type: Number,
-      default: 6
+      default: 6,
     },
     buttonVariants: {
       type: Object,
       default: () => {
         return {
-          slot: "Lastik ara",
-          bg: "bg-primary",
-          text: "text-white"
-        };
-      }
-    }
+          slot: 'Lastik ara',
+          bg: 'bg-primary',
+          text: 'text-white',
+        }
+      },
+    },
   },
   data() {
     return {
-      size: null
-    };
+      size: null,
+    }
   },
   computed: {
     frStyle() {
       const st = `
         grid-template-columns: repeat(${this.mobileFr},1fr);
-      `;
-      const dst = `grid-template-columns: repeat(${this.desktopFr},1fr)`;
-      const arr = { dst, st };
-      return arr;
-    }
+      `
+      const dst = `grid-template-columns: repeat(${this.desktopFr},1fr)`
+      const arr = { dst, st }
+      return arr
+    },
   },
   created() {
-    this.size = window.innerWidth;
-    window.addEventListener("resize", () => {
-      this.size = window.innerWidth;
-    });
+    this.size = window.innerWidth
+    window.addEventListener('resize', () => {
+      this.size = window.innerWidth
+    })
   },
 
   destroyed() {
-    window.addEventListener("resize", () => {
-      this.size = window.innerWidth;
-    });
-  }
-};
+    window.addEventListener('resize', () => {
+      this.size = window.innerWidth
+    })
+  },
+}
 </script>
 
 <style lang="scss" scoped>

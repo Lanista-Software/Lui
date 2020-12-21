@@ -23,18 +23,18 @@ export default {
   props: {
     href: {
       type: String,
-      default: null
+      default: null,
     },
     bgImage: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
     goVideo() {
       window.open(this.href, '_blank')
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

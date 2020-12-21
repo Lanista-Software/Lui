@@ -31,30 +31,30 @@
 </template>
 
 <script>
-import BottomSectiongroup from "../HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup";
-import TopSection from "../HeaderOne/HeaderOneComponents/TopSection/TopSection";
+import BottomSectiongroup from '../HeaderOne/HeaderOneComponents/BottomSection/BottomSectiongroup'
+import TopSection from '../HeaderOne/HeaderOneComponents/TopSection/TopSection'
 export default {
   components: { TopSection, BottomSectiongroup },
   data() {
     return {
-      scrollP: 0
-    };
+      scrollP: 0,
+    }
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     showMenu() {
-      this.$emit("show", true);
+      this.$emit('show', true)
     },
     handleScroll() {
-      this.scrollP = window.scrollY;
-    }
-  }
-};
+      this.scrollP = window.scrollY
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

@@ -14,14 +14,14 @@
 <script>
 // import BottomSection from "./FooteroneBottomsection.vue";
 // import TopSection from "./FooteroneTopsection.vue";
-import BottomSection from "./FooteroneBottomsection";
-import TopSection from "./FooteronetopSection";
+import BottomSection from './FooteroneBottomsection'
+import TopSection from './FooteronetopSection'
 export default {
   components: {
     BottomSection,
-    TopSection
-  }
-};
+    TopSection,
+  },
+}
 </script>
 <style lang="scss" scoped>
 .footer-one {

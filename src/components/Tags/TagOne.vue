@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: "TagOne"
-};
+  name: 'TagOne',
+}
 </script>
 
 <style scoped lang="scss">

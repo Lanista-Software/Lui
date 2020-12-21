@@ -1,17 +1,17 @@
-import { select } from "@storybook/addon-knobs";
-import ListTwo from "../../components/Lists/ListTwo.vue";
-import variants from "../assets/variant";
+import { select } from '@storybook/addon-knobs'
+import ListTwo from '../../components/Lists/ListTwo.vue'
+import variants from '../assets/variant'
 export default {
-  title: "Lists/ListTwo",
-  component: ListTwo
-};
+  title: 'Lists/ListTwo',
+  component: ListTwo,
+}
 export const List_Two = () => ({
   components: { ListTwo },
   props: {
     variant: {
-      default: select("variants", variants.color, "success")
-    }
+      default: select('variants', variants.color, 'success'),
+    },
   },
   template: `<ListTwo :variant="variant">
-  <p :class="'text-' + variant">DOĞA DOSTU ÜRETİM</p></ListTwo>`
-});
+  <p :class="'text-' + variant">DOĞA DOSTU ÜRETİM</p></ListTwo>`,
+})

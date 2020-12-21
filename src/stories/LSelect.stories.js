@@ -1,12 +1,12 @@
-import LSelect from "../components/LSelect";
+import LSelect from '../components/LSelect'
 
 export default {
-  title: "/Lanista/Selects",
+  title: '/Lanista/Selects',
   component: { LSelect },
   argTypes: {
-    BackgroundColor: { control: "color" }
-  }
-};
+    BackgroundColor: { control: 'color' },
+  },
+}
 
 export const L_Select = () => ({
   components: { LSelect },
@@ -14,23 +14,23 @@ export const L_Select = () => ({
     return {
       items: [
         {
-          label: "Marka",
-          key: null
+          label: 'Marka',
+          key: null,
         },
         {
-          label: "Audi",
-          key: "audi"
+          label: 'Audi',
+          key: 'audi',
         },
         {
-          label: "Bmw",
-          key: "bmw"
+          label: 'Bmw',
+          key: 'bmw',
         },
         {
-          label: "Toyota",
-          key: "toyota"
-        }
-      ]
-    };
+          label: 'Toyota',
+          key: 'toyota',
+        },
+      ],
+    }
   },
-  template: `<LSelect :items="items"></LSelect>`
-});
+  template: `<LSelect :items="items"></LSelect>`,
+})

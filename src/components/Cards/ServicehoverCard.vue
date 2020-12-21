@@ -14,18 +14,18 @@ export default {
   props: {
     title: {
       type: String,
-      default: null
+      default: null,
     },
     bgUrl: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     bgStyle() {
       return `background-image: url(${this.bgUrl})`
-    }
-  }
+    },
+  },
 }
 </script>
 

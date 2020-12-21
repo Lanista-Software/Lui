@@ -1,21 +1,21 @@
-import ProductTwo from "../../components/Cards/ProductCards/ProductTwo";
-import TagOne from "../../components/Tags/TagOne.vue";
+import ProductTwo from '../../components/Cards/ProductCards/ProductTwo'
+import TagOne from '../../components/Tags/TagOne.vue'
 export default {
-  title: "Cards/ProductCards/ProductTwo",
+  title: 'Cards/ProductCards/ProductTwo',
   component: {
     ProductTwo,
-    TagOne
-  }
-};
+    TagOne,
+  },
+}
 
 export const VariantOne = () => ({
   props: {},
   data() {
-    return {};
+    return {}
   },
   components: {
     ProductTwo,
-    TagOne
+    TagOne,
   },
   template: `<ProductTwo class="bg-white">
             <template v-slot:tag>
@@ -32,5 +32,5 @@ export const VariantOne = () => ({
             <template v-slot:properties>
             <small class="text-dark_05">Ebatlar : 12 x 5 cm</small>
             </template>
-            </ProductTwo>`
-});
+            </ProductTwo>`,
+})

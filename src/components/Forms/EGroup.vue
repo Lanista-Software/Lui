@@ -11,18 +11,18 @@
 
 <script>
 export default {
-  name: "EGroup",
+  name: 'EGroup',
   props: {
     label: {
       type: String,
-      default: null
+      default: null,
     },
     type: {
       type: String,
-      default: "text"
-    }
-  }
-};
+      default: 'text',
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

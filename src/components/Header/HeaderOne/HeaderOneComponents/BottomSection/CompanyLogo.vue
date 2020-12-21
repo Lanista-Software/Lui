@@ -19,18 +19,18 @@ export default {
   props: {
     img: {
       type: String,
-      default: null
+      default: null,
     },
     name: {
       type: String,
-      default: null
+      default: null,
     },
     subname: {
       type: String,
-      default: null
-    }
-  }
-};
+      default: null,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

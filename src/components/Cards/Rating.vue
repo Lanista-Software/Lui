@@ -10,13 +10,13 @@ export default {
   props: {
     line: {
       type: Number,
-      default: null
+      default: null,
     },
     fill: {
       type: Number,
-      default: null
-    }
-  }
+      default: null,
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

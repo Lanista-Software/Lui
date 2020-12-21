@@ -53,24 +53,24 @@ export default {
   props: {
     line: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   validations: {
     form: {
       name: {
-        required
+        required,
       },
       surname: {
-        required
+        required,
       },
       phone: {
-        required
+        required,
       },
       email: {
-        required
-      }
-    }
+        required,
+      },
+    },
   },
   data() {
     return {
@@ -79,8 +79,8 @@ export default {
         surname: null,
         phone: null,
         email: null,
-        adress: null
-      }
+        adress: null,
+      },
     }
   },
   methods: {
@@ -94,13 +94,13 @@ export default {
           surname: '',
           phone: '',
           email: '',
-          adress: ''
+          adress: '',
         }
       } else {
         alert('Form has strong')
       }
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

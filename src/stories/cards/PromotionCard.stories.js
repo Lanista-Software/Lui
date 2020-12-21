@@ -4,7 +4,7 @@ import ListTwo from '../../components/Lists/ListTwo.vue'
 import LButton from '../../components/LButton.vue'
 export default {
   title: 'Cards/PromotionCard',
-  component: { PromotionCard }
+  component: { PromotionCard },
 }
 
 export const Promotion_Card = () => ({
@@ -25,7 +25,7 @@ export const Promotion_Card = () => ({
         <i class="ri-contacts-book-2-fill ri-2x text-dark" />
       </bg-icon>
   </template>
-  </PromotionCard>`
+  </PromotionCard>`,
 })
 export const Promotion_Card2 = () => ({
   components: { PromotionCard, BgIcon, ListTwo, LButton },
@@ -41,5 +41,5 @@ export const Promotion_Card2 = () => ({
   </template>
   <template v-slot:buttons>
 <l-button bg-variant="bg-success" size="sm">Daha fazla bilgi al</l-button>
-  </PromotionCard>`
+  </PromotionCard>`,
 })

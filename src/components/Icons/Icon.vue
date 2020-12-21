@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  name: "Icon"
-};
+  name: 'Icon',
+}
 </script>
 
 <style scoped lang="scss"></style>

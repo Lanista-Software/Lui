@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'HeroTwo'
+  name: 'HeroTwo',
 }
 </script>
 
