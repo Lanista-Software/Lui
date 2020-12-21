@@ -1,26 +1,26 @@
-import HerocardOne from "../../components/Cards/HeroCards/HerocardOne.vue";
-import ListTwo from "../../components/Lists/ListTwo.vue";
-import LSelect from "../../components/LSelect.vue";
-import SelectFilter from "../../components/Cards/SelectFilter.vue";
+import HerocardOne from '../../components/Cards/HeroCards/HerocardOne.vue'
+import ListTwo from '../../components/Lists/ListTwo.vue'
+import LSelect from '../../components/LSelect.vue'
+import SelectFilter from '../../components/Cards/SelectFilter.vue'
 export default {
-  title: "Cards/Herocards/HerocardOne",
+  title: 'Cards/Herocards/HerocardOne',
   component: { HerocardOne }
-};
+}
 export const Herocard_One = () => ({
   components: { HerocardOne, ListTwo, LSelect, SelectFilter },
   data() {
     return {
       items: [
         {
-          value: "Sektör",
+          value: 'Sektör',
           key: null
         },
         {
-          value: "Kullanım",
+          value: 'Kullanım',
           key: null
         }
       ]
-    };
+    }
   },
   template: `<HerocardOne>
     <template v-slot:tag>
@@ -49,4 +49,4 @@ export const Herocard_One = () => ({
     </p>
     </slot>
     </HerocardOne>`
-});
+})
