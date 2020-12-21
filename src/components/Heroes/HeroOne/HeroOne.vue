@@ -1,112 +1,53 @@
 <template>
-  <div :class="center ? 'hero-card-container-center' : 'hero-card'">
-    <div :class="center ? 'hero-card-top-center' : 'hero-card-top'">
-      <div class="">
-        <component :is="hSize" :class="textVariant">
-          {{ titleOne }}
-        </component>
-      </div>
-      <div class="hero-card-inline">
-        <component :is="hSize" :class="textVariant">
-          {{ titleSecond }}
-        </component>
-        <slot name="icon" />
-      </div>
+  <div class="hero-one">
+    <div class="hero-one-right">
+      <hero-onecard :buttonVariants="buttonVariants">
+        <p>
+          Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza yanıt
+          vermek için bekliyoruz
+        </p>
+        <template v-slot:top>
+          <h3>
+            ONLİNE SİPARİŞ KOLAYLIĞI
+          </h3>
+        </template>
+        <template v-slot:top-desc>
+          <h3 class="text-dark">
+            ÇOK YAKINDA HİZMETİNİZDE
+          </h3>
+        </template>
+      </hero-onecard>
     </div>
-    <div class="hero-card-center">
-      <p :class="[[textVariant + '_08'], [center ? 'text-center' : null]]">
-        <slot />
-      </p>
-    </div>
-    <div class="hero-card-bottom">
-      <l-button
-        size="lg"
-        :bg-variant="buttonVariants.bgVariant"
-        :text-variant="buttonVariants.textVariant"
-        v-on="$listeners"
-        >{{ buttonVariants.btnText }}</l-button
-      >
+    <div class="hero-one-left">
+      <ProductFilter></ProductFilter>
     </div>
   </div>
 </template>
-
 <script>
-import LButton from "../../LButton";
+import HeroOnecard from '../../Cards/HeroCards/HeroOnecard'
+import ProductFilter from '../../Cards/ProductFilter'
 export default {
-  name: "HeroOne",
-  components: { LButton },
-  props: {
-    titleOne: {
-      type: String,
-      default: null
-    },
-    textVariant: {
-      type: String,
-      default: "text-white"
-    },
-    hSize: {
-      type: String,
-      default: "h1"
-    },
-    center: {
-      type: Boolean,
-      default: false
-    },
-    titleSecond: {
-      type: String,
-      default: null
-    },
-    buttonVariants: {
-      type: Object,
-      required: true
+  components: { HeroOnecard, ProductFilter },
+  name: 'HeroOne',
+  data() {
+    return {
+      buttonVariants: {
+        bgVariant: 'bg-warning',
+        textVariant: 'text-dark',
+        btnText: 'İletişime geçin'
+      }
     }
   }
-};
-</script>
-
-<style lang="scss" scoped>
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $baseFont;
 }
-.hero-card {
+</script>
+<style lang="scss" scoped>
+.hero-one {
   display: grid;
-  grid-template-rows: auto auto auto;
-  &-container-center {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-  &-top {
-    justify-self: start;
-    &-center {
-      text-align: center;
-      justify-content: center;
-    }
-  }
-  &-inline {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 20px;
-    i {
-      font-size: 18px;
-      margin-left: 40px;
-    }
-  }
-  &-center {
-    text-align: left;
-    margin: 30px 0px;
-    p {
-      font-family: $baseFont;
-      margin: 0;
-      line-height: 25px;
-    }
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  align-items: center;
+  &-left {
+    justify-self: flex-end;
   }
 }
 </style>

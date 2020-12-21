@@ -16,9 +16,9 @@
   </div>
 </template>
 <script>
-import LButton from "../../LButton.vue";
+import LButton from '../../LButton.vue'
 export default {
-  name: "MediaCard",
+  name: 'MediaCard',
   components: { LButton },
   props: {
     href: {
@@ -32,19 +32,19 @@ export default {
   },
   methods: {
     goVideo() {
-      window.open(this.href, "_blank");
+      window.open(this.href, '_blank')
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .media-card {
   max-width: 560px;
-  max-height: 450px;
-  height: 100%;
+  height: 450px;
   width: 100%;
-  position: absolute;
-  background-size: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
   &-container {
     width: 100%;
     display: flex;

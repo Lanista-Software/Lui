@@ -1,24 +1,16 @@
 <template>
   <div class="service-hover-card radius-10" :style="bgStyle">
     <div class="bg-dark_08 service-hover-card-abs">
-      <h5 class="text-white fw-100">
-        {{ title }}
-      </h5>
-      <p class="text-white fw-400">
-        <slot />
-      </p>
-      <l-button bg-variant="bg-primary" text-variant="text-white" size="md"
-        >Iletişime geçin</l-button
-      >
+      <slot name="title" />
+      <slot />
+      <slot name="button" />
     </div>
   </div>
 </template>
 
 <script>
-import LButton from "../LButton.vue";
 export default {
-  name: "ServicehoverCard",
-  components: { LButton },
+  name: 'ServicehoverCard',
   props: {
     title: {
       type: String,
@@ -31,10 +23,10 @@ export default {
   },
   computed: {
     bgStyle() {
-      return `background-image: url(${this.bgUrl})`;
+      return `background-image: url(${this.bgUrl})`
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -44,11 +36,12 @@ export default {
   height: 240px;
   &-abs {
     align-self: flex-end;
-    height: 40%;
+    height: 25%;
     text-align: center;
     display: grid;
     justify-content: center;
     transition: 1s;
+    width: 100%;
     align-content: center;
     grid-template-rows: auto auto auto;
     border-bottom-left-radius: 10px;
