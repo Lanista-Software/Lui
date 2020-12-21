@@ -1,10 +1,10 @@
-import LineCard from "../../components/Cards/LineCard.vue";
-import BgIcon from "../../components/Icons/BgIcon.vue";
-import LButton from "../../components/LButton.vue";
+import LineCard from '../../components/Cards/LineCard.vue'
+import BgIcon from '../../components/Icons/BgIcon.vue'
+import LButton from '../../components/LButton.vue'
 export default {
-  title: "Cards/LineCard",
+  title: 'Cards/LineCard',
   component: { LineCard, BgIcon, LButton }
-};
+}
 
 export const Variant_1 = () => ({
   components: { LineCard, BgIcon, LButton },
@@ -31,4 +31,4 @@ export const Variant_1 = () => ({
                         </LButton>
                     </template>
                 </LineCard>`
-});
+})
