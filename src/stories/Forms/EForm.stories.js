@@ -1,3 +1,4 @@
+import { boolean } from '@storybook/addon-knobs'
 import EForm from '../../components/Forms/EForm'
 import EGroup from '../../components/Forms/EGroup'
 
@@ -11,6 +12,11 @@ export const E_Group = () => ({
   template: `<EGroup label="Ad"></EGroup>`
 })
 export const E_Form = () => ({
+  props: {
+    line: {
+      default: boolean('line', false)
+    }
+  },
   components: { EForm },
-  template: `<EForm class="bg-white shadow radius-08"></EForm>`
+  template: `<EForm v-bind="$props" class="bg-white shadow radius-08"></EForm>`
 })
