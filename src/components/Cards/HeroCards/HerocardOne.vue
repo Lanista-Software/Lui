@@ -21,7 +21,7 @@ export default {
   display: grid;
   max-width: 470px;
   width: 100%;
-  gap: 1.3rem;
+  gap: 2rem;
   grid-template-rows: auto 1fr 0.5fr;
   text-align: center;
   &-content {
