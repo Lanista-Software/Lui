@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "EGroup",
+  name: 'EGroup',
   props: {
     label: {
       type: String,
@@ -19,10 +19,10 @@ export default {
     },
     type: {
       type: String,
-      default: "text"
+      default: 'text'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -35,15 +35,9 @@ input {
   border: none;
   outline: none;
   width: 100%;
-
-  height: 35px;
+  height: 30px;
 }
 div {
   width: 100%;
-}
-@media ($lg) {
-  input {
-    height: 50px;
-  }
 }
 </style>
