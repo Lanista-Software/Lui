@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 .media-card {
   max-width: 560px;
-  height: 450px;
+  height: 250px;
   width: 100%;
   position: relative;
   background-size: cover;
@@ -58,6 +58,21 @@ export default {
       display: block;
       margin-top: 10px;
     }
+  }
+}
+@media ($sm) {
+  .media-card {
+    height: 320px;
+  }
+}
+@media ($md) {
+  .media-card {
+    height: 370px;
+  }
+}
+@media ($lg) {
+  .media-card {
+    height: 450px;
   }
 }
 </style>

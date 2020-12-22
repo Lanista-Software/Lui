@@ -20,12 +20,19 @@ export default {
 .herocard-one {
   display: grid;
   max-width: 470px;
-  gap: 1.3rem;
+  width: 100%;
+  gap: 2rem;
   grid-template-rows: auto 1fr 0.5fr;
+  text-align: center;
   &-content {
     display: grid;
     grid-template-rows: auto;
     gap: 1rem;
+  }
+}
+@media ($lg) {
+  .herocard-one {
+    text-align: left;
   }
 }
 </style>
