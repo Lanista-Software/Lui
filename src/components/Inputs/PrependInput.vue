@@ -14,10 +14,10 @@
 <style lang="scss" scoped>
 .prepend-input {
   position: relative;
+  width: 100%;
   input {
     height: 30px;
-    width: 100%;
-    max-width: 372px;
+    width: 372px;
     padding-left: 40px;
     outline: none;
     color: $dark;

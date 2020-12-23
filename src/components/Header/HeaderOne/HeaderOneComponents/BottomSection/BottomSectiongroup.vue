@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import lButton from "../../../../LButton";
-import CompanyLogo from "./CompanyLogo";
-import lmenu from "./Menu";
+import lButton from '../../../../LButton'
+import CompanyLogo from './CompanyLogo'
+import lmenu from './Menu'
 export default {
   components: {
     CompanyLogo,
@@ -36,40 +36,40 @@ export default {
     return {
       items: [
         {
-          href: "/",
+          href: '/',
           exact: false,
-          class: "text-white",
-          text: "Anasayfa"
+          class: 'text-white',
+          text: 'Anasayfa'
         },
         {
-          href: "#",
+          href: '#',
           exact: false,
-          class: "text-white",
-          text: "Hakkımızda"
+          class: 'text-white',
+          text: 'Hakkımızda'
         },
         {
-          href: "#",
+          href: '#',
           exact: false,
-          class: "text-white",
-          text: "Sık Sorulan sorular"
+          class: 'text-white',
+          text: 'Sık Sorulan sorular'
         },
         {
-          href: "#",
+          href: '#',
           exact: false,
-          class: "text-white",
-          text: "Ürünler"
+          class: 'text-white',
+          text: 'Ürünler'
         }
       ]
-    };
+    }
   },
   methods: {
     scrollDown(id) {
       // window.scrollTo(0, 400)
-      const elmnt = document.getElementById(id);
-      elmnt.scrollIntoView();
+      const elmnt = document.getElementById(id)
+      elmnt.scrollIntoView()
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
