@@ -61,20 +61,20 @@ export default {
     height: 75px;
     align-items: center;
     grid-template-columns: 1fr auto 1fr;
-    div {
-      align-self: center;
-    }
     div:nth-child(1) {
       justify-self: start;
+      display: flex;
+      align-items: center;
     }
     div:nth-child(2) {
       justify-self: center;
+      display: flex;
+      align-items: center;
     }
     div:nth-child(3) {
-      justify-self: end;
-    }
-    button {
-      padding: 7px 24px;
+      justify-self: flex-end;
+      display: flex;
+      align-items: center;
     }
   }
 }
