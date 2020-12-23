@@ -70,7 +70,7 @@ h6 {
   &-inline {
     display: inline-flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.5rem;
     i {
       font-size: 18px;
       margin-left: 40px;
@@ -78,7 +78,7 @@ h6 {
   }
   &-center {
     text-align: left;
-    margin: 30px 0px;
+    margin: 1.5rem 0px;
     p {
       font-family: $baseFont;
       margin: 0;
