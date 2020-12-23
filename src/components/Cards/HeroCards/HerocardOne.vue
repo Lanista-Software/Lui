@@ -21,13 +21,14 @@ export default {
   display: grid;
   max-width: 470px;
   width: 100%;
-  gap: 2rem;
+  align-content: center;
+  gap: 20px;
   grid-template-rows: auto 1fr 0.5fr;
   text-align: center;
   &-content {
     display: grid;
     grid-template-rows: auto;
-    gap: 1rem;
+    gap: 28px;
   }
 }
 @media ($lg) {
