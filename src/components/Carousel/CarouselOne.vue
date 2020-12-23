@@ -5,15 +5,15 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-  name: "CarouselOne",
+  name: 'CarouselOne',
   components: { VueSlickCarousel }
-};
+}
 /**  All MEthodst And Props **/
 /** https://github.com/gs-shop/vue-slick-carousel/blob/master/docs/API.md#props **/
 </script>
