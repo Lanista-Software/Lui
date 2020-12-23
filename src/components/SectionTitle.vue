@@ -1,24 +1,24 @@
 <template>
   <div class="section-title">
-    <h4 class="text-dark fw-100">
+    <h4 class="text-dark fw-600">
       {{ title }}
     </h4>
-    <h5 class="text-dark fw-100">
+    <p class="text-dark_08 fw-400">
       <slot />
-    </h5>
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SectionTitle",
+  name: 'SectionTitle',
   props: {
     title: {
       type: String,
       default: null
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .section-title {
@@ -29,11 +29,10 @@ export default {
     width: 100%;
     font-family: $baseFont;
   }
-  h5 {
+  p {
     display: flex;
     justify-content: center;
-    opacity: 0.8;
-    margin-top: 1rem;
+    margin-top: 1.1rem;
   }
 }
 </style>
