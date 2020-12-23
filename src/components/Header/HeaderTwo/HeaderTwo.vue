@@ -30,6 +30,11 @@
               <i class="ri-star-line ri-1x text-success" />
             </prepend-input>
           </template>
+          <template v-slot:right>
+            <lang>
+              <i class="ri-arrow-down-s-line text-white" />
+            </lang>
+          </template>
         </Bottom>
       </div>
     </div>
@@ -51,8 +56,9 @@ import Top from './Top'
 import Bottom from './Bottom'
 import BgIcon from '../../Icons/BgIcon.vue'
 import PrependInput from '../../Inputs/PrependInput.vue'
+import Lang from '../../Lang.vue'
 export default {
-  components: { LButton, Top, BgIcon, PrependInput, Bottom },
+  components: { LButton, Top, BgIcon, PrependInput, Bottom, Lang },
   name: 'HeaderTwo'
 }
 </script>

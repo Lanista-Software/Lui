@@ -11,7 +11,7 @@
         <slot name="center" />
       </div>
       <div class="header-two-bottom-right">
-        <h5 class="text-white">dil seçimi</h5>
+        <slot name="right" />
       </div>
     </div>
   </div>
