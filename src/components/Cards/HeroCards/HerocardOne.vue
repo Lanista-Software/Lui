@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: 'HerocardOne'
+  name: 'HerocardOne',
 }
 </script>
 <style lang="scss" scoped>

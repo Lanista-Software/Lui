@@ -19,38 +19,38 @@ export default {
     return {
       menus: [
         {
-          href: "/",
-          text: "Anasayfa"
+          href: '/',
+          text: 'Anasayfa',
         },
         {
-          href: "#products",
-          text: "Ürünler"
+          href: '#products',
+          text: 'Ürünler',
         },
         {
-          href: "#brands",
-          text: "Markalar"
+          href: '#brands',
+          text: 'Markalar',
         },
         {
-          href: "#services",
-          text: "Hizmetler"
+          href: '#services',
+          text: 'Hizmetler',
         },
         {
-          href: "#about",
-          text: "Hakkımızda"
+          href: '#about',
+          text: 'Hakkımızda',
         },
         {
-          href: "#faq",
-          text: "Sık sorulanlar"
-        }
-      ]
-    };
+          href: '#faq',
+          text: 'Sık sorulanlar',
+        },
+      ],
+    }
   },
   methods: {
     emitMenu(e) {
-      this.$emit("show", e);
-    }
-  }
-};
+      this.$emit('show', e)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

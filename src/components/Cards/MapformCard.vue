@@ -20,7 +20,7 @@
 import EForm from '../Forms/EForm.vue'
 export default {
   components: { EForm },
-  name: 'MapformCard'
+  name: 'MapformCard',
 }
 </script>
 <style lang="scss" scoped>

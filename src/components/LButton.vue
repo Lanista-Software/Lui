@@ -3,7 +3,7 @@
     class="l-button"
     :class="[
       ['l-button-' + size, bgVariant, textVariant, borderVariant],
-      [block ? 'l-button-block' : null]
+      [block ? 'l-button-block' : null],
     ]"
     v-on="$listeners"
     v-bind="$attrs"
@@ -14,38 +14,38 @@
 
 <script>
 export default {
-  name: "LButton",
+  name: 'LButton',
   props: {
     size: {
       type: String,
       default: null,
       validator(value) {
-        return ["sm", "md", "lg"].includes(value);
-      }
+        return ['sm', 'md', 'lg'].includes(value)
+      },
     },
     bgVariant: {
       type: String,
-      default: null
+      default: null,
     },
     block: {
       type: Boolean,
-      default: false
+      default: false,
     },
     borderVariant: {
       type: String,
-      default: null
+      default: null,
     },
     textVariant: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
     clicked() {
-      this.$emit("clicked");
-    }
-  }
-};
+      this.$emit('clicked')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

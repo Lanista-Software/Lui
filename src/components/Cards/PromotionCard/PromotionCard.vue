@@ -19,13 +19,13 @@ export default {
   props: {
     title: {
       type: String,
-      default: null
+      default: null,
     },
     borderMode: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

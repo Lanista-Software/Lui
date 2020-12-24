@@ -12,7 +12,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
   name: 'CarouselOne',
-  components: { VueSlickCarousel }
+  components: { VueSlickCarousel },
 }
 /**  All MEthodst And Props **/
 /** https://github.com/gs-shop/vue-slick-carousel/blob/master/docs/API.md#props **/

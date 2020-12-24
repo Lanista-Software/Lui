@@ -31,9 +31,9 @@ export default {
     return {
       show: false,
       selected: 'Turkish',
-      other: 'English'
+      other: 'English',
     }
-  }
+  },
 }
 </script>
 

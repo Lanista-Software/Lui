@@ -1,28 +1,28 @@
-import HeroTwo from "../../components/Heroes/HeroTwo/HeroTwo.vue";
-import LButton from "../../components/LButton.vue";
-import TagImage from "../../components/ImageViews/TagImage.vue";
-import TagOne from "../../components/Tags/TagOne.vue";
-import CarouselOne from "../../components/Carousel/CarouselOne.vue";
+import HeroTwo from '../../components/Heroes/HeroTwo/HeroTwo.vue'
+import LButton from '../../components/LButton.vue'
+import TagImage from '../../components/ImageViews/TagImage.vue'
+import TagOne from '../../components/Tags/TagOne.vue'
+import CarouselOne from '../../components/Carousel/CarouselOne.vue'
 
 export default {
-  title: "Heroes/HeroTwo",
+  title: 'Heroes/HeroTwo',
   component: {
     HeroTwo,
     LButton,
     TagImage,
-    TagOne
-  }
-};
+    TagOne,
+  },
+}
 const url = `https://picsum.photos/id/${Math.floor(
   Math.random() * (200 - 1) + 1
-)}/600/600`;
+)}/600/600`
 export const HeroTwo_v1 = () => ({
   props: {},
   data() {
     return {
       settings: {
         dots: true,
-        dotsClass: "slick-dots custom-dot-class",
+        dotsClass: 'slick-dots custom-dot-class',
         edgeFriction: 0.35,
         infinite: true,
         slidesToShow: 1,
@@ -34,7 +34,7 @@ export const HeroTwo_v1 = () => ({
         // cssEase: "linear",
         pauseOnFocus: true,
         pauseOnHover: true,
-        focusOnSelect: true
+        focusOnSelect: true,
         // responsive: [
         //   {
         //     breakpoint: 1024,
@@ -62,15 +62,15 @@ export const HeroTwo_v1 = () => ({
         //   }
         // ]
       },
-      url: url
-    };
+      url: url,
+    }
   },
   components: {
     HeroTwo,
     LButton,
     CarouselOne,
     TagImage,
-    TagOne
+    TagOne,
   },
   template: `<div class="container">
               <HeroTwo>
@@ -136,5 +136,5 @@ export const HeroTwo_v1 = () => ({
                   </CarouselOne>
                 </slot>
               </HeroTwo>
-              </div>`
-});
+              </div>`,
+})

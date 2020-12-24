@@ -19,7 +19,7 @@ import lmenu from '../HeaderOne/HeaderOneComponents/BottomSection/Menu'
 export default {
   name: 'HeaderTwoTop',
   components: {
-    lmenu
+    lmenu,
   },
   data() {
     return {
@@ -28,29 +28,29 @@ export default {
           href: '/',
           exact: false,
           class: 'text-white',
-          text: 'Anasayfa'
+          text: 'Anasayfa',
         },
         {
           href: '#',
           exact: false,
           class: 'text-white',
-          text: 'Hakkımızda'
+          text: 'Hakkımızda',
         },
         {
           href: '#',
           exact: false,
           class: 'text-white',
-          text: 'Sık Sorulan sorular'
+          text: 'Sık Sorulan sorular',
         },
         {
           href: '#',
           exact: false,
           class: 'text-white',
-          text: 'Ürünler'
-        }
-      ]
+          text: 'Ürünler',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

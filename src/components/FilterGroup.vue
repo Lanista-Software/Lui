@@ -13,28 +13,28 @@
 </template>
 
 <script>
-import LButton from "./LButton.vue";
+import LButton from './LButton.vue'
 export default {
-  name: "FilterGroup",
+  name: 'FilterGroup',
   components: { LButton },
   props: {
     buttons: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      active: null
-    };
+      active: null,
+    }
   },
   methods: {
     activeEmit(i) {
-      this.active = i;
-      this.$emit("active", i);
-    }
-  }
-};
+      this.active = i
+      this.$emit('active', i)
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .filter-group {

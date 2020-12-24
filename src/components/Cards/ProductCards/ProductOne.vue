@@ -48,7 +48,7 @@
                 : [
                     product.type === 'Yaz'
                       ? '/icons/sun.svg'
-                      : '/icons/rainy.svg'
+                      : '/icons/rainy.svg',
                   ]
             "
           />
@@ -79,22 +79,22 @@
 </template>
 
 <script>
-import LButton from "../../LButton.vue";
-import Rating from "../Rating.vue";
+import LButton from '../../LButton.vue'
+import Rating from '../Rating.vue'
 export default {
   components: {
     Rating,
-    LButton
+    LButton,
   },
   props: {
     product: {
       type: Object,
-      required: true
+      required: true,
     },
     img: {
       type: String,
-      required: false
-    }
+      required: false,
+    },
     // href: {
     //   type: String,
     //   default: null,
@@ -110,19 +110,19 @@ export default {
   },
   computed: {
     href() {
-      const data = this.product.title.split(" ");
+      const data = this.product.title.split(' ')
       const link = `https://www.trendyol.com/${data[0].toLowerCase()}/${data[1].toLowerCase()}-p-${
         this.product.id
-      }`;
-      return link;
-    }
+      }`
+      return link
+    },
   },
   methods: {
     goMarket() {
-      window.open(this.href, "_blank");
-    }
-  }
-};
+      window.open(this.href, '_blank')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

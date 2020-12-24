@@ -8,7 +8,7 @@ import CompanyLogo from '../../components/Header/HeaderOne/HeaderOneComponents/B
 
 export default {
   title: 'Headers/HeaderTwobottom',
-  component: HeaderTwobottom
+  component: HeaderTwobottom,
 }
 export const Header_Two_Bottom = () => ({
   components: { HeaderTwobottom, BgIcon, PrependInput },
@@ -32,7 +32,7 @@ export const Header_Two_Bottom = () => ({
           <i class="ri-star-line ri-1x text-success" />
         </prepend-input>
   </template>
-  </HeaderTwobottom>`
+  </HeaderTwobottom>`,
 })
 export const Header_Two_Top = () => ({
   components: { HeaderTwotop, CompanyLogo, LButton },
@@ -47,10 +47,10 @@ subname="Kereste İmalat İnşaat Ltd. Şti."
 <template v-slot:button>
 <l-button bg-variant="bg-light" size="md">Müşteri Girişi</l-button>
 </template>
-  </HeaderTwotop>`
+  </HeaderTwotop>`,
 })
 export const Header_Two = () => ({
   components: { HeaderTwo },
   template: `<HeaderTwo>
-  </HeaderTwo>`
+  </HeaderTwo>`,
 })

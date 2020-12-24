@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'HeaderTwo/Bottom'
+  name: 'HeaderTwo/Bottom',
 }
 </script>
 <style lang="scss" scoped>

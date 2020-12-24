@@ -30,7 +30,7 @@ export default {
   components: {
     CompanyLogo,
     lmenu,
-    lButton
+    lButton,
   },
   data() {
     return {
@@ -39,27 +39,27 @@ export default {
           href: '/',
           exact: false,
           class: 'text-white',
-          text: 'Anasayfa'
+          text: 'Anasayfa',
         },
         {
           href: '#',
           exact: false,
           class: 'text-white',
-          text: 'Hakkımızda'
+          text: 'Hakkımızda',
         },
         {
           href: '#',
           exact: false,
           class: 'text-white',
-          text: 'Sık Sorulan sorular'
+          text: 'Sık Sorulan sorular',
         },
         {
           href: '#',
           exact: false,
           class: 'text-white',
-          text: 'Ürünler'
-        }
-      ]
+          text: 'Ürünler',
+        },
+      ],
     }
   },
   methods: {
@@ -67,8 +67,8 @@ export default {
       // window.scrollTo(0, 400)
       const elmnt = document.getElementById(id)
       elmnt.scrollIntoView()
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -26,22 +26,22 @@
   </div>
 </template>
 <script>
-import LButton from "../LButton.vue";
+import LButton from '../LButton.vue'
 export default {
-  name: "FaqDrop",
+  name: 'FaqDrop',
   components: { LButton },
   props: {
     question: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      show: false
-    };
-  }
-};
+      show: false,
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
 .faq-drop-card {

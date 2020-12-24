@@ -79,10 +79,10 @@
 </template>
 
 <script>
-import ItemGroup from "../../Header/HeaderOne/HeaderOneComponents/TopSection/ItemGroup.vue";
+import ItemGroup from '../../Header/HeaderOne/HeaderOneComponents/TopSection/ItemGroup.vue'
 export default {
-  components: { ItemGroup }
-};
+  components: { ItemGroup },
+}
 </script>
 
 <style lang="scss" scoped>

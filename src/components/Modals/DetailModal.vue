@@ -21,7 +21,7 @@
 import LButton from '../LButton.vue'
 export default {
   components: { LButton },
-  name: 'DetailModal'
+  name: 'DetailModal',
 }
 </script>
 <style lang="scss" scoped>

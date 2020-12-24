@@ -3,7 +3,7 @@ import BgIcon from '../../components/Icons/BgIcon.vue'
 import LButton from '../../components/LButton.vue'
 export default {
   title: 'Cards/LineCard',
-  component: { LineCard, BgIcon, LButton }
+  component: { LineCard, BgIcon, LButton },
 }
 
 export const Variant_1 = () => ({
@@ -30,5 +30,5 @@ export const Variant_1 = () => ({
                         </span>
                         </LButton>
                     </template>
-                </LineCard>`
+                </LineCard>`,
 })

@@ -59,7 +59,7 @@ import PrependInput from '../../Inputs/PrependInput.vue'
 import Lang from '../../Lang.vue'
 export default {
   components: { LButton, Top, BgIcon, PrependInput, Bottom, Lang },
-  name: 'HeaderTwo'
+  name: 'HeaderTwo',
 }
 </script>
 <style lang="scss" scoped>

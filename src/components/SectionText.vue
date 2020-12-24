@@ -25,26 +25,26 @@
 
 <script>
 export default {
-  name: "SectionText",
+  name: 'SectionText',
   props: {
     title: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      more: false
-    };
+      more: false,
+    }
   },
   computed: {
     slot() {
-      const responsiveText = this.$slots.default[0].text.substring(0, 500);
-      const desktopText = this.$slots.default[0].text;
-      return { responsiveText, desktopText };
-    }
-  }
-};
+      const responsiveText = this.$slots.default[0].text.substring(0, 500)
+      const desktopText = this.$slots.default[0].text
+      return { responsiveText, desktopText }
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .section-text {

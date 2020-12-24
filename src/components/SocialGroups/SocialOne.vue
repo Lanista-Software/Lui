@@ -8,7 +8,7 @@
           </a>
           <div class="dnone">
             <a :href="item.link" target="_blank">
-              {{ "/" + item.link.split("/")[3] }}
+              {{ '/' + item.link.split('/')[3] }}
             </a>
           </div>
         </li>
@@ -26,9 +26,9 @@
 </template>
 <script>
 export default {
-  name: "SocialOne",
+  name: 'SocialOne',
   data() {
-    return {};
+    return {}
   },
   props: {
     socialList: {
@@ -36,25 +36,25 @@ export default {
       default() {
         return [
           {
-            name: "Facebook",
-            icon: "/icons/001-facebook.svg",
-            link: "https://www.facebook.com/PfizerTurkiye"
+            name: 'Facebook',
+            icon: '/icons/001-facebook.svg',
+            link: 'https://www.facebook.com/PfizerTurkiye',
           },
           {
-            name: "Whatsapp",
-            icon: "/icons/whatsapp.svg",
-            link: "https://www.facebook.com/PfizerTurkiye"
+            name: 'Whatsapp',
+            icon: '/icons/whatsapp.svg',
+            link: 'https://www.facebook.com/PfizerTurkiye',
           },
           {
-            name: "Instagram",
-            icon: "/icons/instagram (1).svg",
-            link: "https://www.facebook.com/PfizerTurkiye"
-          }
-        ];
-      }
-    }
-  }
-};
+            name: 'Instagram',
+            icon: '/icons/instagram (1).svg',
+            link: 'https://www.facebook.com/PfizerTurkiye',
+          },
+        ]
+      },
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 * {

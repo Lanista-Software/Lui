@@ -28,11 +28,11 @@
   </div>
 </template>
 <script>
-import LButton from "./LButton.vue";
+import LButton from './LButton.vue'
 export default {
   components: { LButton },
-  name: "CookieInfo"
-};
+  name: 'CookieInfo',
+}
 </script>
 <style lang="scss" scoped>
 .cookie-info {

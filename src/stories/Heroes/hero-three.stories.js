@@ -1,20 +1,20 @@
-import HeroThree from "../../components/Heroes/HeroThree.vue";
-import ListTwo from "../../components/Lists/ListTwo.vue";
-import HerocardOne from "../../components/Cards/HeroCards/HerocardOne.vue";
-import MediaCard from "../../components/Cards/HeroCards/MediaCard.vue";
-import LSelect from "../../components/LSelect.vue";
-import SelectFilter from "../../components/Cards/SelectFilter.vue";
+import HeroThree from '../../components/Heroes/HeroThree.vue'
+import ListTwo from '../../components/Lists/ListTwo.vue'
+import HerocardOne from '../../components/Cards/HeroCards/HerocardOne.vue'
+import MediaCard from '../../components/Cards/HeroCards/MediaCard.vue'
+import LSelect from '../../components/LSelect.vue'
+import SelectFilter from '../../components/Cards/SelectFilter.vue'
 export default {
-  title: "Heroes/HeroThree",
+  title: 'Heroes/HeroThree',
   component: {
     HerocardOne,
     HeroThree,
     ListTwo,
     LSelect,
     SelectFilter,
-    MediaCard
-  }
-};
+    MediaCard,
+  },
+}
 export const Hero_Three = () => ({
   components: {
     HerocardOne,
@@ -22,21 +22,21 @@ export const Hero_Three = () => ({
     ListTwo,
     LSelect,
     SelectFilter,
-    MediaCard
+    MediaCard,
   },
   data() {
     return {
       items: [
         {
-          value: "Sektör",
-          key: null
+          value: 'Sektör',
+          key: null,
         },
         {
-          value: "Kullanım",
-          key: null
-        }
-      ]
-    };
+          value: 'Kullanım',
+          key: null,
+        },
+      ],
+    }
   },
   template: `<HeroThree>
     <template v-slot:left>
@@ -71,5 +71,5 @@ export const Hero_Three = () => ({
     <template v-slot:right>
     <MediaCard bgImage="https://api.lanista.com.tr/assest/images/gökhan.jpg-4-4-.jpg" href="https://www.youtube.com/watch?v=-N7kFnzXG4U"></MediaCard>
     </template>
-    </HeroThree>`
-});
+    </HeroThree>`,
+})

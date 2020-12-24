@@ -4,8 +4,8 @@ export default {
   title: 'Cards/HeroOnecard',
   component: { HeroOne },
   argTypes: {
-    BackgroundColor: { control: 'color' }
-  }
+    BackgroundColor: { control: 'color' },
+  },
 }
 
 export const HeroOne1 = () => ({
@@ -14,14 +14,14 @@ export const HeroOne1 = () => ({
       buttonVariants: {
         bgVariant: 'bg-warning',
         textVariant: 'text-dark',
-        btnText: 'İletişime geçin'
-      }
+        btnText: 'İletişime geçin',
+      },
     }
   },
   props: {
     center: {
-      default: boolean('center', false)
-    }
+      default: boolean('center', false),
+    },
   },
   components: { HeroOne },
   template: `<HeroOne hSize="h2" :buttonVariants="buttonVariants" v-bind='$props' >
@@ -37,7 +37,7 @@ export const HeroOne1 = () => ({
   ONLİNE SİPARİŞ KOLAYLIĞI ÇOK YAKINDA HİZMETİNİZDE
   </h2>
   </template>
-  </HeroOne>`
+  </HeroOne>`,
 })
 // export const HeroOne2 = () => ({
 //   data: () => {
