@@ -1,8 +1,6 @@
 <template>
   <ul class="list-three" v-bind="$attrs">
-    <li v-if="$slots.title" class="list-title" :class="textVariant">
-      <slot name="title" />
-    </li>
+    <li v-if="$slots.title" class="list-title"><slot name="title"/></li>
     <li v-for="(item, index) in list" :key="index" class="list-item">
       <a v-if="item.link" :href="item.link" :class="textVariant">{{
         item.title
@@ -18,13 +16,13 @@ export default {
   props: {
     list: {
       type: Array,
-      required: true
+      required: true,
     },
     textVariant: {
       type: String,
-      default: null
-    }
-  }
+      default: 'text-light',
+    },
+  },
 }
 </script>
 

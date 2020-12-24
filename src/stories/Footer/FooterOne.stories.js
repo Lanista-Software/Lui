@@ -6,22 +6,22 @@ export default {
   title: 'Footers/FooterOne',
   component: { FooteronetopSection, FooteonebottomSection, FooterOne },
   argTypes: {
-    BackgroundColor: { control: 'color' }
-  }
+    BackgroundColor: { control: 'color' },
+  },
 }
 
 export const Footeronetop_Section = () => ({
   components: { FooteronetopSection },
   template: `<FooteronetopSection>
-  </FooteronetopSection>`
+  </FooteronetopSection>`,
 })
 export const Footeonebottom_Section = () => ({
   components: { FooteonebottomSection },
   template: `<FooteonebottomSection>
-  </FooteonebottomSection>`
+  </FooteonebottomSection>`,
 })
 export const Footer_One = () => ({
   components: { FooterOne },
   template: `<FooterOne>
-  </FooterOne>`
+  </FooterOne>`,
 })

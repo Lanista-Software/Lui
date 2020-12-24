@@ -4,7 +4,7 @@ import LSelect from '../../components/LSelect.vue'
 import SelectFilter from '../../components/Cards/SelectFilter.vue'
 export default {
   title: 'Cards/Herocards/HerocardOne',
-  component: { HerocardOne }
+  component: { HerocardOne },
 }
 export const Herocard_One = () => ({
   components: { HerocardOne, ListTwo, LSelect, SelectFilter },
@@ -13,13 +13,13 @@ export const Herocard_One = () => ({
       items: [
         {
           value: 'Sektör',
-          key: null
+          key: null,
         },
         {
           value: 'Kullanım',
-          key: null
-        }
-      ]
+          key: null,
+        },
+      ],
     }
   },
   template: `<HerocardOne>
@@ -48,5 +48,5 @@ export const Herocard_One = () => ({
     Sürdürülebilir bir gelecek ve daha yaşanabilir bir dünya için yüksek teknolojiyi kullanarak doğa dostu silikon üretimi gerçekleştiriyoruz.
     </p>
     </slot>
-    </HerocardOne>`
+    </HerocardOne>`,
 })

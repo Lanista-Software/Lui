@@ -1,22 +1,22 @@
-import { number } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
-import SelectFilter from "../../components/Cards/SelectFilter";
-import mixin from "../../components/filter";
-import LSelect from "../../components/LSelect.vue";
+import { number } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
+import SelectFilter from '../../components/Cards/SelectFilter'
+import mixin from '../../components/filter'
+import LSelect from '../../components/LSelect.vue'
 export default {
-  title: "Cards/SelectFilter",
-  component: { SelectFilter, LSelect }
-};
+  title: 'Cards/SelectFilter',
+  component: { SelectFilter, LSelect },
+}
 
 export const Select_Filter = () => ({
   components: { SelectFilter, LSelect },
   props: {
     mobileFr: {
-      default: number("mobileFr", 2)
+      default: number('mobileFr', 2),
     },
     desktopFr: {
-      default: number("desktopFr", 6)
-    }
+      default: number('desktopFr', 6),
+    },
   },
   data: () => {
     return {
@@ -26,11 +26,11 @@ export const Select_Filter = () => ({
         baseWidth: null,
         sectionRatio: null,
         wheelDiameter: null,
-        year: null
-      }
-    };
+        year: null,
+      },
+    }
   },
-  methods: { action: action("filter clicked") },
+  methods: { action: action('filter clicked') },
 
   mixins: [mixin],
   template: `<SelectFilter v-bind="$props" @click="action">
@@ -64,5 +64,5 @@ export const Select_Filter = () => ({
   :selected="selectform.wheelDiameter"
   :items="filterData.attributes.wheelDiameter"
 />
-  </SelectFilter>`
-});
+  </SelectFilter>`,
+})

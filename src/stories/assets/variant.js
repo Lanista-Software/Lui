@@ -5,7 +5,7 @@ export default {
     'bg-success',
     'bg-primary',
     'bg-warning',
-    'bg-light'
+    'bg-light',
   ],
   color: ['success', 'primary', 'warning', 'light', 'white', 'dark'],
   textVariant: [
@@ -14,7 +14,7 @@ export default {
     'text-primary',
     'text-warning',
     'text-light',
-    'text-dark'
+    'text-dark',
   ],
   borderVariant: [
     'border-white',
@@ -22,7 +22,7 @@ export default {
     'border-primary',
     'border-warning',
     'border-dark',
-    'border-light'
+    'border-light',
   ],
   size: [300, 300],
   list: [
@@ -33,6 +33,6 @@ export default {
     { title: 'Makaleler', link: '/home' },
     { title: 'NoLink' },
     { title: 'NoLink' },
-    { title: 'NoLink' }
-  ]
+    { title: 'NoLink' },
+  ],
 }

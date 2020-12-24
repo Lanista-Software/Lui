@@ -7,23 +7,23 @@
 
 <script>
 export default {
-  name: "TagImage",
+  name: 'TagImage',
   props: {
     url: {
       type: String,
-      default: "https://picsum.photos/id/236/600/600"
-    }
+      default: 'https://picsum.photos/id/236/600/600',
+    },
   },
   computed: {
     styleFilter() {
-      let url = this.url;
+      let url = this.url
 
       return {
-        backgroundImage: `url("${url}")`
-      };
-    }
-  }
-};
+        backgroundImage: `url("${url}")`,
+      }
+    },
+  },
+}
 </script>
 
 <style scoped lang="scss">

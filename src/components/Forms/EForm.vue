@@ -1,26 +1,28 @@
 <template>
-  <div class="e-form-container bg-white shadow radius-08">
+  <div class="e-form-container" v-bind="$attrs">
     <form @submit="submit">
-      <div class="e-form">
+      <div class="e-form" :class="line ? 'e-form-a-column' : null">
         <div class="e-form-left">
           <div class="e-form-inline">
             <EGroup v-model="$v.form.name.$model" label="Ad" />
             <EGroup v-model="$v.form.surname.$model" label="Soyad" />
           </div>
-          <EGroup
-            v-model="$v.form.phone.$model"
-            class="e-form-group"
-            label="Telefon"
-          />
-          <EGroup
-            v-model="$v.form.email.$model"
-            class="e-form-group"
-            label="E-mail"
-          />
+          <div :class="line ? 'e-form-inline' : null">
+            <EGroup
+              v-model="$v.form.phone.$model"
+              class="e-form-group"
+              label="Telefon"
+            />
+            <EGroup
+              v-model="$v.form.email.$model"
+              class="e-form-group"
+              label="E-mail"
+            />
+          </div>
         </div>
         <div class="e-form-right">
           <div class="e-form-right-area">
-            <label for="adress">Adres</label>
+            <label for="adress">Mesaj</label>
             <textarea
               id="adress"
               v-model="form.adress"
@@ -43,26 +45,32 @@
 </template>
 
 <script>
-import { required } from "vuelidate/lib/validators";
-import LButton from "../LButton.vue";
-import EGroup from "./EGroup.vue";
+import { required } from 'vuelidate/lib/validators'
+import LButton from '../LButton.vue'
+import EGroup from './EGroup.vue'
 export default {
   components: { EGroup, LButton },
+  props: {
+    line: {
+      type: Boolean,
+      default: false,
+    },
+  },
   validations: {
     form: {
       name: {
-        required
+        required,
       },
       surname: {
-        required
+        required,
       },
       phone: {
-        required
+        required,
       },
       email: {
-        required
-      }
-    }
+        required,
+      },
+    },
   },
   data() {
     return {
@@ -71,29 +79,29 @@ export default {
         surname: null,
         phone: null,
         email: null,
-        adress: null
-      }
-    };
+        adress: null,
+      },
+    }
   },
   methods: {
     submit() {
-      this.$v.$touch();
+      this.$v.$touch()
       if (!this.$v.$anyError) {
         // this.$fire.firestore.collection("requests").add(this.form);
-        this.$v.form.$reset();
+        this.$v.form.$reset()
         this.form = {
-          name: "",
-          surname: "",
-          phone: "",
-          email: "",
-          adress: ""
-        };
+          name: '',
+          surname: '',
+          phone: '',
+          email: '',
+          adress: '',
+        }
       } else {
-        alert("Form has strong");
+        alert('Form has strong')
       }
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .e-form-container {
@@ -107,9 +115,6 @@ export default {
   gap: 24px;
   &-inline {
     width: 100%;
-    div:not(:first-child) {
-      margin-top: 20px;
-    }
   }
   &-group {
     margin-top: 22px;
@@ -148,7 +153,6 @@ export default {
 @media ($lg) {
   .e-form-container {
     padding: 50px;
-    max-height: 390px;
   }
   .e-form {
     display: grid;
@@ -161,9 +165,6 @@ export default {
       div:not(:last-child) {
         margin-right: 20px;
       }
-      div:last-child {
-        margin-top: 0px;
-      }
     }
     &-right-area {
       &-btn {
@@ -173,5 +174,14 @@ export default {
       }
     }
   }
+  .e-form-a-column {
+    textarea {
+      height: 100%;
+      height: 200px;
+    }
+  }
+}
+.e-form-a-column {
+  grid-template-columns: 1fr;
 }
 </style>

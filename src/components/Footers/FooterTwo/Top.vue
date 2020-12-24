@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'FootertwoTop'
+  name: 'FootertwoTop',
 }
 </script>
 

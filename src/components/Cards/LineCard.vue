@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'LineCard'
+  name: 'LineCard',
 }
 </script>
 

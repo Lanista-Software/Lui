@@ -19,18 +19,18 @@
 </template>
 <script>
 export default {
-  name: "LSelect",
+  name: 'LSelect',
   props: {
     items: {
       type: Array,
-      required: true
+      required: true,
     },
     fit: {
       type: Boolean,
-      required: false
-    }
-  }
-};
+      required: false,
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .l-select {

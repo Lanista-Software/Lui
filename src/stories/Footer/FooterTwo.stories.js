@@ -10,25 +10,25 @@ export default {
   component: {
     FooterTwo,
     List,
-    Top
-  }
+    Top,
+  },
 }
 export const FooterTwo_V1 = () => ({
   components: { FooterTwo },
   template: `
             <footer-two>
             </footer-two>            
-    `
+    `,
 })
 export const Top_V1 = () => ({
   components: { Top, List },
   props: {
     list: {
-      default: array('List', Variants.list, '/')
+      default: array('List', Variants.list, '/'),
     },
     textVariant: {
-      default: select('Text Variant', Variants.textVariant)
-    }
+      default: select('Text Variant', Variants.textVariant),
+    },
   },
   template: `
             <Top>
@@ -56,12 +56,12 @@ export const Top_V1 = () => ({
                     <img src="../assets/footerbanner.png" alt="Footer Media">
                 </template>
             </Top>            
-    `
+    `,
 })
 export const Bottom_V1 = () => ({
   components: { Bottom },
   template: `
             <Bottom>
             </Bottom>            
-    `
+    `,
 })

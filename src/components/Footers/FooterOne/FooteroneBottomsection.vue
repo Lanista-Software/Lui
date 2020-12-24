@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import CompanyLogo from "../../Header/HeaderOne/HeaderOneComponents/BottomSection/CompanyLogo";
+import CompanyLogo from '../../Header/HeaderOne/HeaderOneComponents/BottomSection/CompanyLogo'
 export default {
-  components: { CompanyLogo }
-};
+  components: { CompanyLogo },
+}
 </script>
 
 <style lang="scss" scoped>

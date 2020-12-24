@@ -1,10 +1,24 @@
 <template>
   <div class="product-preview-card bg-white shadow radius-08">
     <div class="product-preview-card-responsive-left">
-      <productpreview-cardleft :img="product.img" />
+      <div class="product-preview-card-left shadow radius-10">
+        <div class="product-preview-card-left-icon">
+          <i class="ri-snowy-fill text-blue" />
+        </div>
+        <div class="product-preview-card-left-container">
+          <img :src="img" alt="Erbay" />
+        </div>
+      </div>
     </div>
     <div class="product-preview-card-desktop-top bg-light-100">
-      <productpreview-cardtop />
+      <div class="product-preview-card-top">
+        <div class="bg-warning">
+          <span> Popüler </span>
+        </div>
+        <div>
+          <img src="/erbay/trendyol.png" />
+        </div>
+      </div>
     </div>
     <div class="product-preview-card-img">
       <img :src="product.img" :alt="product.title" />
@@ -34,7 +48,7 @@
                 : [
                     product.type === 'Yaz'
                       ? '/icons/sun.svg'
-                      : '/icons/rainy.svg'
+                      : '/icons/rainy.svg',
                   ]
             "
           />
@@ -65,22 +79,22 @@
 </template>
 
 <script>
-import LButton from "../../LButton.vue";
-import ProductpreviewCardleft from "./ProductpreviewCardleft.vue";
-import ProductpreviewCardtop from "./ProductpreviewCardtop.vue";
-import Rating from "./rating.vue";
+import LButton from '../../LButton.vue'
+import Rating from '../Rating.vue'
 export default {
   components: {
-    ProductpreviewCardleft,
-    ProductpreviewCardtop,
     Rating,
-    LButton
+    LButton,
   },
   props: {
     product: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
+    img: {
+      type: String,
+      required: false,
+    },
     // href: {
     //   type: String,
     //   default: null,
@@ -96,19 +110,19 @@ export default {
   },
   computed: {
     href() {
-      const data = this.product.title.split(" ");
+      const data = this.product.title.split(' ')
       const link = `https://www.trendyol.com/${data[0].toLowerCase()}/${data[1].toLowerCase()}-p-${
         this.product.id
-      }`;
-      return link;
-    }
+      }`
+      return link
+    },
   },
   methods: {
     goMarket() {
-      window.open(this.href, "_blank");
-    }
-  }
-};
+      window.open(this.href, '_blank')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -241,6 +255,55 @@ export default {
         width: 180px;
       }
     }
+  }
+}
+.product-preview-card-top {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  span {
+    font-size: 12px;
+    font-family: $baseFont;
+  }
+  div:nth-child(1) {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    left: 0px;
+  }
+  div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    img {
+      width: 45px;
+      margin-right: 15px;
+    }
+  }
+}
+.product-preview-card-left {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  &-icon {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100px;
   }
 }
 </style>

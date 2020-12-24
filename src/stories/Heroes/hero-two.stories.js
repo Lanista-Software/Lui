@@ -10,8 +10,8 @@ export default {
     HeroTwo,
     LButton,
     TagImage,
-    TagOne
-  }
+    TagOne,
+  },
 }
 const url = `https://picsum.photos/id/${Math.floor(
   Math.random() * (200 - 1) + 1
@@ -34,7 +34,7 @@ export const HeroTwo_v1 = () => ({
         // cssEase: "linear",
         pauseOnFocus: true,
         pauseOnHover: true,
-        focusOnSelect: true
+        focusOnSelect: true,
         // responsive: [
         //   {
         //     breakpoint: 1024,
@@ -62,7 +62,7 @@ export const HeroTwo_v1 = () => ({
         //   }
         // ]
       },
-      url: url
+      url: url,
     }
   },
   components: {
@@ -70,7 +70,7 @@ export const HeroTwo_v1 = () => ({
     LButton,
     CarouselOne,
     TagImage,
-    TagOne
+    TagOne,
   },
   template: `<div class="container">
               <HeroTwo>
@@ -136,5 +136,5 @@ export const HeroTwo_v1 = () => ({
                   </CarouselOne>
                 </slot>
               </HeroTwo>
-              </div>`
+              </div>`,
 })

@@ -6,19 +6,19 @@
 </template>
 <script>
 export default {
-  name: "ListTwo",
+  name: 'ListTwo',
   props: {
     variant: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     variants() {
-      return mode => mode + "-" + this.variant;
-    }
-  }
-};
+      return (mode) => mode + '-' + this.variant
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .list-two {
