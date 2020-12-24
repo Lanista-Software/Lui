@@ -5,7 +5,9 @@
     </div>
     <div class="promotion-card-text" v-if="$slots.title || $slots.default">
       <slot name="title" />
-      <slot />
+      <div class="promotion-card-text-tx">
+        <slot />
+      </div>
     </div>
     <div class="promotion-card-button" v-if="$slots.buttons">
       <slot name="buttons" />
@@ -37,11 +39,11 @@ export default {
 .promotion-card {
   display: grid;
   grid-template-rows: auto;
-  gap: 1.5rem;
+  gap: 16px;
   &-text {
     text-align: center;
-    p {
-      margin-top: 1rem;
+    &-tx {
+      margin-top: 12px;
     }
   }
   &-icon {
