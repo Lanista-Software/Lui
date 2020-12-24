@@ -15,18 +15,18 @@ export default {
   props: {
     circle: {
       type: Boolean,
-      default: false
+      default: false,
     },
     size: {
       type: Array,
-      required: false
-    }
+      required: false,
+    },
   },
   computed: {
     typeSelector() {
       return this.circle === true ? 'rounded-circle' : 'rounded'
-    }
-  }
+    },
+  },
 }
 </script>
 

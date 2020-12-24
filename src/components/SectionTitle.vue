@@ -11,14 +11,14 @@
 
 <script>
 export default {
-  name: "SectionTitle",
+  name: 'SectionTitle',
   props: {
     title: {
       type: String,
-      default: null
-    }
-  }
-};
+      default: null,
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .section-title {

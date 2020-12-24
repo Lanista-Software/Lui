@@ -2,7 +2,7 @@ import PrintCard from '../../components/Cards/PrintCard'
 
 export default {
   title: 'Cards/PrintCard',
-  component: { PrintCard }
+  component: { PrintCard },
 }
 
 export const Print_Card = () => ({
@@ -26,5 +26,5 @@ export const Print_Card = () => ({
             <i class="ri-arrow-right-line ri-1x text-dark" />
           </a>
   </template>
-  </PrintCard>`
+  </PrintCard>`,
 })

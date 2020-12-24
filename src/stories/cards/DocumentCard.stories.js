@@ -3,7 +3,7 @@ import LButton from '../../components/LButton'
 
 export default {
   title: 'Cards/DocumentCard',
-  component: { DocumentCard }
+  component: { DocumentCard },
 }
 
 export const Document_Card = () => ({
@@ -29,5 +29,5 @@ export const Document_Card = () => ({
     etmek için
   </p>
     </template>
-  </DocumentCard>`
+  </DocumentCard>`,
 })

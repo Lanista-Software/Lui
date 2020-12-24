@@ -66,14 +66,14 @@
   </div>
 </template>
 <script>
-import LButton from "../LButton.vue";
-import LSelect from "../LSelect.vue";
-import mixin from "../filter";
+import LButton from '../LButton.vue'
+import LSelect from '../LSelect.vue'
+import mixin from '../filter'
 export default {
-  name: "ProductFilter",
+  name: 'ProductFilter',
   components: { LSelect, LButton },
-  mixins: [mixin]
-};
+  mixins: [mixin],
+}
 </script>
 <style lang="scss" scoped>
 .filter-desktop-btn {

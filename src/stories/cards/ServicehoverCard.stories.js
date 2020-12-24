@@ -2,7 +2,7 @@ import ServicehoverCard from '../../components/Cards/ServicehoverCard'
 import LButton from '../../components/LButton'
 export default {
   title: 'Cards/ServicehoverCard',
-  component: { ServicehoverCard }
+  component: { ServicehoverCard },
 }
 
 export const Servicehover_Card = () => ({
@@ -21,5 +21,5 @@ export const Servicehover_Card = () => ({
   Teknik Dosya
 </h5>
   </template>
-  </ServicehoverCard>`
+  </ServicehoverCard>`,
 })

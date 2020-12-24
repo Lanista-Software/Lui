@@ -128,14 +128,14 @@
 </template>
 
 <script>
-import LButton from "./LButton.vue";
+import LButton from './LButton.vue'
 export default {
   components: { LButton },
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
-    msg: String
-  }
-};
+    msg: String,
+  },
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

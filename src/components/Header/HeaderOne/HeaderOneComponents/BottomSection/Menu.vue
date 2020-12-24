@@ -9,7 +9,7 @@
           :exact="item.exact"
         >
           {{ item.text }}
-          <div><span class="span-right" /></div>
+          <div><span class="span-right"/></div>
           <div v-if="multiBorder">
             <span class="span-left" />
           </div>
@@ -20,18 +20,18 @@
 </template>
 <script>
 export default {
-  name: "Menu",
+  name: 'Menu',
   props: {
     items: {
       type: Array,
-      required: true
+      required: true,
     },
     multiBorder: {
       type: Boolean,
-      default: false
-    }
-  }
-};
+      default: false,
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 ul {

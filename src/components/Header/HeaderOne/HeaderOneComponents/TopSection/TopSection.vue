@@ -19,24 +19,24 @@
 </template>
 
 <script>
-import ItemGroup from "./ItemGroup.vue";
+import ItemGroup from './ItemGroup.vue'
 export default {
-  name: "TopSection",
+  name: 'TopSection',
   components: {
-    ItemGroup
+    ItemGroup,
   },
   props: {
     BackgroundColor: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     style() {
-      return `background-color: ${this.BackgroundColor}`;
-    }
-  }
-};
+      return `background-color: ${this.BackgroundColor}`
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

@@ -31,13 +31,13 @@ export default {
   props: {
     center: {
       type: Boolean,
-      default: false
+      default: false,
     },
     buttonVariants: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

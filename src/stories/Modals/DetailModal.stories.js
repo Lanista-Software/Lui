@@ -4,7 +4,7 @@ import LButton from '../../components/LButton.vue'
 import { action } from '@storybook/addon-actions'
 export default {
   title: 'Modals/DetailModal',
-  component: Modal
+  component: Modal,
 }
 export const Detail_Modal = () => ({
   components: { Modal, BgIcon, LButton },
@@ -46,5 +46,5 @@ export const Detail_Modal = () => ({
     </l-button>   
         </div>
      </template>
-  </Modal>`
+  </Modal>`,
 })

@@ -39,11 +39,11 @@
 </template>
 
 <script>
-import LButton from "../../LButton.vue";
+import LButton from '../../LButton.vue'
 export default {
   components: { LButton },
-  name: "Producttwo"
-};
+  name: 'Producttwo',
+}
 </script>
 
 <style scoped lang="scss">

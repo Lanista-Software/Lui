@@ -34,10 +34,10 @@ export default {
       buttonVariants: {
         bgVariant: 'bg-warning',
         textVariant: 'text-dark',
-        btnText: 'İletişime geçin'
-      }
+        btnText: 'İletişime geçin',
+      },
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

@@ -13,9 +13,9 @@ export default {
   props: {
     images: {
       type: Array,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
