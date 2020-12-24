@@ -35,15 +35,9 @@ input {
   border: none;
   outline: none;
   width: 100%;
-
-  height: 35px;
+  height: 30px;
 }
 div {
   width: 100%;
-}
-@media ($lg) {
-  input {
-    height: 50px;
-  }
 }
 </style>

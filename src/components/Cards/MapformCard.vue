@@ -26,14 +26,27 @@ export default {
 <style lang="scss" scoped>
 .mapform-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   width: 100%;
   &-map {
     width: 100%;
+    padding: 20px;
     height: 100%;
     iframe {
       width: 100%;
-      height: 100%;
+      height: 300px;
+    }
+  }
+}
+@media ($lg) {
+  .mapform-card {
+    grid-template-columns: 1fr 1fr;
+    &-map {
+      padding: 0px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
