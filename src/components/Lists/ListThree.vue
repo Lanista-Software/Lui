@@ -1,11 +1,17 @@
 <template>
-  <ul class="list-three" v-bind="$attrs">
-    <li v-if="$slots.title" class="list-title"><slot name="title"/></li>
+  <ul class="list-three" :class="direction === 'h' ? 'list-h' : 'list-v'">
+    <li v-if="$slots.title" class="list-title" :class="textVariant"
+      ><slot name="title"
+    /></li>
     <li v-for="(item, index) in list" :key="index" class="list-item">
-      <a v-if="item.link" :href="item.link" :class="textVariant">{{
-        item.title
-      }}</a>
-      <span v-else :class="textVariant">{{ item.title }}</span>
+      <component
+        :is="item.link ? 'a' : 'span'"
+        :class="textVariant"
+        :href="item.link ? item.link : null"
+      >
+        <i v-if="item.type === 'icon'" :class="[item.content, textVariant]" />
+        <span v-else :class="textVariant">{{ item.content }}</span>
+      </component>
     </li>
   </ul>
 </template>
@@ -22,6 +28,10 @@ export default {
       type: String,
       default: 'text-light',
     },
+    direction: {
+      type: String,
+      default: 'v',
+    },
   },
 }
 </script>
@@ -37,6 +47,8 @@ export default {
 }
 .list-three {
   width: 100%;
+}
+.list-v {
   li {
     padding-bottom: 8px;
   }
@@ -45,6 +57,17 @@ export default {
   }
   li:last-child {
     padding-bottom: 0;
+  }
+}
+.list-h {
+  li {
+    padding-right: 8px;
+  }
+  li.list-title {
+    padding-right: 16px;
+  }
+  li:last-child {
+    padding-right: 0;
   }
 }
 </style>

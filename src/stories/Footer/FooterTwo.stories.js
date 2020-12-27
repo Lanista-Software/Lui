@@ -33,6 +33,7 @@ export const Top_V1 = () => ({
   template: `
             <Top>
                 <template v-slot:section_1>
+                <img src="/gochem.svg" alt="Gochem Media" width="135" height="auto">
                 <List :list="list" :text-variant="textVariant">
                     <template v-slot:title><h5 style="font-size:1rem;" class="fw-600">Site Haritası</h5></template>
                  </List>
@@ -53,7 +54,7 @@ export const Top_V1 = () => ({
                  </List>
                 </template>
                 <template v-slot:footerMedia>
-                    <img src="../assets/footerbanner.png" alt="Footer Media">
+                    <img src="/footerbanner.png" alt="Footer Media">
                 </template>
             </Top>            
     `,
