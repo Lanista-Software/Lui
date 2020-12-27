@@ -28,7 +28,7 @@ export const Variant_01 = () => ({
       ),
     },
     direction: {
-      default: select('Direction', ['h', 'v'], 'v'),
+      default: select('Direction', ['list-v', 'list-h'], 'list-h'),
     },
   },
   template: `<ListThree :list="list" :text-variant="textVariant" :direction="direction">

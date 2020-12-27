@@ -1,8 +1,8 @@
 <template>
-  <ul class="list-three" :class="direction === 'h' ? 'list-h' : 'list-v'">
-    <li v-if="$slots.title" class="list-title" :class="textVariant"
-      ><slot name="title"
-    /></li>
+  <ul class="list-three" :class="direction" v-bind="$attrs">
+    <li v-if="$slots.title" class="list-title" :class="textVariant">
+      <slot name="title" />
+    </li>
     <li v-for="(item, index) in list" :key="index" class="list-item">
       <component
         :is="item.link ? 'a' : 'span'"
@@ -30,7 +30,7 @@ export default {
     },
     direction: {
       type: String,
-      default: 'v',
+      required: true,
     },
   },
 }
@@ -60,8 +60,9 @@ export default {
   }
 }
 .list-h {
+  display: inline-flex;
   li {
-    padding-right: 8px;
+    padding-right: 12px;
   }
   li.list-title {
     padding-right: 16px;
