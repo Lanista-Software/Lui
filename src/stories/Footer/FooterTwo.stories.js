@@ -13,7 +13,7 @@ export default {
   },
 }
 
-export const TFooterTwo_V1 = () => ({
+export const FooterTwo_V1 = () => ({
   components: {
     FooterTwo,
     Top,
