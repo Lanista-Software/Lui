@@ -1,9 +1,9 @@
 <template>
   <div class="service-hover-card radius-10" :style="bgStyle">
     <div class="bg-dark_08 service-hover-card-abs">
-      <slot name="title" />
-      <slot />
-      <slot name="button" />
+      <slot v-if="$slots.title" name="title" />
+      <slot v-if="$slots.default" />
+      <slot v-if="$slots.button" name="button" />
     </div>
   </div>
 </template>

@@ -53,7 +53,7 @@ export const Top_V1 = () => ({
                  </List>
                 </template>
                 <template v-slot:footerMedia>
-                    <img src="../assets/footerbanner.png" alt="Footer Media">
+                    <img src="/footerbanner.png" alt="Footer Media">
                 </template>
             </Top>            
     `,

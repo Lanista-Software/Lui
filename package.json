@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "sb": "start-storybook -s ./public,./static -p 9001",
+    "sb": "start-storybook -s ./public,./static,./src/stories/assets -p 9001",
     "build-sb": "build-storybook --no-dll"
   },
   "dependencies": {
