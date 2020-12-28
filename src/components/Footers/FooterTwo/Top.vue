@@ -28,12 +28,13 @@ export default {
 
 <style scoped lang="scss">
 .footer-two-top {
-  width: 100%;
+  padding: 50px 0;
   &-content {
-    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    padding: 50px 0;
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    width: 100%;
+    padding-bottom: 50px;
+    column-gap: calc(100% / 12); //Fraction verilmediğinden. 3fr aldık.
   }
   &-media {
     margin-bottom: 50px;

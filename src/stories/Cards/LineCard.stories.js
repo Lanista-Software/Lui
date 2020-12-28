@@ -32,3 +32,23 @@ export const Variant_1 = () => ({
                     </template>
                 </LineCard>`,
 })
+export const Variant_2 = () => ({
+  components: { LineCard, BgIcon, LButton },
+  props: {},
+  template: ` <LineCard class="bg-white radius-05">
+                    <template v-slot:media>
+                        <div style="display:flex; width:100%; justify-content:center;">
+                        <bg-icon class="radius-09 bg-dark_09" :size="[100,100]">
+                        <slot><i class="ri-mail-line ri-2x text-dark" /></slot>
+                        </bg-icon>
+                        </div>
+                    </template>
+                    <template v-slot:title>
+                        <h5 class="fw-600" style="font-size:1rem; line-height:20px;">Tekstil</h5>
+                    </template>
+                    <template v-slot:content>
+                        <p style="line-height:25px;" class="text-dark_08"> Gochem Silikon uzun yıllara dayanan sektör tecrübesiyle performansı yüksek, maliyeti düşük tekstil silikonlarını envanterinde bulundurur. Kullanım ihtiyacına göre formülize edilebilen bu ürünler yüksek kaliteli baskılar elde …		 
+                         </p>
+                    </template>
+                </LineCard>`,
+})

@@ -17,6 +17,7 @@
     "@storybook/addon-viewport": "^6.0.28",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
+    "remixicon": "^2.5.0",
     "vue": "^2.6.11",
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "vue-router": "^3.2.0",

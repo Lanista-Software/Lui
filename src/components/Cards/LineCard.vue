@@ -1,5 +1,8 @@
 <template>
   <div class="line-card">
+    <div v-if="$slots.media" class="line-card-media">
+      <slot name="media"></slot>
+    </div>
     <div class="line-card-top">
       <div v-if="$slots.icon" class="line-card-top-icon">
         <slot name="icon"></slot>
@@ -29,6 +32,10 @@ export default {
   width: 100%;
   max-width: 275px;
   min-width: 200px;
+  &-media {
+    margin-bottom: 20px;
+    width: 100%;
+  }
   &-top {
     display: inline-flex;
     column-gap: 20px;

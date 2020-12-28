@@ -27,8 +27,11 @@ export const Variant_01 = () => ({
         'text-dark'
       ),
     },
+    direction: {
+      default: select('Direction', ['list-v', 'list-h'], 'list-h'),
+    },
   },
-  template: `<ListThree :list="list" :text-variant="textVariant">
+  template: `<ListThree :list="list" :text-variant="textVariant" :direction="direction">
                 <template v-slot:title :style="{color: textVariant}><h5 class="fw-600" style="font-size:1rem;">Site Haritası</h5></template>
              </ListThree>`,
 })

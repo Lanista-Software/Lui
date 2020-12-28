@@ -26,13 +26,30 @@ export default {
   ],
   size: [300, 300],
   list: [
-    { title: 'Anasayfa', link: '/home' },
-    { title: 'Hakkımızda', link: '/home' },
-    { title: 'Ürünler', link: '/home' },
-    { title: 'Sektörler', link: '/home' },
-    { title: 'Makaleler', link: '/home' },
-    { title: 'NoLink' },
-    { title: 'NoLink' },
-    { title: 'NoLink' },
+    {
+      type: 'link',
+      content: 'Anasayfa',
+      link: '/home',
+    },
+    {
+      type: 'link',
+      content: 'Hakkımızda',
+      link: '/home',
+    },
+    {
+      type: 'link',
+      content: 'Ürünler',
+      link: '/home',
+    },
+    {
+      type: 'link',
+      content: 'Sektörler',
+      link: '/home',
+    },
+    {
+      type: 'link',
+      content: 'Makaleler',
+      link: '/home',
+    },
   ],
 }
