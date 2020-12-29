@@ -78,7 +78,7 @@ export default {
   column-gap: 12px;
   width: 100%;
   min-width: 280px;
-  max-width: 400px;
+  max-width: 600px;
   position: relative;
   &-tag {
     position: absolute;
