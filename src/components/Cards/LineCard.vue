@@ -30,7 +30,7 @@ export default {
 .line-card {
   padding: 20px;
   width: 100%;
-  max-width: 275px;
+  max-width: 400px;
   min-width: 200px;
   &-media {
     margin-bottom: 20px;
