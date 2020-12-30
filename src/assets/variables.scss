@@ -1,66 +1,91 @@
-$xss: "min-width:0px";
-$xs: "min-width:320px";
-$sm: "min-width: 576px";
-$md: "min-width: 768px";
-$lg: "min-width: 992px";
-$xl: "min-width: 1200px";
-$xxl: "min-width: 1500px";
+$xss: 'min-width:0px';
+$xs: 'min-width:320px';
+$sm: 'min-width: 576px';
+$md: 'min-width: 768px';
+$lg: 'min-width: 992px';
+$xl: 'min-width: 1200px';
+$xxl: 'min-width: 1500px';
 
-$success: #00FF80;
-$warning: #FCE500;
-$white: #FFFFFF;
-$primary: #27509B;
-$blue: #449BFD;
-$dark: #041F45;
-$light: #F3F4F6;
-$baseFont:'Inter',
-sans-serif;
+$success: #00ff80;
+$warning: #fce500;
+$white: #ffffff;
+$primary: #27509b;
+$blue: #449bfd;
+$dark: #041f45;
+$light: #f3f4f6;
+$baseFont: 'Inter', sans-serif;
 $baseFontSize: 16px;
-$titleFont:'Merriweather',
-serif;
-$otherFont:'Goldman',
-cursive;
-$all-colors: ("success": #00FF80,
-  "warning":#FCE500,
-  "white": #FFFFFF,
-  "primary": #27509B,
-  "dark":#041F45,
-  "light":#F3F4F6,
-  "blue": #449BFD,
-  "light-100":#FCFCFC,
-
+$titleFont: 'Merriweather', serif;
+$otherFont: 'Goldman', cursive;
+$all-colors: (
+  'success': #00ff80,
+  'warning': #fce500,
+  'white': #ffffff,
+  'primary': #27509b,
+  'dark': #041f45,
+  'light': #f3f4f6,
+  'blue': #449bfd,
+  'light-100': #fcfcfc,
 );
 
-$all-opacity: ("01": .1,
-  "02": .2,
-  "03": .3,
-  "04": .4,
-  "05": .5,
-  "06": .6,
-  "07": .7,
-  "08": .8,
-  "09": .9, );
+$all-opacity: (
+  '01': 0.1,
+  '02': 0.2,
+  '03': 0.3,
+  '04': 0.4,
+  '05': 0.5,
+  '06': 0.6,
+  '07': 0.7,
+  '08': 0.8,
+  '09': 0.9,
+);
 
-$all-radius: ("01": 1px,
-  "02": 2px,
-  "03": 3px,
-  "04": 4px,
-  "05": 5px,
-  "06": 6px,
-  "07": 7px,
-  "08": 8px,
-  "09": 9px,
-  "10": 9px, );
+$all-radius: (
+  '01': 1px,
+  '02': 2px,
+  '03': 3px,
+  '04': 4px,
+  '05': 5px,
+  '06': 6px,
+  '07': 7px,
+  '08': 8px,
+  '09': 9px,
+  '10': 9px,
+);
 
-$all-weights: ("100": 100,
-  "200": 200,
-  "300": 300,
-  "400": 400,
-  "500": 500,
-  "600": 600,
-  "700": 700,
-  "800": 800,
-  "900": 900);
-
+$all-weights: (
+  '100': 100,
+  '200': 200,
+  '300': 300,
+  '400': 400,
+  '500': 500,
+  '600': 600,
+  '700': 700,
+  '800': 800,
+  '900': 900,
+);
+$all-size: (
+  'auto': auto,
+  '0': 0rem,
+  '1': 0.5rem,
+  '2': 1rem,
+  '3': 1.5rem,
+  '4': 2rem,
+  '5': 2.5rem,
+  '6': 3rem,
+  '7': 3.5rem,
+  '8': 4rem,
+  '9': 4.5rem,
+  '10': 5rem,
+);
+$all-direction: (
+  'auto': auto,
+  'l': left,
+  'r': right,
+  't': top,
+  'b': bottom,
+  'x': (left, right),
+  'y': (top, bottom),
+);
 /*** shadow */
-$box-shadow: 0px 0px 16px 5px rgba(0,0,0,0.16);
+$box-shadow: 0px 0px 16px 5px rgba(0, 0, 0, 0.16);
