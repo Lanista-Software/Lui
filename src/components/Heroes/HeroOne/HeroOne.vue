@@ -1,21 +1,25 @@
 <template>
   <div class="hero-one">
     <div class="hero-one-right">
-      <hero-onecard :buttonVariants="buttonVariants">
-        <p>
-          Yılların tecrübesiyle ve uzman kadromuzla bütün sorularınıza yanıt
-          vermek için bekliyoruz
-        </p>
-        <template v-slot:top>
-          <h3>
+      <hero-onecard>
+        <template v-slot:title>
+          <h3 class="text-dark">
             ONLİNE SİPARİŞ KOLAYLIĞI
           </h3>
         </template>
-        <template v-slot:top-desc>
-          <h3 class="text-dark">
-            ÇOK YAKINDA HİZMETİNİZDE
-          </h3>
+        <template v-slot:content>
+          <p class="text-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+            distinctio.
+          </p>
         </template>
+        <template v-slot:footer>
+          <p class="text-dark">
+            <l-button bgVariant="bg-warning" size="lg">
+              İletişime geçin
+            </l-button>
+          </p></template
+        >
       </hero-onecard>
     </div>
     <div class="hero-one-left">
@@ -24,20 +28,12 @@
   </div>
 </template>
 <script>
-import HeroOnecard from '../../Cards/HeroCards/HeroOnecard'
+import HeroOnecard from '../../Cards/LineCard'
 import ProductFilter from '../../Cards/ProductFilter'
+import LButton from '../../LButton.vue'
 export default {
-  components: { HeroOnecard, ProductFilter },
+  components: { HeroOnecard, ProductFilter, LButton },
   name: 'HeroOne',
-  data() {
-    return {
-      buttonVariants: {
-        bgVariant: 'bg-warning',
-        textVariant: 'text-dark',
-        btnText: 'İletişime geçin',
-      },
-    }
-  },
 }
 </script>
 <style lang="scss" scoped>
