@@ -68,3 +68,26 @@ $color in $all-colors {
     }
   }
 }
+@each $sizename,
+$size in $all-size {
+
+  @each $directionname,
+  $direction in $all-direction {
+    .m#{$directionname}-#{$sizename} {
+      @each $name in $direction {
+        margin-#{$name}: #{$size} !important;
+      }
+    }
+  }
+}
+@each $sizename,
+$size in $all-size {
+  @each $directionname,
+  $direction in $all-direction {
+    .p#{$directionname}-#{$sizename} {
+      @each $name in $direction {
+        padding-#{$name}: #{$size} !important;
+      }
+    }
+  }
+}

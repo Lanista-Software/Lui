@@ -119,7 +119,7 @@ export const Variant_6 = () => ({
   props: {},
   template: ` <LineCard>
                     <template v-slot:title>
-                    <div style="line-height:30px;">
+                    <div style="line-height:30px;" class="m-auto">
                      <h3 class="text-white">Gochem Silikon’un
                      uzman takımı ile tanışın</h3>
                     </div>
